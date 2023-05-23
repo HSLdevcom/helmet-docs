@@ -61,7 +61,7 @@ Valitse koordinaatisto:
 
 ## Lue sisään verkkotiedostot
 
-Verkkojen sisäänajo tapahtuu Modeller käyttöliittymän kautta. 
+Verkkojen sisäänajo tapahtuu Modeller-työkalun kautta (Tools - Modeller...). 
 HSL:n tarjoamien valmiiden lähtötietojen osalta tarvittavat aineistot eri tarkasteluvuosille löytyvät jakokansiosta
 `Verkot` (lisätietoja [täällä](mallin_lahtotietotiedostot.md)).
 Valitse moduuli `Data management/Scenario/Import scenario`.
