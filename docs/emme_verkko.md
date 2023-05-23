@@ -11,6 +11,7 @@ Jos teet merkittäviä muutoksia, esim. lisäät uuden kulkumuodon, sovi tästä
 
 ## Ohjeen muutoshistoria
 
+- 2023-05-23: Korjattu virhe sentroidien numeroinnissa (erikoissentroidit 30 000 -> 31 000 ja Siuntion viimeinen sentroidi)
 - 2022-01-03: Lisätty tarkennuksia type-attribuutin koodaukseen ja
   us2-kertoimen laskentaan. ([HSLdevcom/helmet-ui#156](https://github.com/HSLdevcom/helmet-ui/pull/156))
 - 2022-09-29: Korjattu kolme kuvaa, joista puuttui merkintöjä; lisätty
