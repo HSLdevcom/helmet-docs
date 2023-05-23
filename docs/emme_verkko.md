@@ -55,11 +55,11 @@ Tästä on sovittava HSL:n yhteyshenkilöiden kanssa erikseen.
 | 35 000–39 999 | ”villit sentroidit” | 35 000–39 999 | tilaa vapaisiin tarkasteluihin, joissa halutaan lisätä sentroideja olemassa olevien sentroidien perään |
 
 Erikoissentroideista verkolle on lisätty omat sentroidit Helsinki-Vantaan lentoasemalle ja Helsingin satamille:
-- Lentoasema: i = 30 400
-- Katajanokka: i = 30 500
-- Eteläsatama: i = 30 501
-- Länsisatama: i = 30 502
-- Vuosaaren satama: i = 30 503
+- Lentoasema: i = 31 400
+- Katajanokka: i = 31 500
+- Eteläsatama: i = 31 501
+- Länsisatama: i = 31 502
+- Vuosaaren satama: i = 31 503
 
 *Taulukko 2. Solmuavaruuden jako, muut solmut kuin sentroidit*
 
