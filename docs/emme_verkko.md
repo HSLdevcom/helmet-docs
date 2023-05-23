@@ -160,7 +160,7 @@ Sijoittelualueet on numeroitu kunnittain seuraavan taulukon mukaisesti.
 | kunta       | numerot       | kunta       | numerot       | kunta       | numerot       |
 |-------------|---------------|-------------|---------------|-------------|---------------|
 | Helsinki    |    100–1 999  | Pornainen   | 15 000–15 499 | Tammela     | 22 500–22 999 |
-| Espoo       |  2 000–3 499  | Siuntio     | 15 500–15 499 | Riihimäki   | 23 000–23 999 |
+| Espoo       |  2 000–3 499  | Siuntio     | 15 500–15 999 | Riihimäki   | 23 000–23 999 |
 | Kauniainen  |  3 500–3 999  | Salo        | 16 000–16 499 | Hausjärvi   | 24 000–24 499 |
 | Vantaa      |  4 000–5 999  | Somero      | 16 500–16 999 | Kärkölä     | 24 500–24 999 |
 | Kirkkonummi |  6 000–6 999  | Raasepori   | 17 000–17 499 | Orimattila  | 25 000–25 499 |
