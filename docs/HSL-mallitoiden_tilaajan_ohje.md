@@ -3,7 +3,7 @@ nav_order: 8
 sort: 8
 ---
 
-# Ohje HSL:n mallitöiden tilaamiseen
+# HSL:n mallitöiden tilausohje
 
 Tähän on koottu ohjeita HSL:n teettämien mallitöiden tilaamiseen. Ohjeita voi soveltaa myös muiden tilaamissa töissä.
 
