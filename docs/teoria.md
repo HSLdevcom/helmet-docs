@@ -5,8 +5,8 @@ sort: 8
 
 # Helmet-mallin teoria
 
-Jenssin kommenti: Ohjeissa ei ole kuvattu mallin käyttämiä parametreja, funktioita ja muita oletuksia
-Pitäisikö tämän olla "matalan kynnyksen kysyntärapporti"?
+Jensin kommentti: Ohjeissa ei ole kuvattu mallin käyttämiä parametreja, funktioita ja muita oletuksia
+Pitäisikö tämän olla "matalan kynnyksen kysyntärapportti"?
 
 ## Helmet-parametrien oletuksia
 Kaikki Helmet-mallissa käytetyt parametrit löytyy Scripts/parameters kansiossa. Poikkeuksena ovat sijopankin ja skenaarioiden parametrit, mutta ne vaikkuttavat malliajoa vain vähän (?).
