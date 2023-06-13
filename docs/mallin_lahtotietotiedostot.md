@@ -72,7 +72,7 @@ Noudatathan näitä periaatteita verkonkuvauksia koodatessa, jotta varmistutaan 
 Lisätietoja mallin käyttämisestä [täällä](mallitoiden_yleisohje.md).
 Taustatietoa verkkokuvausten muodostamisesta ja historiasta löydät raportista [Helsingin seudun työssäkäyntialueen  liikenne-ennustejärjestelmän tarjontamallit 2017](https://hslfi.azureedge.net/globalassets/julkaisuarkisto/2019/helsingin-seudun-tyossakayntialueen-liikenne-ennustejarjestelman-tarjontamallit-6-2019.pdf).
 
-## Lähtötietojen muokkaessa on ennen malliajoa tarkistettava näitä asioita
+## Lähtötietoja muokattaessa on ennen malliajoa tarkistettava mm. nämä asiat
 
 * Hinnoittelu esim. poistetaan ruuhkamaksut
 * Lisätään ruuhkamaksut
