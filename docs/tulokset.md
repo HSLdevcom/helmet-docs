@@ -103,7 +103,6 @@ mutta ne ovat autosijoittelussa taustaliikenteenä.
 | accessibility.txt                            | Kysyntämallin logsum-muuttujat sijoittelualueittain | Logsumit ovat kiertomatkatyyppi- ja kulkutapakohtaisia. Kulkutapamalleista saadaan yhdistetyt logsumit kaikille kulkutavoille. Logsumit voidaan tulkita saavutettavuusmittareiksi. |
 | aggregated_demand.txt aggregated_demand.xlsx | Aggregoidut vuorokauden kysyntämatriisit (kiertomatkoja) suuralueittain |
 | agents.txt                                   | Agenttilista väestötieteellisineen ominaisuuksineen | :exclamation: Vain agenttiajoissa |
-| car_density.txt                              | Autotiheys (auto/asukas) sijoittelualueittain |
 | attraction.txt                               | Kiertomatka-attraktio kiertomatkatyypeittäin ja sijoittelualueittain | Kertoo, kuinka monessa kiertomatkassa kyseinen alue on päämäärä |
 | car_accessibility.txt                        | Kysyntämallin logsum-muuttuja-aggregointi autokulkutavalla sijoittelualueittain | :exclamation: Uusi versiossa 4.0.5 |
 | car_density.txt                              | Autotiheys (auto/asukas) sijoittelualueittain |
