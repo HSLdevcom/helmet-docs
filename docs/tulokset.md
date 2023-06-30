@@ -102,6 +102,8 @@ mutta ne ovat autosijoittelussa taustaliikenteenä.
 |----------------------------------------------|--------|-----------------|
 | accessibility.txt                            | Kysyntämallin logsum-muuttujat sijoittelualueittain | Logsumit ovat kiertomatkatyyppi- ja kulkutapakohtaisia. Kulkutapamalleista saadaan yhdistetyt logsumit kaikille kulkutavoille. Logsumit voidaan tulkita saavutettavuusmittareiksi. |
 | aggregated_demand.txt aggregated_demand.xlsx | Aggregoidut vuorokauden kysyntämatriisit (kiertomatkoja) suuralueittain |
+| agents.txt                                   | Agenttilista väestötieteellisineen ominaisuuksineen | :exclamation: Vain agenttiajoissa |
+| car_density.txt                              | Autotiheys (auto/asukas) sijoittelualueittain |
 | attraction.txt                               | Kiertomatka-attraktio kiertomatkatyypeittäin ja sijoittelualueittain | Kertoo, kuinka monessa kiertomatkassa kyseinen alue on päämäärä |
 | car_accessibility.txt                        | Kysyntämallin logsum-muuttuja-aggregointi autokulkutavalla sijoittelualueittain | :exclamation: Uusi versiossa 4.0.5 |
 | car_density.txt                              | Autotiheys (auto/asukas) sijoittelualueittain |
@@ -114,6 +116,7 @@ mutta ne ovat autosijoittelussa taustaliikenteenä.
 | generation.txt                               | Vuorokauden kiertomatkatuotos kiertomatkatyypeittäin sijoittelualueittain | :exclamation: Nimi muutettu versiossa 4.0.4, aikasemmin tours.txt |
 | impedance_ratio.txt                          | Joukkoliikenteen ja henkilöautoliikenteen matka-aika- ja matkakustannussuhteet aamuruuhkassa sijoittelualueittain | Eri matkakohteiden matka-ajat ja -kustannukset on painotettu työmatkojen määrillä kulkutavoittain. Lukuja käytetään autonomistusmallin muuttujina. |
 | link_lengths.txt                             | Väylätyyppien yhteenlaskettu pituus (km) verkolla | :exclamation: Uusi versiossa 4.1.0 |
+| links.txt                                    | Linkit ominaisuuksineen | :exclamation: Saatavilla vain [Emme-Desktop skriptin](https://github.com/HSLdevcom/helmet-model-system/blob/olusanya/Scripts/emme_tools/helmet_link_printing.py) kautta |
 | mode_share.txt                               | Kokonaiskulkutapajakaumat kiertomatkatyyppeittäin |
 | noise_areas.txt                              | Suuralueiden melualueiden pinta-alat ja väestömäärät | :exclamation: Uusi versiossa 4.0.4 |
 | origins_demand.txt                           | Vuorokauden kiertomatkatuotokset kulkutavoittain ja sijoittelualueittain |
@@ -124,6 +127,7 @@ mutta ne ovat autosijoittelussa taustaliikenteenä.
 | savu.txt                                     | SAVU-vyöhyke, jolle sijoittelualue kuuluu | :exclamation: Uusi versiossa 4.0.4, määrittely muutettu versiossa 4.0.5 |
 | sustainable_accessibility.txt                | Kysyntämallin logsum-muuttujat ilman autokulkutapaa sijoittelualueittain ja kiertomatkatyypeittäin | :exclamation: Uusi versiossa 4.0.4, määrittely muutettu versiossa 4.0.5 |
 | tour_combinations.txt<br />tour_combinations.xlsx | Vuorokauden kiertomatkayhdistelmien tuotosluvut ikäryhmittäin | :exclamation: Nimi muutettu versiossa 4.0.4, aikaisemmin generation.txt |
+| tours.txt                                   | Kiertomatkoja tarkoituksella, liikennemuodolla, kustannuksilla ja saavutettavuusmittareilla | :exclamation: Vain agenttiajoissa |
 | transit_kms.txt                              | Vuorokauden etäisyys- ja ajo-aikasuoritteet (km, min) joukkoliikenteen ajoneuvoille |
 | transit_stations.txt                         | Juna- ja metroasemien lukumäärä | :exclamation: Uusi versiossa 4.0.4 |
 | trip_lengths.txt                             | Vuorokauden kiertomatkatuotokset kiertomatkatyyppeittäin, kulkutavoittain ja etäisyysluokittain | Etäisyysluokka perustuu henkilöauton ajoetäisyyteen kilometreissa. |
