@@ -31,6 +31,10 @@ Olisi hyvä näitä plotata täällä
 ## Muut oletukset Helmet-mallinnuksessa
 Arvot pysyy samana, Helmet ei voi olettaa liikennekäyttäytymisen muutoksia. 
 
+Aggregoitun ajon matkojen lähtöajat on jaettu todennäköisyyden mukaan. Aht+pt+iht on vain murto-osa vuorokautta, joten niiden summa on yhtä alempaa.
+
+Agenttiajolla generoidaan kiertomatkoja kiertomatka kerrallaan. Jokainen kiertomatka on sitten jaettu todennäköisyyden mukaan ajanjaksoille. Jakoparametrit ovat samoja kuin aggregoitulla ajolla.
+
 ## Muut raportit
 Lisätietoa näissä raporteissa:
 https://hslfi.azureedge.net/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf Kysyntäraportti
