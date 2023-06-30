@@ -3,7 +3,7 @@ nav_order: 7
 sort: 7
 ---
 
-# Malliajon tulokset
+# Tulokset
 
 Tulosten tallennuskansiopolku määritellään Helmet-käyttöliittymän projektiasetuksissa (ks. [ohjeet](kaytto-ohje.md)). 
 Kunkin Helmet-skenaarion (malliajon) tulokset tallentuvat kyseisen Helmet-skenaarion nimellä nimettyyn alikansioon. 
