@@ -86,7 +86,7 @@ Taustatietoa verkkokuvausten muodostamisesta ja historiasta löydät raportista 
   * Alueparien väliset matkakustannukset: joukkoliikennelipun hinta, autoiun muuttuvat kustannukset (polttoaine, renkaat) ja mahdollinen ruuhkamaksu/tietulli
   * Autonomistus alueittain
 * Matkakohteiden valinta
-  * Saavutettavuus (matka-aika, etäiyys ja matkakustannus määräpaikkaan eri kulkutavoilla)
+  * Saavutettavuus (matka-aika, etäisyys ja matkakustannus määräpaikkaan eri kulkutavoilla)
   * Työpaikkamäärä määräpaikassa
   * Oppilaspaikkojen määrä määräpaikassa
 * Reitin valinta
