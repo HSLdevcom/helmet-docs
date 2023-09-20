@@ -43,6 +43,7 @@ Alla on lueteltu HELMET-sijoittelupankin (lisenssikoko vähintään 9) dimensiot
 | Origin matrices                                                           | 10        |                                                     |
 | Destination matrices                                                      | 10        |                                                     |
 | Words for extra attributes                                                | 9 700 000 | 3 100 000 (jos ajanjaksot erillisiin skenaarioihin) |
+| SOLA/PToll analyses                                                       | 240       |                                                     |
 
 Muokkaa seuraavaksi yksikköasetuksia. Asetuksiksi käyvät seuraavat (voit muokata näitä myös valitsemalla Tools - Prompt ja moduulin 1.23):
 - unit of energy: MJ
