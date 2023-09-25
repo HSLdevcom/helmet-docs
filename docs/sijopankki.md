@@ -55,7 +55,7 @@ Perusta tyhjä skenaario kohdassa _First scenario_:
 -	Title: esim. 2018_20211130
 
 Valitse koordinaatisto:
--	Spatial reference: Edit - ETRS89 / GK25FIN
+-	Spatial reference: Edit - ETRS89 / GK25FIN (Ei ETRS89 / ETRS-GK25FIN)
 -	Tarkenna kartta Helsingin kantakaupungin alueelle, jotta UTM-vyöhyke menee muotoon 35N
 - Koordinaatistoa voi myöhemmin muuttaa valikossa File - Project Settings – GIS.
 
