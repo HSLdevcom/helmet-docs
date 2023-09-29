@@ -126,7 +126,7 @@ mutta ne ovat autosijoittelussa taustaliikenteenä.
 | savu.txt                                     | SAVU-vyöhyke, jolle sijoittelualue kuuluu | :exclamation: Uusi versiossa 4.0.4, määrittely muutettu versiossa 4.0.5 |
 | sustainable_accessibility.txt                | Kysyntämallin logsum-muuttujat ilman autokulkutapaa sijoittelualueittain ja kiertomatkatyypeittäin | :exclamation: Uusi versiossa 4.0.4, määrittely muutettu versiossa 4.0.5 |
 | tour_combinations.txt<br />tour_combinations.xlsx | Vuorokauden kiertomatkayhdistelmien tuotosluvut ikäryhmittäin | :exclamation: Nimi muutettu versiossa 4.0.4, aikaisemmin generation.txt |
-| tours.txt                                    | Kiertomatkoja tarkoituksella, liikennemuodolla, kustannuksilla ja saavutettavuusmittareilla | :exclamation: Vain agenttiajoissa |
+| tours.txt                                    | Agenttien tekemät kiertomatkat ominaisuuksineen | :exclamation: Vain agenttiajoissa |
 | transit_kms.txt                              | Vuorokauden etäisyys- ja ajo-aikasuoritteet (km, min) joukkoliikenteen ajoneuvoille |
 | transit_stations.txt                         | Juna- ja metroasemien lukumäärä | :exclamation: Uusi versiossa 4.0.4 |
 | trip_lengths.txt                             | Vuorokauden kiertomatkatuotokset kiertomatkatyyppeittäin, kulkutavoittain ja etäisyysluokittain | Etäisyysluokka perustuu henkilöauton ajoetäisyyteen kilometreissa. |
