@@ -21,6 +21,16 @@ Tiedostojen nimillä ei ole merkitystä, ja ne voivat poiketa toisistaan (kansio
 
 **Tiedostot**
 
+* **car** = *valinnainen tiedosto*, johon voi syöttää aluekohtaiset pysäköintinormit (autoa/asukas) sarakkeeseen `prknorm`, esimerkiksi tällä tavalla:
+
+|     | prknorm |
+|-----|---------|
+| 191 |     0.7 |
+| 192 |     0.6 |
+| 301 |     1.0 |
+
+Pysäköintinormit vaikuttavat vain uusien asukkaiden autonomistukseen.
+
 * **cco** = autoilun kilometrikustannus
 * **edu** = kunkin ennustealueen oppilaspaikkamäärät peruskoulussa, toisella asteella ja korkeakouluissa
 * **ext** = ulkoinen liikenne eli työsäkäyntialueen tienpäät (kasvukerroin verrattuna nykytilaan)
@@ -37,7 +47,7 @@ Kansio sisältää perusvuoden (lähtökohtaisesti 2018, mutta jotkut tiedot voi
 ja [kysyntämatriiseja](tulokset.md#tuloskansion-matriisitiedostojen-kuvaukset).
 Kysyntämatriisit menevät ensimmäiseen sijoitteluun, josta kysyntälaskenta alkaa.
 Perusvuoden syöttötiedot menevät tavaraliikennemalliin ja autonomistusmalliin, jotka molemmat ovat muutosmalleja.
-Syöttötiedoissa on yksi ylimääräinen tiedosto verrattuna ennusteskenaarioiden syöttötietoihin:
+Perusvuoden syöttötiedoissa `car`-tiedosto on (toisin kuin ennusteskenaarion syöttötiedoissa) pakollinen:
 
 * **car** = kunkin ennustealueen autotiheys
 
