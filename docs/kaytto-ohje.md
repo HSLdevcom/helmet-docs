@@ -12,13 +12,13 @@ Järjestelmä käyttää INROn [Emme–ohjelmistoa](https://www.inrosoftware.com
 
 Ennen kuin Helmet UI -käyttöliittymää voidaan käyttää, seuraavien edellytysten on täytyttävä:
 
-1.	[Emme 4.5.X](https://www.inrosoftware.com/en/products/emme/) on asennettu, lisenssi on aktivoitu (Authorization) 
-   ja koneessa on lisenssitikku (INRO Key).
-2.	Käyttäjän PATH -ympäristömuuttujiin on lisätty `%EMMEPATH%\programs`.
+1.	[Emme 4.5, 4.6, 4.7 tai 23](https://www.inrosoftware.com/en/products/emme/) on asennettu, lisenssi on aktivoitu (Authorization).
+2.	Käyttäjän PATH -ympäristömuuttujiin on lisätty `%EMMEPATH%`.
     -	Avaa Windows-järjestelmän Ohjauspaneeli
     -	Valitse Käyttäjätilit ja vielä uudelleen Käyttäjätilit. Valitse sen jälkeen vasemmalla olevasta valikosta ”Muuta ympäristömuuttujia”.
     -	Etsi ylhäällä olevasta laatikosta ”käyttäjän (oma_käyttäjätunnuksesi) muuttujat”, valitse Path-muuttuja ja ”muokkaa ympäristömuuttujia”.
-    -	Valitse "Uusi" ja kirjoita `%EMMEPATH%\Programs`
+    -	Valitse "Uusi" ja kirjoita `%EMMEPATH%`
+    -	Syötä Emmen polku
     -	Paina OK ikkunassa ”Muokkaa ympäristömuuttujia” ja vielä uudelleen OK ikkunassa ”ympäristömuuttujat”.
 3.	[valinnainen] [Helmet 4.1 Model System](https://github.com/HSLdevcom/helmet-model-system) on ladattu käyttöön ja määritelty 
    _(tai annetaan tämän käyttöliittymän ladata se)_
