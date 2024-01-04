@@ -83,6 +83,8 @@ Jokaista ajettavaa HELMET-skenaariota kohden on tehtävä seuraavat määrittely
       joten jos ensimmäiseen malliajoon on käytetty 100 (oletus), toiseen malliajoon kannattaa
       laittaa 400.
 
+Huom: agenttiajo ja mockajo onnistuu vain dev_config.json tiedoston muokkaamisen kautta. Ohjeet siihen löydät täältä: [Helmet-model-systems Github](https://github.com/HSLdevcom/helmet-model-system/blob/olusanya/Scripts/README.md).
+
 ### Hyöty-kustannusanalyysin (hankearvioinnin) määrittely
 
 H/K-analyysillä voidaan verrata ajettujen skenaarioiden hyötyjä ja kustannuksia. Tulokset tulostuvat excel-tiedostoon tuloskansiossa. Analyysia varten on määriteltävä:
