@@ -11,6 +11,7 @@ Jos teet merkittäviä muutoksia, esim. lisäät uuden kulkumuodon, sovi tästä
 
 ## Ohjeen muutoshistoria
 
+- 2024-02-05: Lisätty linkkityyppi 143 (hidas pääkatu)
 - 2023-05-23: Korjattu virhe sentroidien numeroinnissa (erikoissentroidit 30 000 -> 31 000 ja Siuntion viimeinen sentroidi)
 - 2022-01-03: Lisätty tarkennuksia type-attribuutin koodaukseen ja
   us2-kertoimen laskentaan. ([HSLdevcom/helmet-ui#156](https://github.com/HSLdevcom/helmet-ui/pull/156))
@@ -326,6 +327,7 @@ jos moottoritien rinnalla tai läheisyydessä kulkee kävely- ja pyörätie.
 | 40 |                          | keskusta, hidas pääkatu                      |            |  40 |  36     |  900     | 140 240 340 440 540 640 |
 | 41 |                          | pienet tonttikadut                           |            |  30 |  30     |  600     | 141 241 341 441 541 641 |
 | 42 |                          | keskusta, pienet kadut                       |            |  30 |  23     |  500     | 142 242 342 442 542 642 |
+| 43 |                          | keskustan pääkatu, 30 km/h                   |            |  30 |  30     |  750     | 143 243 343 443 543 643 |
 
 *) Alun perin 2200, mutta verkolla on käytetty johdonmukaisesti kapasiteettia 2100, Trafixin mukaan siksi,
 että 2200 on epärealistisen suuri kapasiteetti normaaleissa olosuhteissa, ja tekee moottoriteistä liian houkuttelevia vaihtoehtoja.
