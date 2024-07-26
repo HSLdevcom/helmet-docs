@@ -166,7 +166,7 @@ Sijoittelualueet on numeroitu kunnittain seuraavan taulukon mukaisesti.
 | Kauniainen  |  3 500–3 999  | Salo        | 16 000–16 499 | Hausjärvi   | 24 000–24 499 |
 | Vantaa      |  4 000–5 999  | Somero      | 16 500–16 999 | Kärkölä     | 24 500–24 999 |
 | Kirkkonummi |  6 000–6 999  | Raasepori   | 17 000–17 499 | Orimattila  | 25 000–25 499 |
-| Vihti       |  7 000–7 999  | Hanko       | 17 500–17 499 | Hollola     | 25 500–25 999 |
+| Vihti       |  7 000–7 999  | Hanko       | 17 500–17 999 | Hollola     | 25 500–25 999 |
 | Nurmijärvi  |  8 000–8 999  | Inkoo       | 18 000-18 499 | Lahti       | 26 000–26 999 |
 | Tuusula     |  9 000–9 999  | Karkkila    | 18 500–18 999 | Porvoo      | 27 000–27 999 |
 | Kerava      | 10 000–10 999 | Lohja       | 19 000–19 999 | Pukkila     | 28 000–28 499 |
