@@ -91,8 +91,8 @@ mutta ne ovat autosijoittelussa taustaliikenteenä.
 | helsinki_cbd   | Helsingin kantakaupunki                         | 0 - 999          |
 | helsinki_other | Muu Helsinki                                    | 1 000 - 1 999    |
 | espoo_vant_kau | Muu pääkaupunkiseutu                            | 2 000 - 5 999    |
-| surrounding    | Kehyskunnat                                     | 6 000 - 15 999   |
-| surround_train | Junaliikenteeseen <br /> tukeutuvat kehyskunnat | 6 000 - 6 999 <br /> 10 000 - 11 999 <br /> 13 000 - 14 999 <br /> 15 500 - 15 999 |
+| surrounding    | Kehyskunnat + Siuntio                           | 6 000 - 15 999   |
+| surround_train | Junaliikenteeseen <br /> tukeutuvat kehyskunnat + Siuntio | 6 000 - 6 999 <br /> 10 000 - 11 999 <br /> 13 000 - 14 999 <br /> 15 500 - 15 999 |
 | surround_other | Muut kehyskunnat                                | 7 000 - 9 999 <br /> 12 000 - 12 999 <br /> 15 000 - 15 499 |
 | peripheral     | Ympäryskunnat                                   | 16 000 - 30 999  |
 
