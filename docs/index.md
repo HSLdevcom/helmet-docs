@@ -28,7 +28,7 @@ Mallijärjestelmän rakenne on esitetty tarkemmin seuraavassa kuvassa:
 
 ![Helmet-mallijärjestelmän rakenne](images/Helmet-mallijarjestelma.png)
 
-Mallijärjestelmän kysyntämalleja kuvataan tarkemmin raportissa [Helsingin seudun työssäkäyntialueen liikenne-ennustejärjestelmän kysyntämallit 2020](https://hslfi.azureedge.net/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf).
+Mallijärjestelmän kysyntämalleja kuvataan tarkemmin raportissa [Helsingin seudun työssäkäyntialueen liikenne-ennustejärjestelmän kysyntämallit 2020](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf).
 
 Mallijärjestelmän tarjontakuvauksista lisätietoa on raportissa Helsingin seudun liikenteen Emme-verkon kuvaus, joka on saatavilla mallin käyttäjien EXT-Helmet -Teams-ryhmässä.
 
@@ -36,7 +36,7 @@ Mallijärjestelmän tarjontakuvauksista lisätietoa on raportissa Helsingin seud
 
 Tässä on kuvattu keskeisiä nostoja Helmet 4:n uusista ominaisuuksista sekä eroavaisuuksista Helmet 3:een verrattuna.
 Laajemmin aihetta on kuvattu
-[malliraportissa](https://hslfi.azureedge.net/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf). 
+[malliraportissa](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf). 
 
 ### Kulkutapa- ja suuntautumismallien rakenne
 
