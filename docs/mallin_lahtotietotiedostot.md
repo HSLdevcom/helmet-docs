@@ -80,7 +80,7 @@ Verkkokuvausperiaatteita on kuvattu tarkemmin [täällä](emme_verkko.md).
 Noudatathan näitä periaatteita verkonkuvauksia koodatessa, jotta varmistutaan tulosten oikeellisuudesta ja aineistojen yhteiskäyttöisyydestä.
 
 Lisätietoja mallin käyttämisestä [täällä](mallitoiden_yleisohje.md).
-Taustatietoa verkkokuvausten muodostamisesta ja historiasta löydät raportista [Helsingin seudun työssäkäyntialueen  liikenne-ennustejärjestelmän tarjontamallit 2017](https://hslfi.azureedge.net/globalassets/julkaisuarkisto/2019/helsingin-seudun-tyossakayntialueen-liikenne-ennustejarjestelman-tarjontamallit-6-2019.pdf).
+Taustatietoa verkkokuvausten muodostamisesta ja historiasta löydät raportista [Helsingin seudun työssäkäyntialueen  liikenne-ennustejärjestelmän tarjontamallit 2017](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2019/helsingin-seudun-tyossakayntialueen-liikenne-ennustejarjestelman-tarjontamallit-6-2019.pdf).
 
 ## Lähtötietojen vaikutus ennustemallin eri osiin
 
