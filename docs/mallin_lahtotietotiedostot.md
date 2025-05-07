@@ -82,6 +82,15 @@ Noudatathan näitä periaatteita verkonkuvauksia koodatessa, jotta varmistutaan 
 Lisätietoja mallin käyttämisestä [täällä](mallitoiden_yleisohje.md).
 Taustatietoa verkkokuvausten muodostamisesta ja historiasta löydät raportista [Helsingin seudun työssäkäyntialueen  liikenne-ennustejärjestelmän tarjontamallit 2017](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2019/helsingin-seudun-tyossakayntialueen-liikenne-ennustejarjestelman-tarjontamallit-6-2019.pdf).
 
+## Lähtötietoja muokattaessa on ennen malliajoa tarkistettava mm. nämä asiat
+
+* Hinnoittelu esim. poistetaan ruuhkamaksut
+* Lisätään ruuhkamaksut
+* Muutetaan vuorovälit
+* Muutetaan väestötiedot
+* Mitä matriiseja muutetaan ja mille nimelle nimetään
+* Mikä makro tai mitä muutoksia malliin pitää lähtötietoihin tehdä, jos ei halua ajaa koko alustusmakroa
+
 ## Lähtötietojen vaikutus ennustemallin eri osiin
 
 * Autonomistus alueittain
