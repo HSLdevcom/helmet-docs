@@ -6,7 +6,7 @@ title: Etusivu
 # HSL:n liikenne-ennustejärjestelmän yleiskuvaus
 
 Helmet on HSL:n liikenne-ennustejärjestelmä, joka kattaa Helsingin seudun 14 kuntaa ja Siuntion sekä niitä ympäröivän työssäkäyntialueen.
-Uusin malliversio Helmet 4 julkaistiin lokakuussa 2020. Järjestelmä käyttää Inron Emme-ohjelmistoa.
+Uusin malliversio Helmet 5 julkaistaan marraskuussa 2025. Järjestelmä käyttää OpenPaths Emme-ohjelmistoa.
 
 HSL:n Helmet-liikenne-ennustemallia voidaan käyttää arvioimaan erilaisten muutostekijöiden vaikutuksia liikennejärjestelmään.
 Mallia hyödynnetään ja kehitetään erityisesti palvelemaan seudullisen MAL-suunnitelman vaikutusten arviontia.
@@ -18,7 +18,7 @@ matka-aikaan, saavutettavuuteen, matkamääriin ja liikennesuoritteisiin.
 
 ## Mallijärjestelmän rakenne
 
-Helmet 4 -mallijärjestelmässä mallin neljä porrasta ennustetaan seuraavassa järjestyksessä:
+Helmet 5 -mallijärjestelmässä mallin neljä porrasta ennustetaan seuraavassa järjestyksessä:
 1. Matkatuotos
 2. Kulkutavanvalinta
 3. Suuntautuminen
@@ -28,31 +28,31 @@ Mallijärjestelmän rakenne on esitetty tarkemmin seuraavassa kuvassa:
 
 ![Helmet-mallijärjestelmän rakenne](images/Helmet-mallijarjestelma.png)
 
-Mallijärjestelmän kysyntämalleja kuvataan tarkemmin raportissa [Helsingin seudun työssäkäyntialueen liikenne-ennustejärjestelmän kysyntämallit 2020](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf).
+Mallijärjestelmän kysyntämalleja kuvataan tarkemmin raportissa (KORJAA) [Helsingin seudun työssäkäyntialueen liikenne-ennustejärjestelmän kysyntämallit 2020](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf).
 
 Mallijärjestelmän tarjontakuvauksista lisätietoa on raportissa Helsingin seudun liikenteen Emme-verkon kuvaus, joka on saatavilla mallin käyttäjien EXT-Helmet -Teams-ryhmässä.
 
-## Helmet 4 uusia ominaisuuksia
+## Helmet 5 uusia ominaisuuksia
 
-Tässä on kuvattu keskeisiä nostoja Helmet 4:n uusista ominaisuuksista sekä eroavaisuuksista Helmet 3:een verrattuna.
+Tässä on kuvattu keskeisiä nostoja Helmet 5:n uusista ominaisuuksista sekä eroavaisuuksista Helmet 4:een verrattuna.
 Laajemmin aihetta on kuvattu
-[malliraportissa](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf). 
+(KORJAA) [malliraportissa](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf). 
 
 ### Kulkutapa- ja suuntautumismallien rakenne
 
 Helmet-mallien aiempiin versioihin verrattuna kulkutapa- ja suuntautumismallien rakenne on HS15-alueella käännetty siten,
 että kulkutavanvalinta on nyt ylemmällä tasolla kuin määräpaikan valinta (eli suuntautuminen).
 
-![Kulkutapa- ja suuntautumismallien rakenne eri Helmet-versioissa](images/Kulkutapa-%20ja%20suuntautumismallien%20rakenne%20eri%20Helmet-versioissa.png)
+(KORJAA) ![Kulkutapa- ja suuntautumismallien rakenne eri Helmet-versioissa](images/Kulkutapa-%20ja%20suuntautumismallien%20rakenne%20eri%20Helmet-versioissa.png)
 
 ### Aluejako
 
-Helmet 4 -malleissa käytetään vain yhtä aluejakoa, eli mallissa ei enää ole erillisiä ennuste- ja sijoittelualueita tai näiden välisiä jakolukuja.
+Helmet 5 -malleissa käytetään vain yhtä aluejakoa, eli mallissa ei enää ole erillisiä ennuste- ja sijoittelualueita tai näiden välisiä jakolukuja.
 Ennustealuejaon tihentyminen kasvattaa jonkin verran mallin ajon vaatimaa aikaa.
 
 ### Kiertomatkat
 
-Helmet 4 -ennustejärjestelmässä kysyntä ei perustu enää matkoihin, vaan kiertomatkoihin, johon meno- ja paluumatkojen
+Helmet 5 -ennustejärjestelmässä kysyntä perustuu kiertomatkoihin kuten Helmet 4 mallissa, johon meno- ja paluumatkojen
 (esimerkiksi kotoa töihin tai kouluun ja takaisin) lisäksi voi kuulua toissijainen määräpaikka: esimerkiksi työmatkaan liittyvä kauppa- tai asiointimatka.
 
 ### Agenttisimuloinnin kehittäminen
@@ -60,7 +60,6 @@ Helmet 4 -ennustejärjestelmässä kysyntä ei perustu enää matkoihin, vaan ki
 Uudessa ennustejärjestelmässä on mahdollisuus ajaa perinteisen malliajon lisäksi niin sanottuja agenttisimulointeja,
 joissa voidaan seurata yksilöiden matkustamista vuorokauden aikana.
 Tällä tavalla voidaan tutkia miten erilaiset toimenpiteet vaikuttavat eri väestöryhmiin.
-Tätä mahdollisuutta kehitetään edelleen talven 2020-2021 aikana MAL-suunnittelun vaikutusten arvioinnin kehittämisen yhteydessä. 
 
 ### Joukkoliikenteen ruuhkautuvuus
 
