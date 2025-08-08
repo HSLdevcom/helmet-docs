@@ -46,22 +46,22 @@ Tästä on sovittava HSL:n yhteyshenkilöiden kanssa erikseen.
 
 | numeroavaruus | selitys | aliavaruudet  | selitys ja huomiot |
 |---------------|---------|---------------|--------------------|
-| 1-30 999      | sentroidit, tavalliset (aiemmin 1-38 999) | | kunnittain tuhatluvun (1 tai 2 ensimmäisen numeron) perusteella, ks. tarkemmin kohta [Sentroidien numerointi](#sentroidien-numerointi) |
-| 31 000–31 999 | sentroidit, ulkosyötöt (aiemmin 39 000 -> 39 999) | 31 000–31 299 (käytössä 31 000–31 036) | ulkosyötöt, autoväylät |
-|               |         | 31 300–31 399 (käytössä 31 300–31 302) | ulkosyötöt, junaradat |
-|               |         | 31 400–31 499 | ulkosyötöt, lentoasema(t) |
-|               |         | 31 500–31 599 | ulkosyötöt, satamat |
-|               |         | 31 600–31 999 | tyhjää tilaa vielä tuntemattomien kulkumuotojen  ulkosyötöille |
-| 32 000–34 999 | varautuminen mm. liityntäpysäköintialueisiin, muihin pysäköintialueisiin, kauppakeskuksiin, urheilulaitoksiin jne. | 32 000–32 999 | liityntäpysäköintialueet (varautuminen) |
-|               |         | 33 000–34 999 | tyhjää tilaa muille pysäköintilaitoksille, kauppakeskuksille ja urheilulaitoksille yms. (varautuminen) |
-| 35 000–39 999 | ”villit sentroidit” | 35 000–39 999 | tilaa vapaisiin tarkasteluihin, joissa halutaan lisätä sentroideja olemassa olevien sentroidien perään |
+| 1-31 999      | sentroidit, tavalliset (aiemmin 1-30 999) | | kunnittain tuhatluvun (1 tai 2 ensimmäisen numeron) perusteella, ks. tarkemmin kohta [Sentroidien numerointi](#sentroidien-numerointi) |
+| 32 000–33 999 | varautuminen mm. pysäköintiaitoksiin, kauppakeskuksiin, urheilulaitoksiin jne. |33 000–33 999 
+| 34 000–34 999 | sentroidit, ulkosyötöt (aiemmin 31 000 -> 31 999) | 34 000–34 299 (käytössä 34 000–34 036) | ulkosyötöt, autoväylät |
+|               |         | 34 300–34 399 (käytössä 34 300–34 302) | ulkosyötöt, junaradat |
+|               |         | 34 400–34 499 | ulkosyötöt, lentoasema(t) |
+|               |         | 34 500–34 599 | ulkosyötöt, satamat |
+|               |         | 34 600–34 999 | tyhjää tilaa vielä tuntemattomien kulkumuotojen  ulkosyötöille |
+| 35 000-35 999 | liityntäpysäköintilaitokset| 35 000-35 999 (käytössä 35 000-35 096) | 
+| 36 000–39 999 | ”villit sentroidit” | 36 000–39 999 | tilaa vapaisiin tarkasteluihin, joissa halutaan lisätä sentroideja olemassa olevien sentroidien perään |
 
 Erikoissentroideista verkolle on lisätty omat sentroidit Helsinki-Vantaan lentoasemalle ja Helsingin satamille:
-- Lentoasema: i = 31 400
-- Katajanokka: i = 31 500
-- Eteläsatama: i = 31 501
-- Länsisatama: i = 31 502
-- Vuosaaren satama: i = 31 503
+- Lentoasema: i = 34 400
+- Katajanokka: i = 34 500
+- Eteläsatama: i = 34 501
+- Länsisatama: i = 34 502
+- Vuosaaren satama: i = 34 503
 
 *Taulukko 2. Solmuavaruuden jako, muut solmut kuin sentroidit*
 
@@ -95,6 +95,7 @@ Tietoja käytetään pysähtymistietoskriptissä.
 | solmuattribuutti | ui2   | solmun tyyppi, ks. taulukko 4                                |
 | solmuattribuutti | ui3   | sen kunnan kelakoodi, jossa solmu sijaitsee (ks. taulukko 5) |
 | solmuattribuutti | label | joukkoliikenteen lippuvyöhyke (A, B, C tai D) tai tieto muista kunnista joilla on omat lipputuotteensa: Järvenpää (J), Nurmijärvi (N), Vihti (V), Mäntsälä/Hyvinkää (M), Pornainen (P) |
+| extra-attribuutti| @korkeus| vaihtoehtoinen tapa esittää mäkisyyttä pyörätieverkolla, käytettävissä esimerkiksi pyörätiesiltojen mallinnuksessa. Vaatii, että @kaltevuus linkkiattribuutti asetetaan nollaan.
 
 *Taulukko 4. Solmutyypit (ui2) ja niiden selitykset*
 
@@ -243,6 +244,7 @@ Verkolla käytetyt kulkumuodot (modes) ja joukkoliikenteen ajoneuvotyypit (vehic
 | ul2             | linkin vapaa nopeus                                          | ei käytössä (0) | ei käytössä (0)                     |
 | ul3             | autoliikenteen linkeille sijoitellaan aluksi raskas liikenne, ja tulokset tallennetaan linkkiattribuuttiin ul3 (oltava link user datassa eikä extra-attribuutissa, jotta tietoa voidaan käyttää sijoittelufunktioissa)         | ei käytössä (0) | ei käytössä (0)                     |
 | @pyoratieluokka | pyörätien laatuluokka (taulukko 12)                          | ei käytössä (0) | pyörätien laatuluokka (taulukko 12) |
+| @kaltevuus      | linkin pituuskaltevuus (ei hyödynnetty)                      | ei käytössä     | linkin pituuskaltevuus (mäkisyyden mallinnus)|
 
 ### Linkkityypit, väyläluokat ja sallitut kulkutavat
 
@@ -326,7 +328,7 @@ jos moottoritien rinnalla tai läheisyydessä kulkee kävely- ja pyörätie.
 | 39 |                          | kesk.kokooja                                 |            |  40 |  36     |  750     | 139 239 339 439 539 639 |
 | 40 |                          | keskusta, hidas pääkatu                      |            |  40 |  36     |  900     | 140 240 340 440 540 640 |
 | 41 |                          | pienet tonttikadut                           |            |  30 |  30     |  600     | 141 241 341 441 541 641 |
-| 42 |                          | keskusta, pienet kadut                       |            |  30 |  23     |  500     | 142 242 342 442 542 642 |
+| 42 |                          | keskusta, pienet kadut                       |            |  30 |  12 ****|  500     | 142 242 342 442 542 642 |
 | 43 |                          | keskustan pääkatu, 30 km/h                   |            |  30 |  30     |  750     | 143 243 343 443 543 643 |
 
 *) Alun perin 2200, mutta verkolla on käytetty johdonmukaisesti kapasiteettia 2100, Trafixin mukaan siksi,
@@ -337,6 +339,8 @@ jos autoliikenteen käytössä on vähintään kolme kaistaa ko. aikajakson aika
 
 ***) Helmet 3.1+:ssa linkin vapaata nopeutta kasvatettu 54:stä arvoon 63 km/h.
 
+****) Helmet 5:ssa linkin vapaata nopeutta laskettu arvosta 23 arvoon 12. Käytettävä vain ahtaimmilla kaduilla
+
 ### Raitiovaunujen nopeus
 
 Nopeus raitiotieverkolla määräytyy linkkiattribuuttiin ul1 koodattujen nopeuksien perusteella.
@@ -346,15 +350,19 @@ Jos aamun nopeus on alle 10 km/h, nopeus kirjoitetaan muodossa `abbcc`.
 ### Pyörätieluokat
 
 Pyöräliikenneverkossa, kaikille linkeille on määritelty pyörätieluokka (0-4) extra atribuuttiin @pyoratieluokka.
-Pyörätien miellyttävyyteen vaikuttaa sekä määritelty pyörätieluokka että linkkityyppi seuraavan taulukon mukaan.
+Pyörätien miellyttävyyteen tasaisella maalla vaikuttaa sekä määritelty pyörätieluokka että linkkityyppi seuraavan taulukon mukaan. Lisäksi miellyttävyyteen vaikuttaa reitin mäkisyys siten, että alamäki nopeuttaa kulkua, ja ylämäki hidastaa sitä. Ylämäen hidastusvaikutus on suurempi, kuin alamäen nopeutusvaikutus, joten reitinvalinnassa vältetään mäkiä. Pyöräkaistoilla ja sekaliikenteessä myös autoliikenteen määrä samalla katuosuudella vaikuttaa katuosuuden miellyttävyyteen, minkä takia pyörätieluokkien kuvaaminen on aiempaa tärkeämpää, jotta autoliikenteestä ei aiheutuisi haittaa niillä väylillä, joissa haittaa ei todellisuudessa ole.
+
 Baanan määritelmä on tässä seuraava: (1) ei juuri tasoristeyksiä eikä muita esteitä (esim. bussipysäkkejä), 
 (2) oma tarpeeksi leveä tila selvästi eroteltu jalankulusta, (3) tasainen, asfaltoitu pinta, ei jyrkkiä mäkiä.
+Pyöräkadut kuvataan tilanteen mukaan pääsääntöisesti pyörätieluokkana 3, vaikka katuosuus olisi osana baanaverkkoa. Tämä johtuu siitä, että pyöräkatu ei ole täysin vapaa esteistä johtuen pyöräliikenteen joukossa kulkevasta autoliikenteestä. Tulevaisuudessa, jos pyöräkatuja toteutetaan seudulle useampia, voi olla tarpeen toteuttaa oma luokka pyö
+
 Jos moottoritien varressa on pyörätie, sen luokka on yleensä 3 (erillinen pyörätie).
-Pyörätiet käyttävät autoverkon solmuja.
+Pyörätiet käyttävät autoverkon solmuja, paitsi moottoriteillä, joiden ympäristössä pyörätiet pyritään koodaamaan erikseen.
+
 
 *Taulukko 12. Pyörätieluokkien vaikutus*
 
-|                                     | @pyoratieluokka | Linkkityypit | Miellyttävyys |
+|                                     | @pyoratieluokka | Linkkityypit | Miellyttävyys tasaisella |
 |-------------------------------------|-----------------|--------------|---------------|
 | Baana                               | 4               |              | 19            |
 | Erillinen pyörätie                  | 3               |              | 17            |

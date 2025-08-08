@@ -32,7 +32,7 @@ Alla on lueteltu HELMET-sijoittelupankin (lisenssikoko vähintään 9) dimensiot
 | Muuttuja                                                                  | Koko      | Vaihtoehtoinen koko                                 |
 |---------------------------------------------------------------------------|-----------|-----------------------------------------------------|
 | Network scenarios                                                         | 1+        | 5+ (jos ajanjaksot erillisiin skenaarioihin)        |
-| Zones or centroids                                                        | 2100      |                                                     |
+| Zones or centroids                                                        | 2350      |                                                     |
 | Nodes incl. centroids                                                     | 20 000    |                                                     |
 | Directional links                                                         | 55 000    |                                                     |
 | Transit vehicle types                                                     | 30        |                                                     |
@@ -42,7 +42,7 @@ Alla on lueteltu HELMET-sijoittelupankin (lisenssikoko vähintään 9) dimensiot
 | Full matrices                                                             | 100       | 400+ (jos matriisit Emmessä talteen)                |
 | Origin matrices                                                           | 10        |                                                     |
 | Destination matrices                                                      | 10        |                                                     |
-| Words for extra attributes                                                | 9 700 000 | 3 100 000 (jos ajanjaksot erillisiin skenaarioihin) |
+| Words for extra attributes                                                | 9 900 000 | 3 300 000 (jos ajanjaksot erillisiin skenaarioihin) |
 | SOLA/PToll analyses                                                       | 240       |                                                     |
 
 Muokkaa seuraavaksi yksikköasetuksia. Asetuksiksi käyvät seuraavat (voit muokata näitä myös valitsemalla Tools - Prompt ja moduulin 1.23):
@@ -73,7 +73,7 @@ Moduuli lukee skenaarioon tarpeelliset tiedot tiedostoista
 
 |Tiedosto                      | Sisältö                                                    |
 |------------------------------|------------------------------------------------------------|
-|`modes_xxx.txt`	             |	kulkutavat (yhteinen kaikille skenaarioille)              |
+|`modes_xxx.txt`	           |	kulkutavat (yhteinen kaikille skenaarioille)              |
 |`vehicles_xxx.txt`	           |	ajoneuvotyypit (yhteinen kaikille skenaarioille)          |
 |`base_network_xxx.txt`        |	verkko (yhteinen kaikille ajanjaksoille)                  |
 |`transit_lines_xxx.txt`       |	linjasto (yhteinen kaikille ajanjaksoille)                |

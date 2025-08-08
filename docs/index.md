@@ -47,40 +47,42 @@ että kulkutavanvalinta on nyt ylemmällä tasolla kuin määräpaikan valinta (
 
 ### Aluejako
 
-Helmet 5 -malleissa käytetään vain yhtä aluejakoa, eli mallissa ei enää ole erillisiä ennuste- ja sijoittelualueita tai näiden välisiä jakolukuja.
-Ennustealuejaon tihentyminen kasvattaa jonkin verran mallin ajon vaatimaa aikaa.
+Helmet 5 mallissa on aiempaa enemmän sijoittelualueita Itä- ja Länsi-Uudellamaalla. Laajennustyö on toteutettu Uudenmaanliiton tilaamana erillisenä työnä vuonna 2021, ja laajennus on integroitu osaksi Helmet mallia Helmet 5 päivitystyön yhteydessä. 
 
-### Kiertomatkat
+### HSL-alueen ulkopuolinen joukkoliikenne
 
-Helmet 5 -ennustejärjestelmässä kysyntä perustuu kiertomatkoihin kuten Helmet 4 mallissa, johon meno- ja paluumatkojen
-(esimerkiksi kotoa töihin tai kouluun ja takaisin) lisäksi voi kuulua toissijainen määräpaikka: esimerkiksi työmatkaan liittyvä kauppa- tai asiointimatka.
+HSL-alueen ulkopuolinen joukkoliikenne on päivitetty vastaamaan vuoden 2023 tarjontaa GTFS aineiston pohjalta. Joukkoliikenteen tarjonta sisältää nyt myös muiden kaupunkiseutujen seudullisen joukkoliikenteen.
 
-### Agenttisimuloinnin kehittäminen
-
-Uudessa ennustejärjestelmässä on mahdollisuus ajaa perinteisen malliajon lisäksi niin sanottuja agenttisimulointeja,
-joissa voidaan seurata yksilöiden matkustamista vuorokauden aikana.
-Tällä tavalla voidaan tutkia miten erilaiset toimenpiteet vaikuttavat eri väestöryhmiin.
 
 ### Joukkoliikenteen ruuhkautuvuus
 
-Aikaisemmissa malliversioissa ruuhkautuminen aiheutti ongelmia:
-* Jotkut linjat ylikuormittuivat epärealistisesti
-* Hankearvioinnit eivät ole ottaneet huomioon kapasiteettilisäysten vaikutuksia matkan mukavuuteen ja toteutettavuuteen
+<!-- Päivitettävä -->
 
-Kuormitusaste vaikuttaa reitinvalintoihin, ja reitin vastus kasvaa kun linjan kuormitusaste kasvaa.
-Ruuhkautuvuus vaikuttaa ainoastaan loppusijoitteluun eli siihen minkä kyseistä yhteysväliä palvelevan joukkoliikennelinjan matkustaja valitsee,
-ei kulkutavan valintaan tai suuntautumiseen.
+
+### Joukkoliikennevälineet
+
+Joukkoliikennevälineiden kapasiteetteja on tarkistettu ja uusia vaihtoehtoisia joukkoliikennevälineitä on lisätty. 
+ * Runkobussilinjoilla käytettävissä nivelbussi
+ * Lähijunaliikenteessä mahdollisuus käyttää 1-, 2- tai 3-yksikköisiä Sm5 kokonaisuuksia, aiemmin vain 2-yksikköinen käytössä.
+ * HSL-alueen ulkopuolisessa joukkoliikenteessä käytetään kaukobusseja, joissa istumapaikkoja on aiempaa enemmän, mutta seisomapaikkoja ei lainkaan
+ * Pika-kaukobusseille on mahdollisuutena myös kaksikerroksinen bussi
+
+Vaihtoehdoista HSL:n tarjoamissa verkoissa on käytössä ainoastaan nivelbussit linjoilla 20, 30, 40, 560 ja 570, sekä kaksikerroksiset bussit OnniBus MEGA -linjoilla. Muut muutokset ovat käytettävissä harkinnanvaraisesti erilaisissa tarkasteluissa.
+
+### Liityntäpysäköinnin mallinnus
+
+Liityntäpysäköinti on tuotu osaksi mallin kulkutapoja. Liityntäpysäköinti tapahtuu kahtena osamatkana, jossa ensimmäinen osamatka tehdään autolla ja toinen joukkoliikenteellä. Liityntäpysäköintiä varten malliin on kuvattu seudun liityntäpysäköintilaitokset ja niiden kapasiteetit ja mahdollinen hinta. Liityntäpysäköintilaitokset on kuvattu sentroideina, joiden numeroavaruus on 35 000 - 35 999
+
 
 ### Pyöräilyn mallinnus
 
-* Pyöräilylinkit (yhteydet) on tarkistettu
-* Verkolle on lisätty tieto pyörätien karkeasta laatuluokasta:
-  * Baana
-  * Erillinen pyörätie
-  * Pyörätie kadun varressa
-  * Pyöräkaista
-  * Sekaliikenne (oletus)
-* Pyöräilyn yhteydet vaikuttavat reitinvalintoihin
+Pyöräilyn mallintamista on kehitetty Helmet 5 versiossa aiemman Helmet 4 version kehitystyön jatkona.
+
+* Pyöräilyn väyliä on tarkistettu laajasti HS15 alueella
+* Pyöräliikennettä ei enää pääsääntöisesti kuvata moottoriteille, ja moottoriteiden rinnakkaiset pyöräväylät on kuvattu omina linkkeinään Helsingissä ja Espoossa.
+* Pyöräilyn reitinvalintaan vaikuttaa myös maastonmuodot ja samalla väylällä kulkeva autoliikenne
+  * Linkeillä uusi extra-attribuutti @kaltevuus, joka tuotetaan automaatiolla
+  * Solmuilla uusi extra-attribuutti @korkeus, jota voidaan käyttää vaihtoehtoisena kaltevuudelle verkkoja koodatessa.
 
 ## Mallintamisen taustoja
 

@@ -22,7 +22,7 @@ Poikkeamat näihin on syytä dokumentoida huolella (ks. [dokumentointiohje](HSL-
 
 ## Malliajojen ohje
 
-Helmet-käyttöliittymän (UI) kautta pääset määrittämään projektin asetukset ja lähtötiedot.
+Helmet-käyttöliittymän (UI) kautta pääset määrittämään projektin asetukset ja lähtötiedot. Helmet käyttöliittymä on saatavilla [täältä](https://github.com/HSLdevcom/helmet-ui)
 
 ### Asetukset
 
