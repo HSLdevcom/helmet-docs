@@ -56,7 +56,7 @@ HSL-alueen ulkopuolinen joukkoliikenne on päivitetty vastaamaan vuoden 2023 tar
 
 ### Joukkoliikenteen ruuhkautuvuus
 
-<!-- Päivitettävä -->
+HELMET 5 -malliversiossa ruuhkautuvan joukkoliikenteen sijoittelu on otettu käyttöön kaikilla malli-iteraatioilla. Tämä tarkoittaa, että joukkoliikenteen ruuhkautumisen vaikutukset otetaan huomioon koko mallinnusprosessin ajan, ei vain loppusijoitteluvaiheessa. Lisäksi ruuhkautumista kuvaavaa funktiota on tarkennettu siten, että se vastaa Väyläviraston määrittelemiä yksikköarvoja. Uuden ruuhkautumisfunktion mukainen koettumatka-aika kasvaa aiempaa maltillisemmin tilanteissa, joissa joukkoliikennevälineen kapasiteetti loppuu kesken.
 
 
 ### Joukkoliikennevälineet
