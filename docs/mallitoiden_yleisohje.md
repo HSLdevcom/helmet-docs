@@ -32,7 +32,7 @@ Mallin ajoa varten tulee määritellä seuraavat asetukset.
 
 - Suorituskelpoinen Emme Python 
   - Tämän **on oltava** Emmen mukana tullut ’python.exe’, jotta tietyt edellytykset täyttyvät.
-  - esim. `C:\Program Files\INRO\Emme\Emme 4\Emme-4.5.0\Python37\python.exe`
+  - esim. `C:\Program Files\Bentley\OpenPaths\EMME 24.00.00\Python311\python.exe`
 - GitHubin [Helmet 4.1 Model System](https://github.com/HSLdevcom/helmet-model-system)-sivuston kansio ’Scripts’
   - Kansiossa ovat järjestelmän käyttämät Python-ohjelmat.
   - Version päivitys voidaan tehdä klikkaamalla "Lataa eri versio...". Nämä eivät korvaa skriptien vanhoja versioita, 

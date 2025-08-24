@@ -6,14 +6,13 @@ sort: 1
 # Asennus
 
 Tässä ohjeessa kuvataan [Helmet 4.1-liikenne-ennustejärjestelmän](https://github.com/HSLdevcom/helmet-model-system) käyttöliittymää. 
-Järjestelmä käyttää INROn [Emme–ohjelmistoa](https://www.inrosoftware.com/en/products/emme/).
+Järjestelmä käyttää Bentleyn [Openpaths Emme–ohjelmistoa](https://www.bentley.com/software/openpaths/).
 
 ## Emmen asennus
 
 Ennen kuin Helmet UI -käyttöliittymää voidaan käyttää, seuraavien edellytysten on täytyttävä:
 
-1.	[Emme 4.5.X](https://www.inrosoftware.com/en/products/emme/) on asennettu, lisenssi on aktivoitu (Authorization) 
-   ja koneessa on lisenssitikku (INRO Key).
+1.	[Openpaths Emme](https://www.bentley.com/software/openpaths/) on asennettu, lisenssi on aktivoitu.
 2.	Käyttäjän PATH -ympäristömuuttujiin on lisätty `%EMMEPATH%\programs`.
     -	Avaa Windows-järjestelmän Ohjauspaneeli
     -	Valitse Käyttäjätilit ja vielä uudelleen Käyttäjätilit. Valitse sen jälkeen vasemmalla olevasta valikosta ”Muuta ympäristömuuttujia”.
@@ -28,7 +27,7 @@ Ennen kuin Helmet UI -käyttöliittymää voidaan käyttää, seuraavien edellyt
 Seuraavaksi sinun on määriteltävä *Emme-projekti*. 
 Kutakin projektia varten kannattaa luoda yksi yhteinen Emme-projektipankki, johon kootaan eri Helmet-skenaariot (esim. eri linjastovaihtoehdot).
 
-1. Käynnistä Emme-ohjelmisto.
+1. Käynnistä Openpaths Emme-ohjelmisto.
 2. Perusta uusi projekti. Määrittele, mihin kansioon haluat sen asentaa. 
    - Emme muodostaa tiedoston `projektin_nimi.emp` kansioon `projektin_nimi` ja sen alikansioon 
      `projektin_nimi\database` suuren binaaritiedoston `emmebank` sekä muitakin alikansioita ja tiedostoja.
