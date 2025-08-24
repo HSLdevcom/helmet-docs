@@ -33,7 +33,7 @@ Mallin ajoa varten tulee määritellä seuraavat asetukset.
 - Suorituskelpoinen Emme Python 
   - Tämän **on oltava** Emmen mukana tullut ’python.exe’, jotta tietyt edellytykset täyttyvät.
   - esim. `C:\Program Files\Bentley\OpenPaths\EMME 24.00.00\Python311\python.exe`
-- GitHubin [Helmet 4.1 Model System](https://github.com/HSLdevcom/helmet-model-system)-sivuston kansio ’Scripts’
+- GitHubin [Helmet 5.0 Model System](https://github.com/HSLdevcom/helmet-model-system)-sivuston kansio ’Scripts’
   - Kansiossa ovat järjestelmän käyttämät Python-ohjelmat.
   - Version päivitys voidaan tehdä klikkaamalla "Lataa eri versio...". Nämä eivät korvaa skriptien vanhoja versioita, 
   vaan uusimmat versiot skripteistä talletetaan uuteen kansioon.
@@ -63,7 +63,7 @@ Jokaista ajettavaa HELMET-skenaariota kohden on tehtävä seuraavat määrittely
    Asetuksista riippuen sijoittelutulokset tallennetaan tähän skenaarioon tai erikseen seuraavaan neljään skenarioon (vrk, aht, pt, iht).
 4.	Kansio, jossa ovat syöttötiedot
     - esim. `C:\Helmet\Scenario_input_data\2030`
-    - Kansiossa on oltava *yksi* kappale kustakin tiedostotyypista .cco, .edu, .ext, .lnd, .pop, .prk, .tco, .trk sekä .wrk. 
+    - Kansiossa on oltava *yksi* kappale kustakin tiedostotyypista .cco, .edu, .ext, .lnd, .pop, .prk, .pnr, .tco, .trk sekä .wrk. 
       Tiedostojen nimillä ei ole merkitystä, ja ne voivat poiketa toisistaan (kansiossa voi esim. olla 2023.pop ja 2023_b.wrk).
 5.	Suoritettavien iteraatiokierrosten enimmäismäärä (yleensä 15)
     - Voit myös tehdä pelkän loppusijoittelun, jolloin iteraatioita ei ajeta. Pelkän
