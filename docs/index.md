@@ -43,7 +43,7 @@ Laajemmin aihetta on kuvattu
 Helmet-mallien aiempiin versioihin verrattuna kulkutapa- ja suuntautumismallien rakenne on HS15-alueella käännetty siten,
 että kulkutavanvalinta on nyt ylemmällä tasolla kuin määräpaikan valinta (eli suuntautuminen).
 
-(KORJAA) ![Kulkutapa- ja suuntautumismallien rakenne eri Helmet-versioissa](images/Kulkutapa-%20ja%20suuntautumismallien%20rakenne%20eri%20Helmet-versioissa.png)
+![Kulkutapa- ja suuntautumismallien rakenne eri Helmet-versioissa](images/Kulkutapa-%20ja%20suuntautumismallien%20rakenne%20eri%20Helmet-versioissa.png)
 
 ### Aluejako
 
