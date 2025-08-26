@@ -1,3 +1,8 @@
+---
+nav_order: 7
+sort: 7
+---
+
 # Vaikutusten arviointi
 
 Vaikutusten arviointi nojaa usein Väyläviraston ylläpitämään [hankearviointiohjeistukseen](https://vayla.fi/suunnittelu/hankkeiden-suunnittelu/vaikutusten-arviointi/liikennevaylat) siinä, millaisia oletuksia voidaan tehdä. Em. ohjeiden noudattaminen on usein myös edellytys arvioinneissa, joissa valtio on mukana kumppanina tai joita valtio hyödyntää päätöksenteossaan. Myös useimmat liikennejärjestelmävertailut pohjautuvat hankearviointiohjeiden mittareihin, vaikka niitä hyödyntäisivät vain kuntatoimijat. 

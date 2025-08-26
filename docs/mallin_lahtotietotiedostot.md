@@ -5,14 +5,69 @@ sort: 5
 
 # Lähtötiedot
 
-## HSL:n ylläpitämät lähtötiedot
+## Aineistojen ylläpito
 
-Yleiskuvaus HSL:n ylläpitämistä aineistoista ja niiden päivitysperiaatteista löytyy [täältä](HSL_lahtotiedot.md).
-HSL:n lähtötietoaineistot (mm. maankäytöt ja verkkojen tiedot) saat ladattua zip-pakettina,
-kun olet täyttänyt aineistojen luovutuksen hakemuslomakkeen EXT-Helmet -Teams-ryhmässä.
-Paketti sisältää seuraavat aineistot:
+HSL ylläpitää lähtötietoaineistoja MAL-suunnittelun ja joukkoliikennesuunnittelun tueksi.
+Aineistojen nimissä on yleensä jokin vuosiskenaario, mutta ennusteet eivät koskaan kuvaa tarkkaa vuotta, vaan tiettyä hankkeiden,
+maankäyttöjen ja muiden lähtötietojen yhdistelmää.
 
-### Ennusteskenaarioiden syöttötiedot
+Tässä on kuvattu yleisesti HSL:n ylläpitämiä lähtötietoaineistoja.
+Ohjeita aineistojen lataamiseen ja käyttöön löydät [täältä](mallitoiden_yleisohje.md) ja tarkemman kuvauksen
+aineistojen rakenteesta [täältä](mallin_lahtotietotiedostot.md).
+
+## Ennusteskenaarioiden syöttötiedot (maankäyttö, kustannukset ym)
+
+HSL:n virallisia kysyntämallin lähtötietoja ylläpitää Johanna Piipponen. 
+
+**Lähtötietoja tuotetaan MAL-suunnittelun yhteydessä n. neljän vuoden välein seuraaville skenaarioille:**
+* Nykytilakuvaus
+* Ennuste n. 10 vuoden päähän (voi olla useita erilaisia)
+* Ennuste n. 30 vuoden päähän (voi olla useita erilaisia)
+
+Aineistojen sisältöjä on kuvattu tarkemmin aineiston jakokansiossa, johon saat käyttöoikeuden täyttämällä hakemuslomakkeen EXT-Helmet -Teams-ryhmässä.
+Tiedostopolun juuressa on dokumentti (esim. MAL2019-ennusteet.docx), joka sisältää aineistojen yleiskuvauksen,
+ja tarkempia tietoja löytyy kunkin tiedoston sisältä kommmentteina.
+
+Kysyntämalleja on kuvattu tarkemmin raportissa [Helsingin seudun työssäkäyntialueen liikenne-ennustejärjestelmän kysyntämallit 2020](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf).
+
+## Verkkokuvaukset
+
+HSL:n virallisia tarjontamallin lähtötietoja ylläpitää Mervi Vatanen.
+
+Vuosittain päivitetään tuore nykytilan kuvaus sekä mahdolliset muutokset tulevien vuosien kuvauksiin HSL:n ja kuntien tuottamiin suunnitelmiin perustuen.
+Päivitetyt versiot julkaistaan aina alkusyksystä. Verkkojen vuosipäivityksiä laaditaan vuosittain kuvaamaan kunkin syksyn liikennetilannetta HSL-liikenteessä. 
+Muutostyö käynnistyy tammikuussa Liikennöintisuunnitelman hyväksymisen jälkeen, ja viimeistellään kesällä, kun kaikki syksyn muutokset ovat varmistuneet.
+Tässä yhteydessä samat muutokset kuvataan myös MAL-verkkojen päivitettäviin versioihin sekä välivuosien verkoille.
+Lisäksi tulevaisuuden verkkoihin viedään tiedot esim. valmistuneiden linjastosuunnitelmien tuomista muutoksista. 
+
+Kaukojunaliikennettä ja muiden kuin HSL-alueen bussilinjoja ei päivitetä säännöllisesti vuosipäivitysten yhteydessä.
+Kaukojunaliikennettä päivitetään suurempien muutosten yhteydessä, ja viimeisin muutos on syksyltä 2023.
+Muiden kuin HSL:n järjestämän linja-autoliikenteen viimeisin päivitys on vuodelta 2023.
+
+Laajempia muutoksia tehdään MAL-suunnittelun yhteydessä n. neljän vuoden välein, ja tässä pohjana käytetään viimeisimmän vuosipäivityksen mukaisia verkkoja.
+
+**Lähtötietoja tuotetaan seuraaville skenaarioille:**
+* Nykytilan kuvaus
+* MAL-suunnitelman tavoitevuoden skenaario
+* MAL-suunnitelman pitkän aikavälin tavoiteskenaario
+* MAL-suunnitelman mukaiset välivuosiskenaariot (5 vuoden välein)
+
+Aineistojen sisältöjä on kuvattu tarkemmin aineiston jakokansiossa, johon saat käyttöoikeuden täyttämällä hakemuslomakkeen EXT-Helmet -Teams-ryhmässä.
+Kullekin vuodelle on oma alikansionsa ja niistä löytyy readme-tiedostot, joissa on selostettu yleiskuvaus aineistosta.
+
+Ilmoitathan Merville, mikäli havaitset tarjontakuvauksissa puutteita tai korjaustarpeita.
+Mervi ylläpitää korjaustarvelistaa sekä tarjontamallin lähtötietojen tarkempia kuvauksia.
+
+Verkkokuvausperiaatteita on kuvattu tarkemmin raportissa Helsingin seudun liikenteen Emme-verkon kuvaus,
+joka on saatavilla mallin käyttäjien EXT-Helmet -Teams-ryhmässä.
+Noudatathan näitä periaatteita verkonkuvauksia koodatessa, jotta varmistutaan tulosten oikeellisuudesta ja aineistojen yhteiskäyttöisyydestä. 
+
+Lisätietoja mallin käyttämisestä [täällä](mallitoiden_yleisohje.md).
+Taustatietoa verkkokuvausten muodostamisesta ja historiasta löydät raportista [Helsingin seudun työssäkäyntialueen liikenne-ennustejärjestelmän tarjontamallit 2017](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2019/helsingin-seudun-tyossakayntialueen-liikenne-ennustejarjestelman-tarjontamallit-6-2019.pdf).
+
+
+
+## Ennusteskenaarioiden syöttötiedot
 
 Kansio sisältää kullekin tarkasteluvuodelle/skenaariolle alikansion, jossa on lähtötiedot mm. maankäytön ja kustannusten osalta.
 Kunkin tiedoston alussa on kuvattu mitä tiedosto sisältää ja mistä tiedot tulevat.
@@ -36,6 +91,7 @@ Pysäköintinormit vaikuttavat vain uusien asukkaiden autonomistukseen.
 * **ext** = ulkoinen liikenne eli työsäkäyntialueen tienpäät (kasvukerroin verrattuna nykytilaan)
 * **lnd** = kunkin ennustealueen rakennetun maa-alan osuus sekä erillistalojen osuus rakennuskannasta
 * **pop** = kunkin ennustealueen kokonaisväkiluku sekä eri ikäryhmien osuudet
+* **pnr** = liityntäpysäköintilaitosten kapasiteetti ja 12 tunnin hinta
 * **prk** = kunkin ennustealueen työpaikan ja asiointimatkojen pysäköintikustannukset
 * **tco** = joukkoliikenteen kuukausikustannukset eri vyöhykkeillä
 * **trk** = rekkaliikenteen lähtötiedot: yhdistelmäajoneuvoilta kielletyt ennustealueet ja jätteenkäsittelylaitosten ennustealueet
@@ -62,8 +118,8 @@ Kansio sisältää kullekin tarkasteluvuodelle/skenaariolle alikansion, jossa on
   (HUOM: pysähtymiset lasketaan solmujen tietojen perusteella ennusteprosessin aikana ja eri aikajaksojen vuorovälit ajetaan sisään
   erillisestä tiedostosta `extra_transit_lines_xxx.txt`)
 * **turns_xxx.txt** = kääntymiskiellot eri solmujen välillä
-* **extra_links_xxx.txt** = linkkikohtainen tienkäyttömaksu eri aikajaksoilla (aht, pt, iht)
-* **extra_links_xxx.txt** = pyörätieluokka eri linkeillä
+* **extra_links_xxx.txt** = linkkikohtainen tienkäyttömaksu eri aikajaksoilla (aht, pt, iht), pyörätieluokka eri linkeillä, linkin kaltevuus
+* **extra_nodes_xxx.txt** = solmun korkeustaso
 * **extra_transit_lines_xxx.txt** = joukkoliikennelinjojen vuorovälit eri aikajaksoilla (aht, pt, iht)
 
 Skenaariot voi muodostaa kootusti Modellerissa, tarkempi kuvaus [täällä](sijopankki.md). 

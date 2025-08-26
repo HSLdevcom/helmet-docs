@@ -4,10 +4,17 @@ sort: 3
 ---
 
 # Emme-verkon kuvaus
+{: .no_toc }
 
 Tässä kerrotaan millä periaatteilla Emmen liikenneverkko ja joukkoliikennelinjasto on luotu.
 Noudatathan näitä periaatteita verkonkuvauksia koodatessa, jotta varmistutaan tulosten oikeellisuudesta ja aineistojen yhteiskäyttöisyydestä.
 Jos teet merkittäviä muutoksia, esim. lisäät uuden kulkumuodon, sovi tästä erikseen HSL:n yhteyshenkilöiden kanssa.
+
+## Sisällysluettelo
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
 
 ## Ohjeen muutoshistoria
 
@@ -28,6 +35,10 @@ Jos teet merkittäviä muutoksia, esim. lisäät uuden kulkumuodon, sovi tästä
 - 2020-12-28: Täsmennetty ohjetta syöttölinkeistä. Syöttölinkit koodattava aina bussiverkkoon /kävelyverkkoon ja siitä vaihtolinkillä raideliikenteeseen. Lisätietoja luku 6.6.
 - 2020-08-05: Korjattu ja täydennetty
 
+<br>
+
+# Liikenneverkko
+
 ## Solmut
 
 ### Solmunumerot
@@ -39,7 +50,7 @@ Työn loputtua HSL päivittää tarvittaessa valitun vaihtoehdon osaksi virallis
 HSL:n virallisia verkkoja muokattaessa on pyydettävä HSL:stä solmunumerot, joita tietyn hankkeen koodaamiseen käytetään.
 Virallisissa verkoissa käytettävät solmunumerot ovat taulukoiden solmuavaruuksissa, joiden kohdalla lukee ”HSL:n hankkeiden” solmut.
 
-HUOM: HLJ-työn yhteydessä voidaan koodata muutoksia suoraan verkon virallisille solmunumeroille.
+HUOM: MAL-työn yhteydessä voidaan koodata muutoksia suoraan verkon virallisille solmunumeroille.
 Tästä on sovittava HSL:n yhteyshenkilöiden kanssa erikseen.
 
 *Taulukko 1. Solmuavaruuden jako, sentroidit*
@@ -75,7 +86,7 @@ Erikoissentroideista verkolle on lisätty omat sentroidit Helsinki-Vantaan lento
 |                 |                                                       | 801 500–801 999 | ”villit” solmut                                 |
 | 802 000–819 999 | raitiovaunuverkon solmut + pikaraitiotieverkon solmut | 802 000–805 999 | nykyinen ja nykyisenkaltainen raitiovaunuverkko |
 |                 |                                                       | 806 000–809 999 | ”villit” solmut                                 |
-|                 |                                                       | 810 000–815 999 | erillinen pikaraitiotieverkko (tiedossa olevat erilliset hankkeet kuten Raide-Jokeri(t), Tiederatikka)* |
+|                 |                                                       | 810 000–815 999 | erillinen pikaraitiotieverkko (Esim. PR15, Vantaan raitiotie)* |
 |                 |                                                       | 816 000–819 999 | ”villit” solmut                                 |
 
 *) Käytännössä tulee eteen tilanteita, joissa (pika)raitiolinja halutaan koodata ajamaan reittiä,
@@ -197,8 +208,8 @@ Verkolla käytetyt kulkumuodot (modes) ja joukkoliikenteen ajoneuvotyypit (vehic
 | c                 | auto                                                                |
 | b                 | HSL:n bussi                                                         |
 | g                 | HSL:n runkolinja                                                    |
-| d                 | muu bussi (kaukoliikenne, VALLU-rekisteristä)                       |
-| e                 | pikavuoro (kaukoliikenne, VALLU-rekisteristä)                       |
+| d                 | muu bussi (kaukoliikenne)                                           |
+| e                 | pikavuoro (kaukoliikenne)                                           |
 | m                 | metro                                                               |
 | r                 | lähijuna                                                            |
 | j                 | kaukojuna                                                           |
@@ -214,18 +225,22 @@ Verkolla käytetyt kulkumuodot (modes) ja joukkoliikenteen ajoneuvotyypit (vehic
 
  *Taulukko 8. Joukkoliikenteen ajoneuvotyypit (vehicles), niitä vastaavat kulkumuodot ja kuvaus*
  
-| ajoneuvotyyppi (vehicle) | kulkumuoto (mode) | kuvaus         |
-|--------------------------|-------------------|----------------|
-| 1                        | d                 | vakiovuoro     |
-| 2                        | e                 | pikavuoro      |
-| 3                        | b                 | HSL-bussi      |
-| 4                        | m                 | metro          |
-| 5                        | r                 | lähijuna       |
-| 6                        | j                 | kaukojuna      |
-| 7                        | t                 | ratikka        |
-| 8                        | g                 | HSL-runkobussi |
-| 9                        | w                 | lautta         |
-| 10                       | p                 | pikaratikka    |
+| ajoneuvotyyppi (vehicle) | kulkumuoto (mode) | kuvaus              |kapasiteetti (istumapaikkaa/yhteensä) |
+|--------------------------|-------------------|---------------------|---------------------|
+| 1                        | d                 | vakiovuoro          | 66/66               |
+| 2                        | e                 | pikavuoro           | 66/66               |
+| 3                        | b                 | HSL-bussi           | 49/78               |
+| 4                        | m                 | metro               | 260/708             |
+| 5                        | r                 | lähijuna, 2-yksikköä| 520/840             |
+| 6                        | j                 | kaukojuna           | 660/660             |
+| 7                        | t                 | ratikka             | 84/151              |
+| 8                        | g                 | HSL-runkobussi      | 49/78               |
+| 9                        | w                 | lautta              | 350/350             |
+| 10                       | p                 | pikaratikka         | 110/198             |
+| 11                       | g                 | nivelbussi          | 52/105              |
+| 12                       | e                 | 2-kerrosbussi       | 99/99               |
+| 13                       | r                 | lähijuna, 1-yksikkö | 260/420             |
+| 14                       | r                 | lähijuna, 3-yksikköä| 780/1260            |
 
 ## Linkit
 
@@ -267,11 +282,10 @@ Ne on koodattu kuin aina voimassa olevat bussikaistat, ja funktiomakrot käsitte
 Kävely ja pyöräily on lähtökohtaisesti sallittua autolinkeillä ja kiellettyä raideliikenteen linkeillä.
 Ratikka- ja pikaratikkalinkeille voi koodata kävelyn/pyöräilyn (”taf”, ”paf”, ”tpaf”), jos ei ole rinnakkaista ajoneuvolinkkiä, jolle kävelyn voisi koodata.
 Metro- ja junaradoilla kävelyä/pyöräilyä ei kuitenkaan voi sallia (eli ”maf”, ”rjaf” eivät ole sallittuja).
-Autolinkkejä, joilla kävely ja pyöräily eivät ole sallittuja, voi koodata poikkeustapauksissa, kuten tunnelit (esimerkiksi Kampin terminaalissa).
+Autolinkkejä, joilla kävely ja pyöräily eivät ole sallittuja, voi koodata tarpeen mukaan, kuten tunnelit (esimerkiksi Kampin terminaalissa) ja moottoritiet.
 Käytännössä pyöräily on verkossa sallittu kaikkialla missä kävelykin, joitakin poikkeuksia lukuun ottamatta.
 Muutamissa paikoissa on erikseen estetty pyöräily, jos se ei ole todellisuudessa mahdollista.
-Pyöräily on sallittua moottoritiemäisten väylien linkeillä molempiin suuntiin samoin kuin kävely,
-jos moottoritien rinnalla tai läheisyydessä kulkee kävely- ja pyörätie.
+Aiemmista malliversioista poiketen pyöräilyä ei tule kuvata moottoritiemäisille linkeille, vaan mahdollisuuksien mukaan omina linkkeinään. Näin saadaan paremmin kuvattua moottoritien aiheuttama estevaikutus, sekä reitin mäkisyysvaikutukset. Tällä ei kuitenkaan ole merkitystä Helsingin seudun ulkopuolella, missä pyöräilyä ei muutenkaan ole mallinnettu.
 
 *Taulukko 10. Linkkityypit (link type)*
 
@@ -307,18 +321,18 @@ jos moottoritien rinnalla tai läheisyydessä kulkee kävely- ja pyörätie.
 
 | Väyläluokan tunnus | Väyläluokka | Tarkennus | Sijoittelu- funktio (suluissa bussi- kaista- linkkien funktio) | Nopeus- rajoitus | Vapaa nopeus (km/h, ul2) | Kapasi- teetti (S, ul1) | Linkkityyppi: ei bussi-kaistaa, bussikaista ruuhka-aikana, bussikaista koko päivän, bussikaista vain aamuruuhkassa, bussikaista vain iltaruuhkassa, bussiväylä |
 |----|--------------------------|----------------------------------------------|------------|-----|---------|----------|-------------------------|
-| 21 | Moottoritiet             | moottoritie                                  | fd1 (fd6)  | 120 | 113     | 2100 *   | 121 221 321 421 521 621 |
-| 22 |                          | moottoritie, kaistoja=>3                     |            | 120 | 113     | 1900 **  | 122 222 322 422 522 622 |
+| 21 | Moottoritiet             | moottoritie                                  | fd1 (fd6)  | 120 | 113     | 2100    | 121 221 321 421 521 621 |
+| 22 |                          | moottoritie, kaistoja=>3                     |            | 120 | 113     | 1900    | 122 222 322 422 522 622 |
 | 23 |                          | moottoritie                                  |            | 100 |  97     | 2000     | 123 223 323 423 523 623 |
-| 24 |                          | moottoritie, kaistoja=>3                     |            | 100 |  97     | 1800 **  | 124 224 324 424 524 624 |
+| 24 |                          | moottoritie, kaistoja=>3                     |            | 100 |  97     | 1800     | 124 224 324 424 524 624 |
 | 25 |                          | moottoritie                                  |            |  80 |  81     | 2000     | 125 225 325 425 525 625 |
-| 26 |                          | moottoritie, kaistoja=>3                     |            |  80 |  81     | 1800 **  | 126 226 326 426 526 626 |
+| 26 |                          | moottoritie, kaistoja=>3                     |            |  80 |  81     | 1800     | 126 226 326 426 526 626 |
 | 27 | Maantiet / Useampikaistaiset kaupunkiväylät eritasoliittymin | maantie, 2 kaistaa | fd2 (fd7) | 100 | 97 | 1900 | 127 227 327 427 527 627 |
-| 28 |                          | maantie, kaistoja=>3                         |            | 100 |  97     | 1800 **  | 128 228 328 428 528 628 |
+| 28 |                          | maantie, kaistoja=>3                         |            | 100 |  97     | 1800     | 128 228 328 428 528 628 |
 | 29 |                          | maantie, 2 kaistaa                           |            |  80 |  81     | 1850     | 129 229 329 429 529 629 |
-| 30 |                          | maantie, kaistoja=>3                         |            |  80 |  81     | 1800 **  | 130 230 330 430 530 630 |
+| 30 |                          | maantie, kaistoja=>3                         |            |  80 |  81     | 1800     | 130 230 330 430 530 630 |
 | 31 |                          | maantie, 2 kaistaa                           |            |  70 |  73     | 1600     | 131 231 331 431 531 631 |
-| 32 |                          | maantie, 2 kaistaa                           |            |  60 |  63 *** | 1600     | 132 232 332 432 532 632 |
+| 32 |                          | maantie, 2 kaistaa                           |            |  60 |  63     | 1600     | 132 232 332 432 532 632 |
 | 33 | Useampikaistaiset pääkadut tasoliittymin valoilla | usea kaista, valot  | fd3 (fd8)  |  70 |  61     | 1450     | 133 233 333 433 533 633 |
 | 34 |                          | usea kaista, valot                           |            |  60 |  54     | 1250     | 134 234 334 434 534 634 |
 | 35 | Pääkadut                 | esik,pääk, ei valoja                         | fd4 (fd9)  |  50 |  48     | 1150     | 135 235 335 435 535 635 |
@@ -328,20 +342,12 @@ jos moottoritien rinnalla tai läheisyydessä kulkee kävely- ja pyörätie.
 | 39 |                          | kesk.kokooja                                 |            |  40 |  36     |  750     | 139 239 339 439 539 639 |
 | 40 |                          | keskusta, hidas pääkatu                      |            |  40 |  36     |  900     | 140 240 340 440 540 640 |
 | 41 |                          | pienet tonttikadut                           |            |  30 |  30     |  600     | 141 241 341 441 541 641 |
-| 42 |                          | keskusta, pienet kadut                       |            |  30 |  12 ****|  500     | 142 242 342 442 542 642 |
+| 42 |                          | keskusta, pienet kadut                       |            |  30 |  **12***|  500     | 142 242 342 442 542 642 |
 | 43 |                          | keskustan pääkatu, 30 km/h                   |            |  30 |  30     |  750     | 143 243 343 443 543 643 |
 
-*) Alun perin 2200, mutta verkolla on käytetty johdonmukaisesti kapasiteettia 2100, Trafixin mukaan siksi,
-että 2200 on epärealistisen suuri kapasiteetti normaaleissa olosuhteissa, ja tekee moottoriteistä liian houkuttelevia vaihtoehtoja.
+*) Helmet 5:ssa linkin vapaata nopeutta laskettu arvosta 23 arvoon 12. Käytettävä vain kaikkein hitaimmilla kaduilla, esimerkiksi Helsingin kantakaupungissa.
 
-**) Helmet 3.1+:ssa linkin kapasiteettia kasvatettu 1700:sta arvoon 1800 ajon/h (paitsi linkkityypillä x22 arvoon 1900 ajon/h),
-jos autoliikenteen käytössä on vähintään kolme kaistaa ko. aikajakson aikana.
-
-***) Helmet 3.1+:ssa linkin vapaata nopeutta kasvatettu 54:stä arvoon 63 km/h.
-
-****) Helmet 5:ssa linkin vapaata nopeutta laskettu arvosta 23 arvoon 12. Käytettävä vain ahtaimmilla kaduilla
-
-### Raitiovaunujen nopeus
+### Nopeus raitiotieverkolla
 
 Nopeus raitiotieverkolla määräytyy linkkiattribuuttiin ul1 koodattujen nopeuksien perusteella.
 > `ul1 = aabbcc`, jossa ratikoiden nopeudet `aa = aamuhuipputunti`, `bb = päivä` ja `cc = iltahuipputunti`
@@ -396,28 +402,28 @@ Seuraavat väylät on verkossa kuvattu kaksiajorataisina:
   - Porvoonväylä (vt7): 2-ajoratainen kuvaus verkon ulkoreunalta Lahdenväylälle
   - Itäväylä: 2-ajoratainen kuvaus Itäkeskuksesta Kehä I:n liittymästä Kalasatamaan.
 - Kehätiet
-  - Kehä I: 2-ajoratainen kuvaus koko matkan Länsiväylältä (Karhusaarensolmusta) Itäkes-kukseen (Itäväylän liittymään)
+  - Kehä I: 2-ajoratainen kuvaus koko matkan Länsiväylältä (Karhusaarensolmusta) Itäkeskukseen (Itäväylän liittymään)
   - Kehä II: 2-ajoratainen kuvaus koko matkan Länsiväylältä (Matinsolmusta) Turuntielle (tie 110)
   - Kehä III: 2-ajoratainen kuvaus Mankinsolmusta (Kauklahdenväylältä) Vuosaaren sata-maan.
 - Moottoritiemäiset väylät
   - Lentoasemantie Kehä III:lta pohjoiseen (Virkatie – Helsinki-Vantaan lentoasema), koska sen kaikki liittymät tuolla välillä ovat eritasoliittymiä.
-
-### Kiertoliittymät
-
-Kiertoliittymät kuvataan yhdellä solmulla.
-Poikkeuksen muodostavat moottoritiemäiset, eri tasos-sa olevat kiertoliittymät, jotka voidaan tarvittaessa kuvata useammalla solmulla.
-Esimerkki useammalla solmulla koodatusta moottoritiemäisestä kiertoliittymästä: Lentoasemantien, Virkatien ja Äyritien liittymä Vantaalla.
 
 ### Kääntymiskiellot
 
 Moottoriteillä on kääntymiskiellolla estetty autoilta poistumisrampilta suoraan liittymisrampille ja takaisin moottoritielle ajaminen
 (katkoviivat seuraavassa kuvassa).
 Tämä ei kuitenkaan estä bussi-linjojen koodaamista suoraan ramppeja pitkin (punainen viiva seuraavassa kuvassa),
-niin että ne pääsevät usein rampeilla sijaiseville pysäkeille.
+niin että ne pääsevät usein rampeilla sijaiseville pysäkeille. Koodaamisen helpottamiseksi pakotetaan bussit kulkemaan ramppeja pitkin kieltämällä bussikulkumuodot pääväylältä liittymän kohdalla. Samoin autoliikenne voidaan paikoin estää ajamasta ramppien läpi myös poistamalla autokulkumuoto tietyltä linkiltä.
 
 ![image](images/emme_kaantymiskiellot.png)
 
 *Kuva 1. Moottoritien ramppien hyödyntäminen suoraan ajamiseen on estetty autoilta (katkoviivat).*
+
+### Kiertoliittymät
+
+Kiertoliittymät kuvataan yhdellä solmulla.
+Poikkeuksen muodostavat moottoritiemäiset, eri tasos-sa olevat kiertoliittymät, jotka voidaan tarvittaessa kuvata useammalla solmulla.
+Esimerkki useammalla solmulla koodatusta moottoritiemäisestä kiertoliittymästä: Lentoasemantien, Virkatien ja Äyritien liittymä Vantaalla.
 
 ### Syöttö- ja vaihtolinkit
 
@@ -433,39 +439,18 @@ Vaihtolinkit ratikkapysäkiltä, metro- ja juna-asemilta koodataan lähimmälle 
 jonka olisi hyvä olla pysäkki, mutta kohteesta riippuen siitä voi poiketa.
 Vaihtolinkin pituus voi olla 0 m, jos se sijaitsee fyysisesti samalla pysäkillä bussin kanssa.
 
-### Keskustan huoltotunneli ja raskaan liikenteen rajoitukset Helsingin keskustassa
 
-Keskustan huoltotunneli on kuvattu verkolle kulkumuotoyhdistelmällä cvk.
-Teknisistä syistä (oltava aina primary class) myös autokulkutapa c on sallittava.
-Vapaaksi nopeudeksi verkolle on koodattu 15 km/h, jotta tunneliin ei menisi liikaa autoja.
-
-![image](images/emme_raskaan-liikenteen-rajoitusalue_kartta.png)
-
-*Kuva 2. Helsingin raskaan liikenteen rajoitusalue. Mustalla viivalla merkittyjä aluetta reunustavia katuja pitkin saa ajaa.*
-
-Verkolle rajoitusalue on kuvattu asettamalla rajoituksia y-kulkumuodolle, eli käytännössä poistamalla y-kulkumuoto osalta linkkejä.
-Rajoitusaluetta (kuva 2) ei voi kuvata kieltämällä y-kulkumuotoa kokonaan rajoitusalueella, koska myös y-kulkumuodolla on oltava reitti jokaiseen sentroidiin,
-joten y-kulkutapa on sallittu pääkaduilla sekä siten että jokaiseen sentroidiin pääsee jotain reittiä (kuva 3).
-Jotta keskustan läpiajo ei ole mahdollista (kuva 3:ssa punaisen viivan yli), itäisiä alueita lähestytään idästä ja läntisiä alueita lännestä
-(joillekin alueille voi päästä molemmista suunnista).
-
-![image](images/emme_raskaan-liikenteen-rajoitusalue_emme.png)
-
-*Kuva 3. Helsingin keskustan raskaan liikenteen rajoitusalue Emmessä.
-Y-kulkumuoto on sallittu vihreillä ja oransseilla linkeillä.
-Oranssit linkit ovat syöttölinkkejä, joilla autokulkumuodot on sallittu.*
+# Joukkoliikenne
 
 ## Bussipysäkkien ja muun bussi-infran kuvaus
 
-Pysäkit koodataan niin, että linjojen pysähtymiskäyttäytymisen kuvaaminen voidaan automatisoida skriptin avulla.
+Pysäkit koodataan niin, että linjojen pysähtymiskäyttäytymisen kuvaaminen voidaan automatisoida osana malliajoa.
 Linjojen pysähtymisiä ei tarvitse kuvata käsin, kunhan pysäkkien kuvaus verkolla pidetään ajantasaisena.
 
 Verkon koodauksessa noudatetaan bussipysäkkien osalta seuraavia periaatteita:
 - Pysäkin tyyppi koodataan solmuattribuuttiin ui2. 
-- Linjojen pysähtymiset tuotetaan automaattisesti makrolla solmujen ui2-koodeihin perustuen.
-  VALLU-linjoilla tarvitaan lisäksi tietoa ajosuunnasta.
-- Yhdellä linkillä kuvatuilla kaduilla ja teillä pysäkkiparin vastasuuntien pysäkit yhdistetään samaan pysäkkisolmuun.
-  Tämä on välttämätöntä, jotta pysähtymiskäyttäytymisten automatisointi toimii.
+- Linjojen pysähtymiset tuotetaan automaattisesti malliajon aikana solmujen ui2-koodeihin ja kaukobusseissa ajosuuntaan perustuen.
+- Yhdellä linkillä kuvatuilla kaduilla ja teillä pysäkkiparin vastasuuntien pysäkit yhdistetään useimmiten samaan pysäkkisolmuun.
 - Kahdella erillisellä linkillä kuvatuilla teillä (moottoritiemäiset väylät ja eritasoliittymät) pysäkit kuvataan pääosin todellisuutta vastaavasti, 
   eli mm. vastasuuntien pysäkit omille puolilleen.
   Tällöin myös vaihdot eritasoliittymissä kuvautuvat kohtalaisen realistisesti.
@@ -514,7 +499,7 @@ Pysäkin label-attribuutin lippuvyöhykkeen tiedon perusteella lasketaan tieto H
 HSL-alueen vyöhykkeitä ovat A, B, C, D ja E (varaus).
 HSL-aluetieto käytetään Vallu-linjojen pysähtymisiin HSL-alueella.
 Vallu-linjojen linjatunnuksessa on oltava täsmälleen 6 merkkiä, joista viimeinen kuvaa linjan suuntaa.
-Suunta 1 on Helsingistä poispäin ja suunta 2 Helsinkiin.
+Suunta 1 on Helsingistä poispäin ja suunta 2 Helsinkiin. Lisäksi muutamilla linjoilla käytetään suuntatunnusta 3, jolla kuvataan ympyrälinjoja, mutta se ei vaikuta pysähtymiseen koska linjat eivät ylitä HSL-alueen rajaa.
 HSL-alueen ulkopuolella kulkevilla linjoilla ei ole suunnalla väliä.
 
 Pysähtymisskripti määrittää vain bussilinjojen (modet b, g, d ja e) ja raitiotie- ja pikaraitiotielinjojen (modet t ja p) pysähtymiset.
@@ -541,13 +526,14 @@ Lisäksi on syytä huomata seuraavat pysähtymiseen vaikuttavat seikat:
 - Mikään bussilinja ei pysähdy bussipysäkeillä, jotka on merkitty koodilla ui2 = 6 (muu bus-sipysäkki).
   Näille pysäkeille on siis määritettävä jokin muu koodi, jos ne halutaan ”ottaa käyttöön”.
 - Solmutyypeissä on varauduttu ratikka- ja pikaratikkaterminaaleihin (ui2 = 12), mutta näitä ei ole vielä verkolla,
-  eikä niitä ole otettu huomioon pysähtymistietomakrossa.
-  Jos verkolla lisätään terminaaleja, pysähtymistietomakroa on muokattava niin, että raitiolinjat pysähtyvät terminaalissa.
+  eikä niitä ole otettu huomioon mallijärjestelmän pysähtymiskäyttäytymisessä.
+  Jos verkolla lisätään terminaaleja, mallijärjestelmän pysähtymiskäyttäytymistä on muokattava niin, että raitiolinjat pysähtyvät terminaalissa suunnitellusti.
 
-Eri kulkumuodot pysähtyvät pysähtymistietomakron ajamisen jälkeen seuraavasti: 
-- Raitiolinjat (mode t) ja pikaraitiolinjat (mode p) pysähtyvät kaikilla raitiovaunupysäkeillä (ui2 = 1).
+Eri kulkumuodot pysähtyvät pysäkeille pysäkkitunnusten mukaan seuraavasti: 
+- Raitiolinjat (mode t) pysähtyvät kaikilla raitiovaunupysäkeillä (ui2 = 1 tai 8).
+- Pikaraitiolinjat pysähtyvät kaikilla pikaraitiovaunupysäkeillä (ui2 = 8)
 - Tavalliset HSL-bussit (mode b) pysähtyvät kaikilla reitillään olevilla bussipysäkeillä (ui2 = 2…5) ja bussiterminaaleissa (ui2 = 11).
-- HSL:n runkolinjat (mode g) pysähtyvät runkolinjapysäkeillä (ui2 = 3 tai 5) ja bussiterminaa-leissa (ui2 = 11).
+- HSL:n runkolinjat (mode g) pysähtyvät runkolinjapysäkeillä (ui2 = 3 tai 5) ja bussiterminaaleissa (ui2 = 11).
 - ”Muut bussit” (mode d), eli HSL-alueen ulkopuoliset tai HSL:n rajan ylittävät bussilinjat, jotka eivät ole pikavuoroja, pysähtyvät seuraavasti:
   - 1-suuntaan eli Helsingistä poispäin: kyytiin voi nousta kaikilta bussipysäkeiltä, ja bussis-ta voi poistua kaikilla pysäkeillä HSL-alueen ulkopuolella.
   - 2-suuntaan eli Helsinkiin päin: kyytiin voi nousta kaikilta bussipysäkeiltä HSL-alueen ulkopuolella, ja bussista voi poistua kaikilla bussipysäkeillä. 
@@ -556,26 +542,27 @@ Eri kulkumuodot pysähtyvät pysähtymistietomakron ajamisen jälkeen seuraavast
   - 1-suuntaan eli Helsingistä poispäin: kyytiin voi nousta kaikilta pikavuoropysäkeiltä, ja bussista voi poistua pikavuoropysäkeillä HSL-alueen ulkopuolella.
   - 2-suuntaan eli Helsinkiin päin: kyytiin voi nousta pikavuoropysäkeiltä HSL-alueen ulkopuolella, ja bussista voi poistua kaikilla pikavuoropysäkeillä.
 
-## Raideliikenteen verkot
+## Raideliikenteen kuvaus
 
 Junaliikenteen verkko kuvataan linkkityypillä 4 ja metroliikenteen verkko linkkityypillä 3.
 Molemmissa verkko koostuu ainoastaan asemia kuvaavista solmuista, erillisiä välisolmuja ei käytetä.
-Nopeus juna- ja metroverkolla määräytyy segmenttimuuttujaan us1 tallennettujen asemien välisten matka-aikojen perusteella.
-Matka-aika asemaväleittäin koodataan erikseen kutakin juna- tai metrolinjaa koodattaessa, eikä se ole sidoksissa verkon kuvaukseen.
+Nopeus juna- ja metroverkolla määräytyy segmenttimuuttujaan us1 tallennettujen asemien välisten matka-aikojen perusteella. Jos segmenttimuuttujaa ei ole asetettu, junan matka-aika asemimen välillä on 0 ja nopeus siten ääretön. 
+Matka-aika asemaväleittäin koodataan erikseen kutakin juna- tai metrolinjaa koodattaessa, eikä se ole sidoksissa verkon kuvaukseen. Tämä johtuu siitä, että junien pysähtyminen hidastaa matka-aikaa, joten aseman ohittava juna voi kulkea saman asemavälin pysähtyvää junaa nopeammin.
 
 Lakkautetut juna-asemat Luoma, Mankki, Purola ja Nuppulinna on jätetty verkolle.
 Junatyyppejä ei ole eroteltu omille raiteilleen, vaan kaikki junat ovat samoilla linkeillä.
-Poikkeuksen asemakoodauk-seen muodostaa Pasilan asema, jossa kuvataan päärataa ja rantarataa kahdella erillisellä solmulla
-– ja siten kahdella erillisellä linkkiparilla Helsingin ja Pasilan välillä.
-Juna- ja metroliikenteen pysäh-tymiskäyttäytyminen koodataan käsin todellisuutta vastaavaksi:
+Poikkeuksen asemakoodaukseen muodostaa Pasilan asema, jossa kuvataan päärataa ja rantarataa kahdella erillisellä solmulla
+-– ja siten kahdella erillisellä linkkiparilla Helsingin ja Pasilan välillä. 
+
+Juna- ja metroliikenteen pysähtymiskäyttäytyminen koodataan käsin todellisuutta vastaavaksi:
 lakkautetuilla asemilla juna ei pysähdy, eli niillä ei voi nousta kyytiin tai jäädä pois.
 Vastaavasti nykyisten asemien väliin valmiiksi koodatuilla tulevaisuuden asemilla ei myöskään voi nousta kyytiin tai jäädä pois,
 ellei erityisesti ole tarkoitus kuvata sitä, että asema otetaan käyttöön.
 
 Raitiotieverkko on kuvattu autoliikenteestä erillisillä linkeillä.
 Linkkien tyyppi on 2. Nopeus raitiotieverkolla määräytyy linkkiattribuuttiin ul1 koodattujen nopeuksien perusteella.
-Raitiotieverkolla rai-tiovaunupysäkit merkitään solmutyypillä ui2 = 1, ja muut solmut solmutyypillä ui2 = 0.
-Tällöin linjo-jen pysähtymiset kuvautuvat automaattisesti oikein pysähtymistietomakrolla.
+Raitiotieverkolla raitiovaunupysäkit merkitään solmutyypillä ui2 = 1, ja muut solmut solmutyypillä ui2 = 0.
+Tällöin linjojen pysähtymiset kuvautuvat automaattisesti oikein pysähtymistietomakrolla.
 
 ## Joukkoliikennelinjastot
 
@@ -666,12 +653,34 @@ HSL-versiot (mode b) on koodattu HSL:n rajalle asti normaaleina HSL-linjoina ja 
 Ne siis pysähtyvät HSL-alueen kaikilla pysäkeillä.
 VALLU-versiot (mode d) on koodattu kuten muutkin VALLU-linjat, ja ne pysähtyvät niin, että niillä ei voi tehdä HSL-alueen sisäisiä matkoja.
 
-### VALLU-linjat
+### Muiden kuin HSL:n järjestämä linja-autoliikene
 
-VALLU-linjoja eli HSL-alueen ulkopuolisia ja HSL:n rajan ylittäviä bussilinjoja on koodattu kahdesta lähteestä.
-VALLU-rekisteri pitää sisällään lähes koko Suomen bussireitit ja vuorot, mutta siinä on jonkin verran puutteita mm. kuntien itse ostamien liikenteiden osalta.
-VALLUsta on poimittu mallialueen sisäiset ja mallialueen rajat ylittävät vuorot, ja lisäksi käsin on koodattu VALLUsta puuttuneet
-Hyvinkään, Riihimäen ja Järvenpään paikallisliikenteen linjat.
+.
 
-VALLU-rekisterin aineistossa on paljon vuoroja, jotka Emme-verkon alueella kulkevat samaa reittiä.
-Linjojen määrän vähentämiseksi sisääntuloteiden vuoroja on yhdistelty ennen Emmeen vientiä samaksi linjaksi, jos ne kulkivat (lähes) samaa reittiä. 
+
+# Tavaraliikenne
+
+Tavaraliikenne mallissa kulkee ainoastaan maanteitse, rautateillä kuljetettavaa rahtia ei ole kuvattu.
+
+### Keskustan huoltotunneli ja raskaan liikenteen rajoitukset Helsingin keskustassa
+
+Keskustan huoltotunneli on kuvattu verkolle kulkumuotoyhdistelmällä hvk, eli henkilöautoilta on kielletty ajo tunnelin läpi.
+
+![image](images/emme_raskaan-liikenteen-rajoitusalue_kartta.png)
+
+*Kuva 2. Helsingin raskaan liikenteen rajoitusalue. Mustalla viivalla merkittyjä aluetta reunustavia katuja pitkin saa ajaa.*
+
+Verkolle rajoitusalue on kuvattu asettamalla rajoituksia y-kulkumuodolle, eli käytännössä poistamalla y-kulkumuoto osalta linkkejä.
+Rajoitusaluetta (kuva 2) ei voi kuvata kieltämällä y-kulkumuotoa kokonaan rajoitusalueella, koska myös y-kulkumuodolla on oltava reitti jokaiseen sentroidiin,
+joten y-kulkutapa on sallittu pääkaduilla sekä siten että jokaiseen sentroidiin pääsee jotain reittiä (kuva 3).
+Jotta keskustan läpiajo ei ole mahdollista (kuva 3:ssa punaisen viivan yli), itäisiä alueita lähestytään idästä ja läntisiä alueita lännestä
+(joillekin alueille voi päästä molemmista suunnista).
+
+![image](images/emme_raskaan-liikenteen-rajoitusalue_emme.png)
+
+*Kuva 3. Helsingin keskustan raskaan liikenteen rajoitusalue Emmessä.
+Y-kulkumuoto on sallittu vihreillä ja oransseilla linkeillä.
+Oranssit linkit ovat syöttölinkkejä, joilla autokulkumuodot on sallittu.*
+
+### Jätteenkeräys ja kuljetus
+

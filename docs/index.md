@@ -13,12 +13,12 @@ Mallia hyödynnetään ja kehitetään erityisesti palvelemaan seudullisen MAL-s
 HSL ja muut tahot käyttävät Helmet-mallia myös monissa muissa töissä, kuten linjastosuunnitelmien vaikutusten arvioinnissa sekä liikennehankkeiden hankearvioinneissa.
 
 Mallin avulla saadaan tietoa suunnitteluratkaisuihin ja valintoihin jo suunnitteluprosessin aikana, ja sen avulla arvioidaan suunnittelun vaikutuksia ”etukäteen”.
-Malli tuo esiin esimerkiksi linjastouunnitelman tai liikennehankkeen vaikutukset/vaikutuksia kulkumuotojakaumaan,
+Malli tuo esiin esimerkiksi linjastosuunnitelman tai liikennehankkeen vaikutukset/vaikutuksia kulkumuotojakaumaan,
 matka-aikaan, saavutettavuuteen, matkamääriin ja liikennesuoritteisiin.
 
 ## Mallijärjestelmän rakenne
 
-Helmet 5 -mallijärjestelmässä mallin neljä porrasta ennustetaan seuraavassa järjestyksessä:
+Helmet 5 -mallijärjestelmässä mallin neljä porrasta mallinnetaan seuraavassa järjestyksessä:
 1. Matkatuotos
 2. Kulkutavanvalinta
 3. Suuntautuminen
@@ -91,7 +91,7 @@ Pyöräilyn mallintamista on kehitetty Helmet 5 versiossa aiemman Helmet 4 versi
 * **Malli:** Matemaattinen kuvaus järjestelmästä (tässä tapauksessa Helsingin seudun liikkumisesta)
 * **Mallin estimointi:** Mallin parametrien määritys niin, että malli kuvaa käytetyillä lähtötiedoilla mahdollisimman hyvin lähtöaineistossa (nykytila) havaittua käyttäytymistä 
 * **Mallin validointi:** Testaus, että malli tosiaan ennakoi nykytilalle oikean tuloksen
-* **Ennuste:** Mallin käyttö _samoilla parametreilla_, mutta _eri lähtötiedoilla_ kuin estimoinnissa
+* **Ennusteskenaario:** Mallin käyttö _samoilla parametreilla_, mutta _eri lähtötiedoilla_ kuin estimoinnissa
 
 ### Mallin oletuksia, perusteluita ja rajoituksia
 
@@ -101,8 +101,9 @@ Oletuksena yksilöiden hyödyn maksimointi:
 * Todellisuudessa ihmisten päätöksenteko ei ole näin suoraviivaista ja rationaalista, mutta hyötymaksimointi on mallintamisessa yleisesti käytetty oletus
 
 Malli perustuu nykytilan havaintoaineiston valintoihin:
-* Oletetaan, että ennustevuoden ihmiset tekevät valintansa samalla perusteella kuin havaintoaineistossa eli nykytilassa
+* Oletetaan, että tulevaiuusskenaarioissa ihmiset tekevät valintansa samoilla perusteilla kuin havaintoaineistossa eli nykytilassa
 * Ennusteita ei voida tehdä asenteiden muutoksista (jos matka-aikaa, kustannuksia ym. arvostetaan eri tavalla kuin nykyisin)
+* Radikaaleja muutoksia toimintaympäristössä on haastava ennustaa ja siten mallintaa. Esimerkiksi koronaviruspandemia ja siitä seurannut etätyön lisääntyminen myös pysyvästi vaikuttaa mallin tuloksiin huomattavasti, mitä ei ole voinut näyttää todenmukaisesti mallilla, joka oli estimoitu pandemiaa edeltävällä liikkumistutkimusaineistolla.
 
 Mallin matemaattinen pohja perustuu diskreetteihin valintamalleihin:
 * Mallijärjestelmä rakentuu useista eri osamalleista, joissa kuvataan logit-malleilla todennäköisyyttä, että päätöksentekijä valitsee tietyn vaihtoehdon (esim. kulkutapa)

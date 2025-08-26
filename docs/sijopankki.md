@@ -8,9 +8,9 @@ sort: 2
 ## Luo uusi Emme-projekti haluamaasi kansioon
 - File - New - Project…
 -	Name: esim. `Viima`
--	Project location: esim. `C:\HELMET41`
+-	Project location: esim. `C:\HELMET50`
 
-Emme luo valitsemaasi kansioon alikansion (tässä tapauksessa `C:\HELMET41\Viima`) ja tähän alikansioon emp-tiedoston.
+Emme luo valitsemaasi kansioon alikansion (tässä tapauksessa `C:\HELMET50\Viima`) ja tähän alikansioon emp-tiedoston.
 Huomaa, että emp-tiedoston nimen pitää vastata alikansion nimeä, tässä tapauksessa siis `Viima.emp`.
 
 Seuraavassa valintaikkunassa valitse kohta _Create an empty project_ ja jatka dimensioiden määrittelyyn.
@@ -77,13 +77,13 @@ Moduuli lukee skenaarioon tarpeelliset tiedot tiedostoista
 |`vehicles_xxx.txt`	           |	ajoneuvotyypit (yhteinen kaikille skenaarioille)          |
 |`base_network_xxx.txt`        |	verkko (yhteinen kaikille ajanjaksoille)                  |
 |`transit_lines_xxx.txt`       |	linjasto (yhteinen kaikille ajanjaksoille)                |
-|`turns_xxx.txt`               |	kääntymiset (yhteinen kaikille ajanjaksoille)             |
-|`extra_links_xxx.txt`         |	linkkien pyörätieluokat (yhteinen kaikille ajanjaksoille) |
-|`extra_links_xxx.txt`         |	mahdolliset ruuhkamaksut tai tietullit ajanjaksoittain    |
+|`turns_xxx.txt`               |	kääntymiskiellot (yhteinen kaikille ajanjaksoille)             |
+|`extra_links_xxx.txt`         |	mahdolliset ruuhkamaksut tai tietullit ajanjaksoittain, linkkien pyörätieluokat (yhteinen kaikille ajanjaksoille) |
+|`extra_nodes_xxx.txt`         |	solmujen korkeustaso (yhteinen kaikille ajanjaksoille)|
 |`extra_transit_lines_xxx.txt` |	linjojen vuorovälit ajanjaksoittain                       | 
 
 `extra_xxx.txt`-tiedostot luovat valmiiksi ennustejärjestelmän tarvitsemat ekstra-attribuutit. 
 
 ## Muut lähtötiedot
 
-Muut tarvittavat lähtötiedot (mm. kustannukset, pohjakysyntä) ajetaan automaattisesti sisään ennusteprosessin aikana.
+Muut tarvittavat lähtötiedot (mm. maankäyttö, kustannukset, pohjakysyntä) ajetaan automaattisesti sisään ennusteprosessin aikana. Lähtötiedot kuvaavat mallin estimointivuoden tilannetta, ja lisäksi malliin syötetään syöttötietoja, jotka kuvaavat ennusteskenaarion tilannetta (lisätietoja [täällä](mallin_lahtotietotiedostot.md)).
