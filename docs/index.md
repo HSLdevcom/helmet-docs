@@ -58,7 +58,12 @@ HSL-alueen ulkopuolinen joukkoliikenne on päivitetty vastaamaan vuoden 2023 tar
 HELMET 5 -malliversiossa pysäköintiin kuluva aika huomioidaan henkilöautomatkoilla erillisenä vastustekijänä. Mallissa jokaiselle sijoittelualueelle määritetään pysäköintiaika, joka mallintaa pysäköintipaikan löytymiseen ja pysäköintiin kuluvaa aikaa, ja joka riippuu alueen asukas- ja työpaikkatiheydestä. Pysäköintiaika huomioidaan vastustekijänä kulkutavanvalinnassa sekä suuntautumisessa. Pysäköintiin liittyvä lisävastus laskee henkilöauton houkuttelevuutta ja kulkutapaosuutta erityisesti keskusta-alueelle suuntautuvilla kiertomatkoilla ja vaikuttaa osaltaan myös matkojen suuntautumiseen.
 
 ### Säteittäisväylien päiden kapasiteetin korjaus
+
 HELMET 5 -malliversiossa säteittäisväylien välityskykyä on pienennetty vastaamaan paremmin todellista liikennevalojen rajoittamaa verkon välityskyky keskustaan päin suuntautuvalla liikenteellä. Korjattu kapasiteetti vastaa tarkemmin toteutunutta välityskykyä ja kasvattaa ruuhkatuntien matka-aikoja keskustaan.
+
+### Kantakaupungin linkkien vapaan nopeuden muutos
+
+HELMET 5 -malliversiossa Helsingin kantakaupungin alueella käytetyn linkkityypin 42 vapaan nopeuden arvoa on pienennetty vastaamaan paremmin todellisia matka-aikoja Helsingin keskusta-alueella. Muutoksen myötä keskustan katuverkolla tapahtuvien automatkojen matka-ajat kasvavat, jolla on selkeä vaikutus reitinvalintaan ja osaltaan myös kulkutavanvalintaan ja suuntautumiseen.
 
 ### Joukkoliikenteen ruuhkautuvuus
 
