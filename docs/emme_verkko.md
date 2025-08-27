@@ -366,7 +366,7 @@ Jos aamun nopeus on alle 10 km/h, nopeus kirjoitetaan muodossa `abbcc`.
 
 ### Pyöräliikenne
 
-Pyöräliikenneverkossa kaikille linkeille on määritelty pyörätieluokka (0-4) extra atribuuttiin @pyoratieluokka.
+Pyöräliikenneverkossa kaikille linkeille on määritelty pyörätieluokka (0-4) extra atribuuttiin @pyoratieluokka. Luokan avulla kuvataan pyörätieinfran toteuttamisen muotoa ja laatua.
 Pyörätien miellyttävyyteen tasaisella maalla vaikuttaa sekä määritelty pyörätieluokka että linkkityyppi seuraavan taulukon mukaan. Lisäksi miellyttävyyteen vaikuttaa reitin mäkisyys siten, että alamäki nopeuttaa kulkua, ja ylämäki hidastaa sitä. Ylämäen hidastusvaikutus on suurempi kuin alamäen nopeutusvaikutus, joten reitinvalinnassa vältetään mäkiä. Pyöräkaistoilla ja sekaliikenteessä myös autoliikenteen määrä samalla katuosuudella vaikuttaa katuosuuden miellyttävyyteen, minkä takia pyörätieluokkien kuvaaminen on aiempaa tärkeämpää, jotta autoliikenteestä ei aiheutuisi haittaa niillä väylillä, joissa haittaa ei todellisuudessa ole.
 
 Baanan määritelmä on tässä seuraava: (1) ei juuri tasoristeyksiä eikä muita esteitä (esim. bussipysäkkejä), 
@@ -377,7 +377,7 @@ Jos moottoritien varressa on pyörätie, sen luokka on yleensä 3 (erillinen py�
 Pyörätiet käyttävät autoverkon solmuja, paitsi moottoriteillä, joiden ympäristössä pyörätiet pyritään koodaamaan erikseen, jotta moottoriteiden aiheuttama estevaikutus ja pyörätien mäkisyys saadaan kuvattua tarkemmin.
 
 
-*Taulukko 12. Pyörätieluokkien vaikutus*
+*Taulukko 12. Pyörätieluokkien vaikutus. Miellyttävyys kuvataan yleistettynä matkanopeutena*
 
 |                                     | @pyoratieluokka | Linkkityypit | Miellyttävyys tasaisella |
 |-------------------------------------|-----------------|--------------|---------------|
@@ -390,6 +390,21 @@ Pyörätiet käyttävät autoverkon solmuja, paitsi moottoriteillä, joiden ymp�
 | Sekaliikenne, maantie               | 0               | 27-32        | 12            |
 | Sekaliikenne, pääkatu               | 0               | 33-40        | 10            |
 | Sekaliikenne, pieni katu            | 0               | 41-42        | 12            |
+
+## Mäkisyyden vaikutus pyöräilyyn
+
+Pyöräilyn sijoittelussa reitinvalintaan vaikuttaa myös reitin mäkisyys. Mäkisyys on kuvattu linkkien gradienttina, joka lasketaan solmujen korkeuserosta ja linkin length-attribuutista. Gradientti on tallennettu verkolle @kaltevuus extra-attribuuttina. Lisäksi solmuille on tallennettu uusi @korkeus extra-attribuutti, jota voidaan käyttää vaihtoehtona linkkien kaltevuudelle verkkoja koodatessa.
+
+HSL:n tarjoamille verkoille on haettu Maanmittauslaitoksen 2x2 m -korkeusmallista solmujen korkeustiedot, joista on laskettu linkkien kaltevuudet. Korkeustiedot omille verkoille on mahdollista lisätä käyttämällä [helmet-utils](https://github.com/HSLdevcom/helmet-utils) -Python-kirjastoa. Kirjaston käyttäminen vaatii Maanmittauslaitoksen API-avaimen, jonka voi saada käyttöönsä rekisteröitymällä Maanmittauslaitoksen verkkopalveluun. Rekisteröityminen ja korkeusmallin käyttö on ilmaista.
+
+Vaihtoehtoisesti kaltevuus voidaan laskea myös malliajon aikana solmujen korkeustiedoista. Korkeustietoja hyödynnetään tilanteessa, jossa linkin kaltevuus on 0. Arvioitaessa esimerkiksi baanahankkeiden muutoksia muutosten kohteena olevien linkkien @kaltevuus extra-attribuutit tulee asettaa arvoon 0, jos halutaan käyttää @korkeus extra-attribuutista laskettavia arvoja
+
+
+## Autoliikenteen vaikutus pyöräilyyn
+
+Autoliikenne haittaa pyöräilyä siten, että samalla linkillä kulkeva autoliikenne laskee pyöräilyn miellyttävyyttä. Ominaisuus on käytössä ainoastaan väylillä, joissa pyöräliikenne tapahtuu sekaliikenteesäsä tai pyöräkaistalla (@pyoratieluokka 0 tai 1). Jos autoliikennettä on hyvin vähän, miellyttävyys kasvaa normaalista, jolloin ero miellyttävyydessä ajoradalla ja erillisellä pyörätiellä laskee.
+
+Mäkisyyden ja autoliikenteen vaikutusten jälkeen lopullinen miellyttävyys saa arvoja välillä 5 &ndash; v*1,5; missä v on yllä olevan taulukon mukainen miellyttävyys tasaisella. Tästä poikkeuksena baanoilla miellyttävyys alamäessä voi olla maksimissaan jopa 35, johtuen selkeästä erottelusta muista liikennemuodoista.
 
 ### Kaksiajorataiset kadut
 
@@ -690,7 +705,7 @@ Nykyisin käytössä olevien liityntäpysäköintilaitosten tiedot on saatavilla
 
 # Tavaraliikenne
 
-Tavaraliikenne mallissa kulkee ainoastaan maanteitse, rautateillä kuljetettavaa rahtia ei ole kuvattu.
+Tavaraliikenne mallissa kulkee ainoastaan maanteitse, rautateillä kuljetettavaa rahtia ei ole kuvattu. Tavaraliikenne käyttää kulkumuotoja v, k ja y (pakettiautot, kuorma-autot ilman perävaunua sekä perävaunulliset kuorma-autot).
 
 ### Keskustan huoltotunneli ja raskaan liikenteen rajoitukset Helsingin keskustassa
 

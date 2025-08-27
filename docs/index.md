@@ -89,10 +89,12 @@ Liityntäpysäköinti on tuotu osaksi mallin kulkutapoja. Liityntäpysäköinti 
 
 Pyöräilyn mallintamista on kehitetty Helmet 5 versiossa aiemman Helmet 4 version kehitystyön jatkona.
 
-* Pyöräilyn väyliä on tarkistettu laajasti HS15 alueella
+* Pyöräilyn väyliä on tarkistettu laajasti HS15 alueella.
+* Pyöräliikenteeseen eivät enää vaikuta autoliikenteen kääntymiskiellot.
+* Pyöräliikenteen kysyntä ei perustu enää matkan pituuteen vaan matka-aikaan.
 * Pyöräliikennettä ei enää pääsääntöisesti kuvata moottoriteille, ja moottoriteiden rinnakkaiset pyöräväylät on kuvattu omina linkkeinään Helsingissä ja Espoossa.
-* Pyöräilyn reitinvalintaan vaikuttaa myös maastonmuodot ja samalla väylällä kulkeva autoliikenne
-  * Linkeillä uusi extra-attribuutti @kaltevuus, joka tuotetaan automaatiolla
+* Pyöräilyn reitinvalintaan vaikuttaa myös maastonmuodot ja samalla väylällä kulkeva autoliikenne.
+  * Linkeillä uusi extra-attribuutti @kaltevuus, joka tuotetaan automaatiolla.
   * Solmuilla uusi extra-attribuutti @korkeus, jota voidaan käyttää vaihtoehtoisena kaltevuudelle verkkoja koodatessa.
 
 ## Mallintamisen taustoja
