@@ -22,7 +22,7 @@ Tämän dokumentoinnin tavoitteena on helpottaa tulosten tulkintaa, mahdollistaa
 
 ### Mallitarkastelujen yleiskuvaus
 
-Kirjaa tehdyistä tarkasteluista ja verkkomuutoksista yleiskuvaus omaan dokumenttiinsa ja kirjaa vastaavat asiat myös työn raporttiin.
+Kirjaa tehdyistä tarkasteluista ja verkkomuutoksista yleiskuvaus omaan dokumenttiin ja kirjaa vastaavat asiat myös työn raporttiin.
 Esimerkkinä voi käyttää lähtöaineistojen yhteydessä olevia yleiskuvauksia.
 
 Kuvaa lyhyesti myös mm. mahdollisten poikkeavien skriptien ja parametrien käyttö. 
