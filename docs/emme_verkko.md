@@ -352,6 +352,12 @@ Aiemmista malliversioista poiketen pyöräilyä ei tule kuvata moottoritiemäisi
 
 *) Helmet 5:ssä linkin vapaata nopeutta laskettu arvosta 23 arvoon 12. Käytettävä vain kaikkein hitaimmilla kaduilla, esimerkiksi Helsingin kantakaupungissa.
 
+### Kaistamäärät
+
+Linkin lanes-attribuuttiin kuvataan ajoradan kaistamäärä per suunta. Mallijärjestelmässä linkin kapasiteetti kerrotaan kaistamäärällä, minkä takia malliin on määritelty omat linkkityypit moottoriteille, joilla on 3 tai enemmän kaistaa, jolloin ryhmittymiskäyttäytyminen syö osan kapasiteetista ja kapasiteetti olisi liian suuri jos käytettäisiin samaa linkkityyppiä kuin harvempikaistaisilla tieosuuksilla.
+
+Edellä mainitun ryhmittymiskäyttäytymisen takia myöskään liittymäalueiden kääntymiskaistoja ei koodata erikseen, vaan käytetään samaa kaistamäärää kuin risteyksen tai liittymän ulkopuolella. Mallissa kääntymiskaistoja ei varsinaisesti tunnisteta kääntymiskaistoiksi, vaan kääntymiskaistojen koodaaminen kasvattaa kapasiteettia myös vapaasti suoraan ajaville. Kääntyvät ajoneuvot eivät myöskään haittaa muuta liikennettä, koska risteävät liikennevirrat eivät hidasta toisiaan, eikä liikennevaloristeyksiä ole eksplisiittisesti koodattu, vaan liikennevaloja sisältävillä väylillä käytetään eri linkkityyppejä yllä olevan taulukon mukaisesti.
+
 ### Nopeus raitiotieverkolla
 
 Nopeus raitiotieverkolla määräytyy linkkiattribuuttiin ul1 koodattujen nopeuksien perusteella.
@@ -556,7 +562,7 @@ Eri kulkumuodot pysähtyvät pysäkeille pysäkkitunnusten mukaan seuraavasti:
 ## Raideliikenteen kuvaus
 
 Junaliikenteen verkko kuvataan linkkityypillä 4 ja metroliikenteen verkko linkkityypillä 3.
-Molemmissa verkko koostuu ainoastaan asemia kuvaavista solmuista, erillisiä välisolmuja ei käytetä.
+Molemmissa verkko koostuu ainoastaan asemia kuvaavista solmuista, erillisiä välisolmuja ei käytetä. Lisäksi mallialueen rajoilla on mallin sisäisten pääteasemien jälkeen solmu johon junaliikenteen ulkosyöttö on yhdistetty. Näin mallialueen ulkopuolelta tulevat matkustajat aloittavat matkansa kaukojunassa, sen sijaan että he valitsisivat esimerkiksi Lahdessa Z-lähiliikenteen junan.
 Nopeus juna- ja metroverkolla määräytyy segmenttimuuttujaan us1 tallennettujen asemien välisten matka-aikojen perusteella. Jos segmenttimuuttujaa ei ole asetettu, junan matka-aika asemimen välillä on 0 ja nopeus siten ääretön. 
 Matka-aika asemaväleittäin koodataan erikseen kutakin juna- tai metrolinjaa koodattaessa, eikä se ole sidoksissa verkon kuvaukseen. Tämä johtuu siitä, että junien pysähtyminen hidastaa matka-aikaa, joten aseman ohittava juna voi kulkea saman asemavälin pysähtyvää junaa nopeammin.
 
