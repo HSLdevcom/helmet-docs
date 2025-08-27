@@ -100,7 +100,7 @@ Pysäköintinormit vaikuttavat vain uusien asukkaiden autonomistukseen.
 
 ### Lähtödata
 
-Kansio sisältää perusvuoden (lähtökohtaisesti 2018, mutta jotkut tiedot voivat olla vanhempia) syöttötietoja (kuvattu yllä)
+Kansio sisältää perusvuoden (lähtökohtaisesti 2023, mutta jotkut tiedot voivat olla vanhempia) syöttötietoja (kuvattu yllä)
 ja [kysyntämatriiseja](tulokset.md#tuloskansion-matriisitiedostojen-kuvaukset).
 Kysyntämatriisit menevät ensimmäiseen sijoitteluun, josta kysyntälaskenta alkaa.
 Perusvuoden syöttötiedot menevät tavaraliikennemalliin ja autonomistusmalliin, jotka molemmat ovat muutosmalleja.
@@ -114,7 +114,7 @@ Kansio sisältää kullekin tarkasteluvuodelle/skenaariolle alikansion, jossa on
 
 **Tiedostot**
 
-* **base_network_xxx.txt** = liikenneverkon solmut ja linkit sekä niiden attribuutit (HUOM: Helmet 4 käyttää myös solmun label-attribuuttia, jossa lippuvyöhykkeen kirjain)
+* **base_network_xxx.txt** = liikenneverkon solmut ja linkit sekä niiden attribuutit (HUOM: Helmet 5 käyttää myös solmun label-attribuuttia, jossa lippuvyöhykkeen kirjain)
 * **transit_lines_xxx.txt** = joukkoliikennelinjaston kuvaus: mm. linjatunnus, kulkumuoto, ajoneuvotyyppi (vehicle), reitin otsikko, reitin käyttämät solmut
   (HUOM: pysähtymiset lasketaan solmujen tietojen perusteella ennusteprosessin aikana ja eri aikajaksojen vuorovälit ajetaan sisään
   erillisestä tiedostosta `extra_transit_lines_xxx.txt`)
