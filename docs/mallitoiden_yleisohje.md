@@ -11,7 +11,7 @@ Myös työn huolellinen dokumentointi on tärkeää, sillä se auttaa aineistoje
 
 Mallin käyttämiä lähtötietoja on kuvattu [täällä](mallin_lahtotietotiedostot.md). 
 HSL:n lähtötietoaineistot (mm. maankäytöt ja verkkojen tiedot) saat ladattua zip-pakettina, kun olet täyttänyt aineistojen luovutuksen hakemuslomakkeen.
-Näistä löydät yleistietoa [täältä](HSL_lahtotiedot.md).
+Näistä löydät yleistietoa [täältä](mallin_lahtotietotiedostot.md).
 Hakemuslomake löytyy Teams-ryhmästä EXT-Helmet, jonne saat käyttöoikeuden HSL:n Liikennejärjestelmäyksiköstä (Johanna Piipponen).
 Kutakin projektia varten tulee hakea uudet aineistot, jotta aineistojen käyttöä voidaan seurata sekä varmistutaan, että lähtötiedot ovat aina ajan tasalla.
 
