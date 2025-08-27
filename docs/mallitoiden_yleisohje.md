@@ -12,7 +12,7 @@ Myös työn huolellinen dokumentointi on tärkeää, sillä se auttaa aineistoje
 Mallin käyttämiä lähtötietoja on kuvattu [täällä](mallin_lahtotietotiedostot.md). 
 HSL:n lähtötietoaineistot (mm. maankäytöt ja verkkojen tiedot) saat ladattua zip-pakettina, kun olet täyttänyt aineistojen luovutuksen hakemuslomakkeen.
 Näistä löydät yleistietoa [täältä](HSL_lahtotiedot.md).
-Hakemuslomake löytyy Teams-ryhmästä EXT-Helmet, jonne saat käyttöoikeuden HSL:n Liikennejärjestelmäryhmästä (Johanna Piipponen).
+Hakemuslomake löytyy Teams-ryhmästä EXT-Helmet, jonne saat käyttöoikeuden HSL:n Liikennejärjestelmäyksiköstä (Johanna Piipponen).
 Kutakin projektia varten tulee hakea uudet aineistot, jotta aineistojen käyttöä voidaan seurata sekä varmistutaan, että lähtötiedot ovat aina ajan tasalla.
 
 Mallin asennusohjeet löydät [täältä](kaytto-ohje.md), ja Emme-pankin perustamisen ohjeet [täältä](sijopankki.md).
@@ -77,6 +77,7 @@ Jokaista ajettavaa HELMET-skenaariota kohden on tehtävä seuraavat määrittely
 9.  Valinta, tallennetaanko mm. joukkoliikenteen matka-ajan osamatriisit (in-vehicle time, first
     waiting time, jne.). Malliajoon ja hankearviointiin tarpeelliset matriisit tallennetaan
     aina .omx-muodossa riippumatta tästä valinnasta.
+    - Emme projektissa matriisit on aina jaettu kaikkien skenaarioiden kesken, eli jos valintaa ei erikseen tehdä, matriisit yliajetaan jokaisen malliajon jälkeen ja eri skenaarioiden matriisien tarkastelu on mahdotonta Emmessä.
     - Mikäli halutaan useiden Helmet-skenaarioiden kaikki Emme-matriisit talteen samaan
       Emme-projektiin (.emx-tiedostoihin), voidaan lisäksi ennen jokaista malliajoa määrittää
       ensimmäisen matriisin numero. Varataan yhteen malliajoon aina 300 matriisin numeroavaruus,
@@ -90,7 +91,7 @@ H/K-analyysillä voidaan verrata ajettujen skenaarioiden hyötyjä ja kustannuks
 1. Vertailuvaihtoehdon (ve0) tuloskansio (`Tulosten tallennuspolku\Skenaarion nimi`)
 2. Hankevaihtoehdon (ve1) tuloskansio
 
-Jos ennusteita on ajettu kahdelle vuodelle (esim. 2040 ja 2060), vertailuvaihtoehto ja hankevaihtoehto on mahdollista määrittää toisellekin ennustevuodelle.
+Jos ennusteita on ajettu kahdelle vuodelle (esim. 2040 ja 2060), vertailuvaihtoehto ja hankevaihtoehto on mahdollista määrittää toisellekin ennustevuodelle. Lisätietoa H/K laskennasta ja vaikutustenarvioinnista löytyy [täältä](vaikutusten_arvionti.md).
 
 ## Tulosten käsittely ja tulkinta
 

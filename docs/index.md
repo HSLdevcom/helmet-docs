@@ -5,7 +5,7 @@ title: Etusivu
 ---
 # HSL:n liikenne-ennustejärjestelmän yleiskuvaus
 
-Helmet on HSL:n liikenne-ennustejärjestelmä, joka kattaa Helsingin seudun 14 kuntaa ja Siuntion sekä niitä ympäröivän työssäkäyntialueen.
+Helmet on HSL:n liikenne-ennustejärjestelmä, joka kattaa Helsingin seudun 14 kuntaa ja Siuntion sekä niitä ympäröivän työssäkäyntialueen, johon kuuluu koko Uusimaa ja lisäksi Varsinais-Suomen, Kanta-Hämeen ja Päijät-Hämeen kuntia.
 Uusin malliversio Helmet 5 julkaistaan marraskuussa 2025. Järjestelmä käyttää OpenPaths Emme-ohjelmistoa.
 
 HSL:n Helmet-liikenne-ennustemallia voidaan käyttää arvioimaan erilaisten muutostekijöiden vaikutuksia liikennejärjestelmään.

@@ -17,12 +17,13 @@ aineistojen rakenteesta [täältä](mallin_lahtotietotiedostot.md).
 
 ## Ennusteskenaarioiden syöttötiedot (maankäyttö, kustannukset ym)
 
-HSL:n virallisia kysyntämallin lähtötietoja ylläpitää Johanna Piipponen. 
+HSL:n virallisia kysyntämallin lähtötietoja ylläpitää Santeri Hiitola. 
 
 **Lähtötietoja tuotetaan MAL-suunnittelun yhteydessä n. neljän vuoden välein seuraaville skenaarioille:**
-* Nykytilakuvaus
-* Ennuste n. 10 vuoden päähän (voi olla useita erilaisia)
-* Ennuste n. 30 vuoden päähän (voi olla useita erilaisia)
+* Nykytilan kuvaus
+* MAL-suunnitelman tavoitevuoden skenaario
+* MAL-suunnitelman pitkän aikavälin tavoiteskenaario
+* MAL-suunnitelman mukaiset välivuosiskenaariot (5 vuoden välein)
 
 Aineistojen sisältöjä on kuvattu tarkemmin aineiston jakokansiossa, johon saat käyttöoikeuden täyttämällä hakemuslomakkeen EXT-Helmet -Teams-ryhmässä.
 Tiedostopolun juuressa on dokumentti (esim. MAL2019-ennusteet.docx), joka sisältää aineistojen yleiskuvauksen,
