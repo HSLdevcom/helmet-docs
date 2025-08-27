@@ -47,11 +47,11 @@ että kulkutavanvalinta on ylemmällä tasolla kuin määräpaikan valinta (eli 
 
 ### Aluejako
 
-Helmet 5 mallissa on aiempaa enemmän sijoittelualueita Itä- ja Länsi-Uudellamaalla. Laajennustyö on toteutettu Uudenmaanliiton tilaamana erillisenä työnä vuonna 2021, ja laajennus on integroitu osaksi Helmet mallia Helmet 5 päivitystyön yhteydessä. 
+Helmet 5 mallissa on aiempaa enemmän sijoittelualueita Itä- ja Länsi-Uudellamaalla. Laajennustyö on toteutettu Uudenmaan liiton tilaamana erillisenä työnä vuonna 2021, ja laajennus on integroitu osaksi Helmet mallia Helmet 5 päivitystyön yhteydessä. 
 
 ### HSL-alueen ulkopuolinen joukkoliikenne
 
-HSL-alueen ulkopuolinen joukkoliikenne on päivitetty vastaamaan vuoden 2023 tarjontaa GTFS aineiston pohjalta. Joukkoliikenteen tarjonta sisältää nyt myös muiden kaupunkiseutujen seudullisen joukkoliikenteen.
+HSL-alueen ulkopuolinen joukkoliikenne on päivitetty vastaamaan vuoden 2023 tarjontaa GTFS-aineiston pohjalta. Joukkoliikenteen tarjonta sisältää nyt myös muiden kaupunkiseutujen seudullisen joukkoliikenteen.
 
 ### Pysäköintiin kuluva aika osana autoliikenteen matka-aikaa
 
@@ -59,7 +59,7 @@ HELMET 5 -malliversiossa pysäköintiin kuluva aika huomioidaan henkilöautomatk
 
 ### Säteittäisväylien päiden kapasiteetin korjaus
 
-HELMET 5 -malliversiossa säteittäisväylien välityskykyä on pienennetty vastaamaan paremmin todellista liikennevalojen rajoittamaa verkon välityskyky keskustaan päin suuntautuvalla liikenteellä. Korjattu kapasiteetti vastaa tarkemmin toteutunutta välityskykyä ja kasvattaa ruuhkatuntien matka-aikoja keskustaan.
+HELMET 5 -malliversiossa säteittäisväylien välityskykyä on pienennetty vastaamaan paremmin todellista liikennevalojen rajoittamaa verkon välityskykyä keskustaan päin suuntautuvalla liikenteellä. Korjattu kapasiteetti vastaa tarkemmin toteutunutta välityskykyä ja kasvattaa ruuhkatuntien matka-aikoja keskustaan.
 
 ### Kantakaupungin linkkien vapaan nopeuden muutos
 
@@ -67,7 +67,7 @@ HELMET 5 -malliversiossa Helsingin kantakaupungin alueella käytetyn linkkityypi
 
 ### Joukkoliikenteen ruuhkautuvuus
 
-HELMET 5 -malliversiossa ruuhkautuvan joukkoliikenteen sijoittelu on otettu käyttöön kaikilla malli-iteraatioilla. Tämä tarkoittaa, että joukkoliikenteen ruuhkautumisen vaikutukset otetaan huomioon koko mallinnusprosessin ajan, ei vain loppusijoitteluvaiheessa. Lisäksi ruuhkautumista kuvaavaa funktiota on tarkennettu siten, että se vastaa Väyläviraston määrittelemiä yksikköarvoja. Uuden ruuhkautumisfunktion mukainen koettumatka-aika kasvaa aiempaa maltillisemmin tilanteissa, joissa joukkoliikennevälineen kapasiteetti loppuu kesken.
+HELMET 5 -malliversiossa ruuhkautuvan joukkoliikenteen sijoittelu on otettu käyttöön kaikilla malli-iteraatioilla. Tämä tarkoittaa, että joukkoliikenteen ruuhkautumisen vaikutukset otetaan huomioon koko mallinnusprosessin ajan, ei vain loppusijoitteluvaiheessa. Lisäksi ruuhkautumista kuvaavaa funktiota on tarkennettu siten, että se vastaa Väyläviraston määrittelemiä yksikköarvoja. Uuden ruuhkautumisfunktion mukainen koettu matka-aika kasvaa aiempaa maltillisemmin tilanteissa, joissa joukkoliikennevälineen kapasiteetti loppuu kesken.
 
 
 ### Joukkoliikennevälineet
@@ -82,7 +82,7 @@ Vaihtoehdoista HSL:n tarjoamissa verkoissa on käytössä ainoastaan nivelbussit
 
 ### Liityntäpysäköinnin mallinnus
 
-Liityntäpysäköinti on tuotu osaksi mallin kulkutapoja. Liityntäpysäköinti tapahtuu kahtena osamatkana, jossa ensimmäinen osamatka tehdään autolla ja toinen joukkoliikenteellä. Liityntäpysäköintiä varten malliin on kuvattu seudun liityntäpysäköintilaitokset ja niiden kapasiteetit ja mahdollinen hinta. Liityntäpysäköintilaitokset on kuvattu sentroideina, joiden numeroavaruus on 35 000 - 35 999
+Liityntäpysäköinti on tuotu osaksi mallin kulkutapoja. Liityntäpysäköinti tapahtuu kahtena osamatkana, joista ensimmäinen osamatka tehdään autolla ja toinen joukkoliikenteellä. Liityntäpysäköintiä varten malliin on kuvattu seudun liityntäpysäköintilaitokset ja niiden kapasiteetit ja mahdollinen hinta. Liityntäpysäköintilaitokset on kuvattu sentroideina, joiden numeroavaruus on 35 000 - 35 999
 
 
 ### Pyöräilyn mallinnus
@@ -95,7 +95,7 @@ Pyöräilyn mallintamista on kehitetty Helmet 5 versiossa aiemman Helmet 4 versi
 * Pyöräliikennettä ei enää pääsääntöisesti kuvata moottoriteille, ja moottoriteiden rinnakkaiset pyöräväylät on kuvattu omina linkkeinään Helsingissä ja Espoossa.
 * Pyöräilyn reitinvalintaan vaikuttaa myös maastonmuodot ja samalla väylällä kulkeva autoliikenne.
   * Linkeillä uusi extra-attribuutti @kaltevuus, joka tuotetaan automaatiolla.
-  * Solmuilla uusi extra-attribuutti @korkeus, jota voidaan käyttää vaihtoehtoisena kaltevuudelle verkkoja koodatessa.
+  * Solmuilla uusi extra-attribuutti @korkeus, jota voidaan käyttää vaihtoehtona kaltevuudelle verkkoja koodatessa.
 
 ## Mallintamisen taustoja
 
@@ -116,7 +116,7 @@ Oletuksena yksilöiden hyödyn maksimointi:
 Malli perustuu nykytilan havaintoaineiston valintoihin:
 * Oletetaan, että tulevaiuusskenaarioissa ihmiset tekevät valintansa samoilla perusteilla kuin havaintoaineistossa eli nykytilassa
 * Ennusteita ei voida tehdä asenteiden muutoksista (jos matka-aikaa, kustannuksia ym. arvostetaan eri tavalla kuin nykyisin)
-* Radikaaleja muutoksia toimintaympäristössä on haastava ennustaa ja siten mallintaa. Esimerkiksi koronaviruspandemia ja siitä seurannut etätyön lisääntyminen myös pysyvästi vaikuttaa mallin tuloksiin huomattavasti, mitä ei ole voinut näyttää todenmukaisesti mallilla, joka oli estimoitu pandemiaa edeltävällä liikkumistutkimusaineistolla.
+* Radikaaleja muutoksia toimintaympäristössä on haastava ennustaa ja siten mallintaa. Esimerkiksi koronaviruspandemia ja siitä seurannut etätyön lisääntyminen vaikuttaa pysyvästi mallin tuloksiin, mutta sitä ei ole voinut kuvata todenmukaisesti mallilla, joka oli estimoitu pandemiaa edeltävällä liikkumistutkimusaineistolla.
 
 Mallin matemaattinen pohja perustuu diskreetteihin valintamalleihin:
 * Mallijärjestelmä rakentuu useista eri osamalleista, joissa kuvataan logit-malleilla todennäköisyyttä, että päätöksentekijä valitsee tietyn vaihtoehdon (esim. kulkutapa)
