@@ -47,7 +47,7 @@ että kulkutavanvalinta on ylemmällä tasolla kuin määräpaikan valinta (eli 
 
 ### Aluejako
 
-Helmet 5 mallissa on aiempaa enemmän sijoittelualueita Itä- ja Länsi-Uudellamaalla. Laajennustyö on toteutettu Uudenmaan liiton tilaamana erillisenä työnä vuonna 2021, ja laajennus on integroitu osaksi Helmet mallia Helmet 5 päivitystyön yhteydessä. 
+Helmet 5 mallissa on aiempaa enemmän sijoittelualueita Itä- ja Länsi-Uudellamaalla. Laajennustyö on toteutettu Uudenmaan liiton tilaamana erillisenä työnä vuonna 2021, ja laajennus on integroitu osaksi Helmet mallia Helmet 5 päivitystyön yhteydessä. Vuoden 2021 muutosten lisäksi myös liikenneverkko on tarkistettu ja päivitetty ympäryskuntien alueilla.
 
 ### HSL-alueen ulkopuolinen joukkoliikenne
 
@@ -96,6 +96,15 @@ Pyöräilyn mallintamista on kehitetty Helmet 5 versiossa aiemman Helmet 4 versi
 * Pyöräilyn reitinvalintaan vaikuttaa myös maastonmuodot ja samalla väylällä kulkeva autoliikenne.
   * Linkeillä uusi extra-attribuutti @kaltevuus, joka tuotetaan automaatiolla.
   * Solmuilla uusi extra-attribuutti @korkeus, jota voidaan käyttää vaihtoehtona kaltevuudelle verkkoja koodatessa.
+
+### Käytettävyysparannukset
+
+Mallin käytettävyyttä on pyritty parantamaan selkeyttämällä virhetilanteiden viestintää ja kehittämällä verkkovalidointia ennen malliajoa
+
+ * Tapaukset joissa joukkoliikennelinjat kulkevat samojen linkkien yli useita kertoja ilmoitetaan käyttäjälle
+ * Täyttyneistä joukkoliikennelinjoista ilmoitetaan käyttäjälle
+ * Mallijärjestelmä ilmoittaa ongelmasta aiempaa nopeammin ja selkeämmin, jos käyttäjä haluaa käyttää esilaskettua joukkoliikenteen kustannusmatriisia tai ajaa vain loppusijoittelun, mutta skenaarion tuloskansiosta puuttuu vaaditut matriisit.
+ * Ja muita pienempiä käytettävyysparannuksia
 
 ## Mallintamisen taustoja
 
