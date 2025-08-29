@@ -15,14 +15,14 @@ Näistä löydät yleistietoa [täältä](mallin_lahtotietotiedostot.md).
 Hakemuslomake löytyy Teams-ryhmästä EXT-Helmet, jonne saat käyttöoikeuden HSL:n Liikennejärjestelmäyksiköstä (Johanna Piipponen).
 Kutakin projektia varten tulee hakea uudet aineistot, jotta aineistojen käyttöä voidaan seurata sekä varmistutaan, että lähtötiedot ovat aina ajan tasalla.
 
-Mallin asennusohjeet löydät [täältä](kaytto-ohje.md), ja Emme-pankin perustamisen ohjeet [täältä](sijopankki.md).
-Kutakin projektia varten kannattaa luoda yksi yhteinen Emme-pankki, johon kootaan eri Helmet-skenaariot (esim. eri linjastovaihtoehdot).
+Mallin asennusohjeet löydät [täältä](kaytto-ohje.md), ja EMME-pankin perustamisen ohjeet [täältä](sijopankki.md).
+Kutakin projektia varten kannattaa luoda yksi yhteinen EMME-pankki, johon kootaan eri HELMET-skenaariot (esim. eri linjastovaihtoehdot).
 Pääosin suositellaan käytettäväksi vain HSL:n julkaisemia skriptejä ja näiden oletusparametrejä.
 Poikkeamat näihin on syytä dokumentoida huolella (ks. [dokumentointiohje](HSL-toiden_dokumentointi.md)).
 
 ## Malliajojen ohje
 
-Helmet-käyttöliittymän (UI) kautta pääset määrittämään projektin asetukset ja lähtötiedot. Helmet käyttöliittymä on saatavilla [täältä](https://github.com/HSLdevcom/helmet-ui)
+HELMET-käyttöliittymän (UI) kautta pääset määrittämään projektin asetukset ja lähtötiedot. HELMET-käyttöliittymä on saatavilla [täältä](https://github.com/HSLdevcom/helmet-ui)
 
 ### Asetukset
 
@@ -30,17 +30,17 @@ Mallin ajoa varten tulee määritellä seuraavat asetukset.
 
 :warning: **Kansiopoluissa ei saa olla ääkkösiä!**
 
-- Suorituskelpoinen Emme Python 
-  - Tämän **on oltava** Emmen mukana tullut ’python.exe’, jotta tietyt edellytykset täyttyvät.
+- Suorituskelpoinen EMME Python 
+  - Tämän **on oltava** EMMEn mukana tullut ’python.exe’, jotta tietyt edellytykset täyttyvät.
   - esim. `C:\Program Files\Bentley\OpenPaths\EMME 24.00.00\Python311\python.exe`
-- GitHubin [Helmet 5.0 Model System](https://github.com/HSLdevcom/helmet-model-system)-sivuston kansio ’Scripts’
+- GitHubin [HELMET 5.0 Model System](https://github.com/HSLdevcom/helmet-model-system)-sivuston kansio ’Scripts’
   - Kansiossa ovat järjestelmän käyttämät Python-ohjelmat.
   - Version päivitys voidaan tehdä klikkaamalla "Lataa eri versio...". Nämä eivät korvaa skriptien vanhoja versioita, 
   vaan uusimmat versiot skripteistä talletetaan uuteen kansioon.
   - Voidaan käyttää myös olemassa olevaa kansiota.
 - Projektin kansiopolku
-  - Tänne talletetaan Helmet-skenaarioiden (malliajojen) määrittelyt (.json)
-  - Tämä **ei** siis viittaa Emmen projektitiedostoon (.emp)
+  - Tänne talletetaan HELMET-skenaarioiden (malliajojen) määrittelyt (.json)
+  - Tämä **ei** siis viittaa EMMEn projektitiedostoon (.emp)
 - Lähtödatan sisältävä kansio
   - Tässä ovat omissa alakansioissaan pohjakysyntämatriisit ja nykytilanteen syöttötiedot (2018)
   - Kansion sisällön saa HSL:ltä (ks. [lähtötietotiedostojen ohje](mallin_lahtotietotiedostot.md))
@@ -48,7 +48,7 @@ Mallin ajoa varten tulee määritellä seuraavat asetukset.
   - Tänne talletetaan ennusteajojen tulokset
 
 Näiden asetusten lisäksi on kehittäjille tarkoitettuja asetuksia helmet-model-system -kansion tiedostossa `dev-config.json`.
-Näihin ei ole tavalliselle käyttäjälle yleensä syytä koskea, mutta joissain tapauksissa hyödyllinen asetusmahdollisuus ei ole vielä implementoitu käyttöliittymään.
+Tyypillisesti tavallisilla käyttäjillä ei ole tarvetta muokata näitä lisäasetuksia, mutta joissain käyttötapauksissa voi olla hyötyä myös sellaisista asetuksista, joita ei ole vielä implementoitu käyttöliittymään.
 Lisää tietoja `dev-config.json`-tiedoston asetuksista löytyy 
 [tästä](https://github.com/HSLdevcom/helmet-model-system/tree/olusanya/Scripts#configuring-the-model-run-with-dev-configjson).
 
@@ -57,9 +57,9 @@ Lisää tietoja `dev-config.json`-tiedoston asetuksista löytyy
 Jokaista ajettavaa HELMET-skenaariota kohden on tehtävä seuraavat määrittelyt:
 
 1.	Skenaarion tai ajon nimi
-    - *Skenaario* ei tässä viittaa Emme-skenaarioon, vaan tässä annetaan nimi verkkokuvaus- ja maankäyttötietoyhdistelmälle joka menee yhteen malliajoon.
-2.	Emmen project-tiedosto (.emp)
-3.	Emme-skenaarion numero. 
+    - *Skenaario* ei tässä viittaa EMME-skenaarioon, vaan tässä annetaan nimi verkkokuvaus- ja maankäyttötietoyhdistelmälle joka menee yhteen malliajoon.
+2.	EMMEn project-tiedosto (.emp)
+3.	EMME-skenaarion numero. 
    Asetuksista riippuen sijoittelutulokset tallennetaan tähän skenaarioon tai erikseen seuraavaan neljään skenarioon (vrk, aht, pt, iht).
 4.	Kansio, jossa ovat syöttötiedot
     - esim. `C:\Helmet\Scenario_input_data\2030`
@@ -73,14 +73,14 @@ Jokaista ajettavaa HELMET-skenaariota kohden on tehtävä seuraavat määrittely
 6.	Valinta, lasketaanko joukkoliikenteen kustannusmatriisi vai käytetäänkö aiemmin laskettua 
    (sijaitsee tämän skenaarion tuloskansiossa `Tulosten tallennuspolku\Skenaario nimi`).
 7.  Valinta, poistetaanko sijoittelun strategiatiedostot malliajon jälkeen.
-8.  Valinta, tallennetaanko eri ajanjaksot erillisiin Emme-skenaarioihin.
+8.  Valinta, tallennetaanko eri ajanjaksot erillisiin EMME-skenaarioihin.
 9.  Valinta, tallennetaanko mm. joukkoliikenteen matka-ajan osamatriisit (in-vehicle time, first
     waiting time, jne.). Malliajoon ja hankearviointiin tarpeelliset matriisit tallennetaan
     aina .omx-muodossa riippumatta tästä valinnasta.
-    - Emme projektissa matriisit on aina jaettu kaikkien skenaarioiden kesken, eli jos valintaa ei erikseen tehdä, matriisit yliajetaan jokaisen malliajon jälkeen ja eri skenaarioiden matriisien tarkastelu on mahdotonta Emmessä.
-    - Mikäli halutaan useiden Helmet-skenaarioiden kaikki Emme-matriisit talteen samaan
-      Emme-projektiin (.emx-tiedostoihin), voidaan lisäksi ennen jokaista malliajoa määrittää
-      ensimmäisen matriisin numero. Varataan yhteen malliajoon aina 300 matriisin numeroavaruus,
+    - EMME-projektissa matriisit on aina jaettu kaikkien skenaarioiden kesken, eli jos valintaa ei erikseen tehdä, matriisit yliajetaan jokaisen malliajon jälkeen ja eri skenaarioiden matriisien tarkastelu on mahdotonta EMMEssä.
+    - Mikäli halutaan useiden HELMET-skenaarioiden kaikki EMME-matriisit talteen samaan
+      EMME-projektiin (.emx-tiedostoihin), voidaan lisäksi ennen jokaista malliajoa määrittää
+      ensimmäisen matriisin numero. Yhteen malliajoon tarvitaan aina 300 matriisin numeroavaruus,
       joten jos ensimmäiseen malliajoon on käytetty 100 (oletus), toiseen malliajoon kannattaa
       laittaa 400.
 
