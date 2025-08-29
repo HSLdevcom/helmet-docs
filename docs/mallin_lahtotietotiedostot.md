@@ -59,7 +59,7 @@ Kullekin vuodelle on oma alikansionsa ja niistä löytyy readme-tiedostot, joiss
 Ilmoitathan Merville, mikäli havaitset tarjontakuvauksissa puutteita tai korjaustarpeita.
 Mervi ylläpitää korjaustarvelistaa sekä tarjontamallin lähtötietojen tarkempia kuvauksia.
 
-Verkkokuvausperiaatteita on kuvattu tarkemmin raportissa Helsingin seudun liikenteen Emme-verkon kuvaus,
+Verkkokuvausperiaatteita on kuvattu tarkemmin raportissa Helsingin seudun liikenteen EMME-verkon kuvaus,
 joka on saatavilla mallin käyttäjien EXT-Helmet -Teams-ryhmässä.
 Noudatathan näitä periaatteita verkonkuvauksia koodatessa, jotta varmistutaan tulosten oikeellisuudesta ja aineistojen yhteiskäyttöisyydestä. 
 
@@ -114,7 +114,7 @@ Kansio sisältää kullekin tarkasteluvuodelle/skenaariolle alikansion, jossa on
 
 **Tiedostot**
 
-* **base_network_xxx.txt** = liikenneverkon solmut ja linkit sekä niiden attribuutit (HUOM: Helmet 5 käyttää myös solmun label-attribuuttia, jossa lippuvyöhykkeen kirjain)
+* **base_network_xxx.txt** = liikenneverkon solmut ja linkit sekä niiden attribuutit (HUOM: HELMET 5 käyttää myös solmun label-attribuuttia, jossa lippuvyöhykkeen kirjain)
 * **transit_lines_xxx.txt** = joukkoliikennelinjaston kuvaus: mm. linjatunnus, kulkumuoto, ajoneuvotyyppi (vehicle), reitin otsikko, reitin käyttämät solmut
   (HUOM: pysähtymiset lasketaan solmujen tietojen perusteella ennusteprosessin aikana ja eri aikajaksojen vuorovälit ajetaan sisään
   erillisestä tiedostosta `extra_transit_lines_xxx.txt`)
@@ -131,7 +131,7 @@ Moduuli ajaa myös sisään seuraavat kaikille skenaarioille yhteiset tiedot:
 
 ## Lähtötietojen muokkaaminen
 
-Lähtötietoja voi muokata joko suoraan lähtötietotiedostoihin tai Emme-ohjelmiston (Modeller, Network Editor, Prompt) kautta.
+Lähtötietoja voi muokata joko suoraan lähtötietotiedostoihin tai EMME-ohjelmiston (Modeller, Network Editor, Prompt) kautta.
 
 Verkkokuvausperiaatteita on kuvattu tarkemmin [täällä](emme_verkko.md).
 Noudatathan näitä periaatteita verkonkuvauksia koodatessa, jotta varmistutaan tulosten oikeellisuudesta ja aineistojen yhteiskäyttöisyydestä.
