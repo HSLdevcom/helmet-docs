@@ -5,26 +5,26 @@ sort: 2
 
 # Sijoittelupankin perustaminen
 
-## Luo uusi Emme-projekti haluamaasi kansioon
+## Luo uusi EMME-projekti haluamaasi kansioon
 - File - New - Project…
 -	Name: esim. `Viima`
 -	Project location: esim. `C:\HELMET50`
 
-Emme luo valitsemaasi kansioon alikansion (tässä tapauksessa `C:\HELMET50\Viima`) ja tähän alikansioon emp-tiedoston.
+EMME luo valitsemaasi kansioon alikansion (tässä tapauksessa `C:\HELMET50\Viima`) ja tähän alikansioon emp-tiedoston.
 Huomaa, että emp-tiedoston nimen pitää vastata alikansion nimeä, tässä tapauksessa siis `Viima.emp`.
 
 Seuraavassa valintaikkunassa valitse kohta _Create an empty project_ ja jatka dimensioiden määrittelyyn.
 
-Tarvittavat skenaario- matriisi- ja ekstra-attribuuttimäärät riippuvat Helmet-asetuksista:
-- Jos malliajon määrittelyssä aiotaan valita _Tallenna eri ajanjaksot erillisiin Emme-skenaarioihin_,
-  tarvitaan viisi Emme-skenaariota kutakin tarkasteltavaa Helmet-skenaariota kohti.
+Tarvittavat skenaario-, matriisi- ja ekstra-attribuuttimäärät riippuvat HELMET-asetuksista:
+- Jos malliajon määrittelyssä aiotaan valita _Tallenna eri ajanjaksot erillisiin EMME-skenaarioihin_,
+  tarvitaan viisi EMME-skenaariota kutakin tarkasteltavaa HELMET-skenaariota kohti.
   Ensimmäinen niistä toimii lähtötietona (verkko ja linjasto) malliajoon ja muut luodaan automaattisesti
   malliajon aikana ajanjaksojen tuloksia varten (vrk, aht, pt, iht).
   Tässä tapauksessa pärjätään pienemmällä ekstra-attribuuttimäärällä.
-- Jos malliajon määrittelyssä ei valita _Tallenna eri ajanjaksot erillisiin Emme-skenaarioihin_,
-  tarvitaan yksi Emme-skenaario kutakin tarkasteltavaa Helmet-skenaariota kohti.
+- Jos malliajon määrittelyssä ei valita _Tallenna eri ajanjaksot erillisiin EMME-skenaarioihin_,
+  tarvitaan yksi EMME-skenaario kutakin tarkasteltavaa HELMET-skenaariota kohti.
   Tässä tapauksessa tarvitaan tuloksia varten enemmän ekstra-attribuuttitilaa.
-- Jos malliajon määrittelyssä aiotaan valita _Tallenna eri ajanjaksojen matriisit Emme-projektin Database-kansioon_,
+- Jos malliajon määrittelyssä aiotaan valita _Tallenna eri ajanjaksojen matriisit EMME-projektin Database-kansioon_,
   tarvitaan enemmän tilaa matriiseille
 
 Alla on lueteltu HELMET-sijoittelupankin (lisenssikoko vähintään 9) dimensiot:
@@ -39,7 +39,7 @@ Alla on lueteltu HELMET-sijoittelupankin (lisenssikoko vähintään 9) dimensiot
 | Transit lines or routes                                                   | 2 000     |                                                     |
 | Transit line segments                                                     | 200 000   |                                                     |
 | Turn table entries                                                        | 10 000    |                                                     |
-| Full matrices                                                             | 100       | 400+ (jos matriisit Emmessä talteen)                |
+| Full matrices                                                             | 100       | 400+ (jos matriisit EMMEssä talteen)                |
 | Origin matrices                                                           | 10        |                                                     |
 | Destination matrices                                                      | 10        |                                                     |
 | Words for extra attributes                                                | 9 900 000 | 3 300 000 (jos ajanjaksot erillisiin skenaarioihin) |
