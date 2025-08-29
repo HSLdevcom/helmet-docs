@@ -5,12 +5,12 @@ title: Etusivu
 ---
 # HSL:n liikenne-ennustejärjestelmän yleiskuvaus
 
-Helmet on HSL:n liikenne-ennustejärjestelmä, joka kattaa Helsingin seudun 14 kuntaa ja Siuntion sekä niitä ympäröivän työssäkäyntialueen, johon kuuluu koko Uusimaa ja lisäksi Varsinais-Suomen, Kanta-Hämeen ja Päijät-Hämeen kuntia.
-Uusin malliversio Helmet 5 julkaistaan marraskuussa 2025. Järjestelmä käyttää OpenPaths Emme-ohjelmistoa.
+HELMET on HSL:n liikenne-ennustemallijärjestelmä, joka kattaa Helsingin seudun 14 kuntaa ja Siuntion sekä niitä ympäröivän työssäkäyntialueen, johon kuuluu koko Uusimaa ja lisäksi Varsinais-Suomen, Kanta-Hämeen ja Päijät-Hämeen kuntia.
+Uusin malliversio HELMET 5 julkaistiin marraskuussa 2025. Järjestelmä käyttää OpenPaths Emme-ohjelmistoa.
 
-HSL:n Helmet-liikenne-ennustemallia voidaan käyttää arvioimaan erilaisten muutostekijöiden vaikutuksia liikennejärjestelmään.
+HSL:n HELMET-liikenne-ennustemallia voidaan käyttää arvioimaan erilaisten muutostekijöiden vaikutuksia liikennejärjestelmään.
 Mallia hyödynnetään ja kehitetään erityisesti palvelemaan seudullisen MAL-suunnitelman vaikutusten arviontia.
-HSL ja muut tahot käyttävät Helmet-mallia myös monissa muissa töissä, kuten linjastosuunnitelmien vaikutusten arvioinnissa sekä liikennehankkeiden hankearvioinneissa.
+HSL ja muut tahot käyttävät HELMET-mallia myös monissa muissa töissä, kuten linjastosuunnitelmien vaikutusten arvioinnissa sekä liikennehankkeiden hankearvioinneissa.
 
 Mallin avulla saadaan tietoa suunnitteluratkaisuihin ja valintoihin jo suunnitteluprosessin aikana, ja sen avulla arvioidaan suunnittelun vaikutuksia ”etukäteen”.
 Malli tuo esiin esimerkiksi linjastosuunnitelman tai liikennehankkeen vaikutukset/vaikutuksia kulkumuotojakaumaan,
@@ -18,7 +18,7 @@ matka-aikaan, saavutettavuuteen, matkamääriin ja liikennesuoritteisiin.
 
 ## Mallijärjestelmän rakenne
 
-Helmet 5 -mallijärjestelmässä mallin neljä porrasta mallinnetaan seuraavassa järjestyksessä:
+HELMET 5 -mallijärjestelmässä mallin neljä porrasta mallinnetaan seuraavassa järjestyksessä:
 1. Matkatuotos
 2. Kulkutavanvalinta
 3. Suuntautuminen
@@ -26,28 +26,28 @@ Helmet 5 -mallijärjestelmässä mallin neljä porrasta mallinnetaan seuraavassa
 
 Mallijärjestelmän rakenne on esitetty tarkemmin seuraavassa kuvassa: 
 
-![Helmet-mallijärjestelmän rakenne](images/Helmet-mallijarjestelma.png)
+![HELMET-mallijärjestelmän rakenne](images/Helmet-mallijarjestelma.png)
 
 Mallijärjestelmän kysyntämalleja kuvataan tarkemmin raportissa (KORJAA) [Helsingin seudun työssäkäyntialueen liikenne-ennustejärjestelmän kysyntämallit 2020](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf).
 
 Mallijärjestelmän tarjontakuvauksista lisätietoa on raportissa Helsingin seudun liikenteen Emme-verkon kuvaus, joka on saatavilla mallin käyttäjien EXT-Helmet -Teams-ryhmässä.
 
-## Helmet 5 uusia ominaisuuksia
+## HELMET 5 uusia ominaisuuksia
 
-Tässä on kuvattu keskeisiä nostoja Helmet 5:n uusista ominaisuuksista sekä eroavaisuuksista Helmet 4:een verrattuna.
-Laajemmin aihetta on kuvattu
-(KORJAA) [malliraportissa](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf). 
+Tässä on kuvattu keskeisiä nostoja HELMET 5:n uusista ominaisuuksista sekä eroavaisuuksista HELMET 4:een verrattuna.
+Laajemmin aihetta on kuvattu raportissa
+(KORJAA) [Helsingin seudun työssäkäyntialueen liikenne-ennustemallijärjestelmän 2025 kehitystyö](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf). 
 
 ### Kulkutapa- ja suuntautumismallien rakenne
 
 Kuten HELMET 4 -malliversiossa, kulkutapa- ja suuntautumismallien rakenne on HS15-alueella sellainen,
 että kulkutavanvalinta on ylemmällä tasolla kuin määräpaikan valinta (eli suuntautuminen).
 
-![Kulkutapa- ja suuntautumismallien rakenne eri Helmet-versioissa](images/Kulkutapa-%20ja%20suuntautumismallien%20rakenne%20eri%20Helmet-versioissa.png)
+![Kulkutapa- ja suuntautumismallien rakenne eri HELMET-versioissa](images/Kulkutapa-%20ja%20suuntautumismallien%20rakenne%20eri%20Helmet-versioissa.png)
 
 ### Aluejako
 
-Helmet 5 mallissa on aiempaa enemmän sijoittelualueita Itä- ja Länsi-Uudellamaalla. Laajennustyö on toteutettu Uudenmaan liiton tilaamana erillisenä työnä vuonna 2021, ja laajennus on integroitu osaksi Helmet mallia Helmet 5 päivitystyön yhteydessä. Vuoden 2021 muutosten lisäksi myös liikenneverkko on tarkistettu ja päivitetty ympäryskuntien alueilla.
+HELMET 5 -mallissa on aiempaa enemmän sijoittelualueita Itä- ja Länsi-Uudellamaalla. Laajennustyö on toteutettu Uudenmaan liiton tilaamana erillisenä työnä vuonna 2021, ja laajennus on integroitu osaksi HELMET-mallia HELMET 5 -päivitystyön yhteydessä. Vuoden 2021 muutosten lisäksi myös liikenneverkko on tarkistettu ja päivitetty ympäryskuntien alueilla.
 
 ### HSL-alueen ulkopuolinen joukkoliikenne
 
@@ -74,7 +74,7 @@ HELMET 5 -malliversiossa ruuhkautuvan joukkoliikenteen sijoittelu on otettu käy
 
 Joukkoliikennevälineiden kapasiteetteja on tarkistettu ja uusia vaihtoehtoisia joukkoliikennevälineitä on lisätty. 
  * Runkobussilinjoilla käytettävissä nivelbussi
- * Lähijunaliikenteessä mahdollisuus käyttää 1-, 2- tai 3-yksikköisiä Sm5 kokonaisuuksia, aiemmin vain 2-yksikköinen käytössä.
+ * Lähijunaliikenteessä mahdollisuus käyttää 1-, 2- tai 3-yksikköisiä Sm5-kokonaisuuksia, aiemmin vain 2-yksikköinen käytössä.
  * HSL-alueen ulkopuolisessa joukkoliikenteessä käytetään kaukobusseja, joissa istumapaikkoja on aiempaa enemmän, mutta seisomapaikkoja ei lainkaan
  * Pika-kaukobusseille on mahdollisuutena myös kaksikerroksinen bussi
 
@@ -87,13 +87,13 @@ Liityntäpysäköinti on tuotu osaksi mallin kulkutapoja. Liityntäpysäköinti 
 
 ### Pyöräilyn mallinnus
 
-Pyöräilyn mallintamista on kehitetty Helmet 5 versiossa aiemman Helmet 4 version kehitystyön jatkona.
+Pyöräilyn mallintamista on kehitetty HELMET 5 -versiossa aiemman HELMET 4 -version kehitystyön jatkona.
 
-* Pyöräilyn väyliä on tarkistettu laajasti HS15 alueella.
+* Pyöräilyn väyliä on tarkistettu laajasti HS15-alueella.
 * Pyöräliikenteeseen eivät enää vaikuta autoliikenteen kääntymiskiellot.
 * Pyöräliikenteen kysyntä ei perustu enää matkan pituuteen vaan matka-aikaan.
 * Pyöräliikennettä ei enää pääsääntöisesti kuvata moottoriteille, ja moottoriteiden rinnakkaiset pyöräväylät on kuvattu omina linkkeinään Helsingissä ja Espoossa.
-* Pyöräilyn reitinvalintaan vaikuttaa myös maastonmuodot ja samalla väylällä kulkeva autoliikenne.
+* Pyöräilyn reitinvalintaan vaikuttavat myös maastonmuodot ja samalla väylällä kulkeva autoliikenne.
   * Linkeillä uusi extra-attribuutti @kaltevuus, joka tuotetaan automaatiolla.
   * Solmuilla uusi extra-attribuutti @korkeus, jota voidaan käyttää vaihtoehtona kaltevuudelle verkkoja koodatessa.
 
