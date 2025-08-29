@@ -10,7 +10,7 @@ Järjestelmä käyttää Bentleyn [Openpaths Emme–ohjelmistoa](https://www.ben
 
 ## Emmen asennus
 
-Ennen kuin Helmet UI -käyttöliittymää voidaan käyttää, seuraavien edellytysten on täytyttävä:
+Ennen kuin HELMET UI -käyttöliittymää voidaan käyttää, seuraavien edellytysten on täytyttävä:
 
 1.	[Openpaths Emme](https://www.bentley.com/software/openpaths/) on asennettu, lisenssi on aktivoitu.
 2.	Käyttäjän PATH -ympäristömuuttujiin on lisätty `%EMMEPATH%\programs`.
