@@ -19,7 +19,7 @@ Pääsääntöisesti töiden lähtötietoina käytetään HSL:n virallisia ainei
 Pohja-aineiston valinnassa kannattaa ottaa kyseisen projektin tarpeiden lisäksi huomioon myös mahdolliset tarpeet käyttää projektin tuloksia ja koodauksia jatkossa.
 Hankearvioinneissa vertailuvaihtoehdossa tulee aina olla mukana vain jo päätetyt hankkeet,
 muissa tarkasteluissa tutkittavat verkkovaihtoehdot voidaan valita vapaammin.
-Hankearvioinneista lisätietoa Väyläviraston hankearviointiohjeissa.
+Hankearvioinneista lisätietoa [täältä](vaikutusten_arviointi.md).
 
 Pääsääntöisesti HSL:n tilaamien konsulttitöiden vertailuvaihtoehto laaditaan HSL:ssä.
 Pohjaverkkona toimii yleensä HSL:n tuorein verkkokuvaus, mutta jos niissä on paljon MAL-työn jälkeen tehtyjä muutoksia,
