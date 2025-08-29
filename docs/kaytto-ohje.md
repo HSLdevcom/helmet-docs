@@ -5,38 +5,38 @@ sort: 1
 
 # Asennus
 
-Tässä ohjeessa kuvataan [Helmet 5.0-liikenne-ennustejärjestelmän](https://github.com/HSLdevcom/helmet-model-system) käyttöliittymää. 
-Järjestelmä käyttää Bentleyn [Openpaths Emme–ohjelmistoa](https://www.bentley.com/software/openpaths/).
+Tässä ohjeessa kuvataan [HELMET 5.0-liikenne-ennustejärjestelmän](https://github.com/HSLdevcom/helmet-model-system) käyttöliittymää. 
+Järjestelmä käyttää Bentleyn [OpenPaths EMME–ohjelmistoa](https://www.bentley.com/software/openpaths/).
 
-## Emmen asennus
+## EMMEn asennus
 
 Ennen kuin HELMET UI -käyttöliittymää voidaan käyttää, seuraavien edellytysten on täytyttävä:
 
-1.	[Openpaths Emme](https://www.bentley.com/software/openpaths/) on asennettu, lisenssi on aktivoitu.
+1.	[OpenPaths EMME](https://www.bentley.com/software/openpaths/) on asennettu, lisenssi on aktivoitu.
 2.	Käyttäjän PATH -ympäristömuuttujiin on lisätty `%EMMEPATH%\programs`.
     -	Avaa Windows-järjestelmän Ohjauspaneeli
     -	Valitse Käyttäjätilit ja vielä uudelleen Käyttäjätilit. Valitse sen jälkeen vasemmalla olevasta valikosta ”Muuta ympäristömuuttujia”.
     -	Etsi ylhäällä olevasta laatikosta ”käyttäjän (oma_käyttäjätunnuksesi) muuttujat”, valitse Path-muuttuja ja ”muokkaa ympäristömuuttujia”.
     -	Valitse "Uusi" ja kirjoita `%EMMEPATH%\Programs`
     -	Paina OK ikkunassa ”Muokkaa ympäristömuuttujia” ja vielä uudelleen OK ikkunassa ”ympäristömuuttujat”.
-3.	[valinnainen] [Helmet 5.0 Model System](https://github.com/HSLdevcom/helmet-model-system) on ladattu käyttöön ja määritelty 
+3.	[valinnainen] [HELMET 5.0 Model System](https://github.com/HSLdevcom/helmet-model-system) on ladattu käyttöön ja määritelty 
    _(tai annetaan tämän käyttöliittymän ladata se)_
 
-## Emme-projektin määrittely
+## EMME-projektin määrittely
 
-Seuraavaksi sinun on määriteltävä *Emme-projekti*. 
-Kutakin projektia varten kannattaa luoda yksi yhteinen Emme-projektipankki, johon kootaan eri Helmet-skenaariot (esim. eri linjastovaihtoehdot).
+Seuraavaksi sinun on määriteltävä *EMME-projekti*. 
+Kutakin projektia varten kannattaa luoda yksi yhteinen EMME-projektipankki, johon kootaan eri HELMET-skenaariot (esim. eri linjastovaihtoehdot).
 
-1. Käynnistä Openpaths Emme-ohjelmisto.
+1. Käynnistä Openpaths EMME-ohjelmisto.
 2. Perusta uusi projekti. Määrittele, mihin kansioon haluat sen asentaa. 
-   - Emme muodostaa tiedoston `projektin_nimi.emp` kansioon `projektin_nimi` ja sen alikansioon 
+   - EMME muodostaa tiedoston `projektin_nimi.emp` kansioon `projektin_nimi` ja sen alikansioon 
      `projektin_nimi\database` suuren binaaritiedoston `emmebank` sekä muitakin alikansioita ja tiedostoja.
 3. Noudata [erillistä ohjetta](sijopankki.md), jossa kerrotaan mm. sopivista dimensioista (solmujen, linkkien ym. maksimimäärät). 
    Ne vaikuttavat em. `emmebank`-tiedoston kokoon. Aja sisään verkot ja linjastot ohjeen mukaan.
 
-## Helmet-asennus
+## HELMET-asennus
 
-Helmet-käyttöliittymän asennustiedosto ladataan [releases-sivulta](https://github.com/HSLdevcom/helmet-ui/releases).
+HELMET-käyttöliittymän asennustiedosto ladataan [releases-sivulta](https://github.com/HSLdevcom/helmet-ui/releases).
 Asennustiedosto on nimeltään `Helmet.4.1-x.y.z.Setup.exe`, jossa `x.y.x` on käyttöliittymän
 versionumero. Suosittelemme uusimman version eli sivulla ylimpänä olevan version lataamista.
 
@@ -55,7 +55,7 @@ useampaa yhtä aikaa:**
  
 Sovellus asentuu käyttäjän koneelle kansioon `%HOMEPATH%/AppData`. Varsinainen sovellus on kansiossa `AppData\Local`, ja sen asetukset 
 kansiossa `AppData\Roaming`. 
-Jos käyttäjällä jostain syystä ei ole pääsyä `AppData`-kansioon, vaihtoehto on sovelluksen lataaminen zip-tiedostona ja purku haluamaan kansioon.
+Jos käyttäjällä jostain syystä ei ole pääsyä `AppData`-kansioon, vaihtoehto on sovelluksen lataaminen zip-tiedostona ja purku haluamaansa kansioon.
 
 :exclamation: Projektiasetukset nollautuvat, kun käyttöliittymän päivittää vanhemmasta versiosta
 versioon 4.1 (mm. Kaivoksela-, Tikkurila-versiot). Jos et muista, mitkä vanhat asetukset
@@ -63,11 +63,11 @@ olivatkaan, voit tarkistaa ne polusta
 `C:\Users\KÄYTTÄJÄTUNNUS\AppData\Roaming\Helmet 4\config.json`. Tiedosto aukeaa esimerkiksi
 Notepadilla. Tiedostossa olevat polut syötetään käyttöliittymän projektiasetuksiin.
 
-Kun sovellus käynnistetään ensimmäistä kertaa, se yrittää löytää työasemalta Emme-asennuksen ja ladata 
-[Helmet 5.0 -liikenne-ennustejärjestelmän (model system)](https://github.com/HSLdevcom/helmet-model-system) 
+Kun sovellus käynnistetään ensimmäistä kertaa, se yrittää löytää työasemalta EMME-asennuksen ja ladata 
+[HELMET 5.0 -liikenne-ennustejärjestelmän (model system)](https://github.com/HSLdevcom/helmet-model-system) 
 uusimman version skriptit. Sovellus suorittaa myös komennon ’pip install’. 
 Nämä kommennot pyörivät hiljaa taustalla, ja sovellus alkaa reagoida vasta niiden valmistuttua.
 
-Emmen Python-polussa oleva määrittely saattaa epäonnistua, 
+EMMEn Python-polussa oleva määrittely saattaa epäonnistua, 
 jos ympäristömuuttujaa ’EMMEPATH’ ei ole määritelty tai jos sovellus on asennettu epätavallisella tavalla. Jos näin käy, suorituskelpoisen 
 Python-kielen ja kansion Scripts sijainti on määriteltävä manuaalisesti Asetukset-valikosta.
