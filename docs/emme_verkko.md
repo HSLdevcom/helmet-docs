@@ -364,7 +364,7 @@ Nopeus raitiotieverkolla määräytyy linkkiattribuuttiin ul1 koodattujen nopeuk
 > `ul1 = aabbcc`, jossa ratikoiden nopeudet `aa = aamuhuipputunti`, `bb = päivä` ja `cc = iltahuipputunti`
 Jos aamun nopeus on alle 10 km/h, nopeus kirjoitetaan muodossa `abbcc`.
 
-### Pyöräliikenne
+## Pyöräliikenne
 
 Pyöräliikenneverkossa kaikille linkeille on määritelty pyörätieluokka (0-4) extra-attribuuttiin @pyoratieluokka. Luokan avulla kuvataan pyörätieinfran toteuttamisen muotoa ja laatua.
 Pyörätien miellyttävyyteen tasaisella maalla vaikuttaa sekä määritelty pyörätieluokka että linkkityyppi seuraavan taulukon mukaan. Lisäksi miellyttävyyteen vaikuttaa reitin mäkisyys siten, että alamäki nopeuttaa kulkua, ja ylämäki hidastaa sitä. Ylämäen hidastusvaikutus on suurempi kuin alamäen nopeutusvaikutus, joten reitinvalinnassa vältetään mäkiä. Pyöräkaistoilla ja sekaliikenteessä myös autoliikenteen määrä samalla katuosuudella vaikuttaa katuosuuden miellyttävyyteen, minkä takia pyörätieluokkien kuvaaminen on aiempaa tärkeämpää, jotta autoliikenteestä ei aiheutuisi haittaa niillä väylillä, joissa haittaa ei todellisuudessa ole.
@@ -391,7 +391,7 @@ Pyörätiet käyttävät autoverkon solmuja, paitsi moottoriteillä, joiden ymp�
 | Sekaliikenne, pääkatu               | 0               | 33-40        | 10            |
 | Sekaliikenne, pieni katu            | 0               | 41-42        | 12            |
 
-## Mäkisyyden vaikutus pyöräilyyn
+### Mäkisyyden vaikutus pyöräilyyn
 
 Pyöräilyn sijoittelussa reitinvalintaan vaikuttaa myös reitin mäkisyys. Mäkisyys on kuvattu linkkien gradienttina, joka lasketaan solmujen korkeuserosta ja linkin length-attribuutista. Gradientti on tallennettu verkolle @kaltevuus extra-attribuuttina. Lisäksi solmuille on tallennettu uusi @korkeus extra-attribuutti, jota voidaan käyttää vaihtoehtona linkkien kaltevuudelle verkkoja koodatessa.
 
@@ -400,11 +400,13 @@ HSL:n tarjoamille verkoille on haettu Maanmittauslaitoksen 2x2 m -korkeusmallist
 Vaihtoehtoisesti kaltevuus voidaan laskea myös malliajon aikana solmujen korkeustiedoista. Korkeustietoja hyödynnetään tilanteessa, jossa linkin kaltevuus on 0. Arvioitaessa esimerkiksi baanahankkeiden muutoksia muutosten kohteena olevien linkkien @kaltevuus-extra-attribuutit tulee asettaa arvoon 0, jos halutaan käyttää @korkeus-extra-attribuutista laskettavia arvoja
 
 
-## Autoliikenteen vaikutus pyöräilyyn
+### Autoliikenteen vaikutus pyöräilyyn
 
 Autoliikenne haittaa pyöräilyä siten, että samalla linkillä kulkeva autoliikenne laskee pyöräilyn miellyttävyyttä. Ominaisuus on käytössä ainoastaan väylillä, joissa pyöräliikenne tapahtuu sekaliikenteenä tai pyöräkaistalla (@pyoratieluokka 0 tai 1). Jos autoliikennettä on hyvin vähän, miellyttävyys kasvaa normaalista, jolloin ero miellyttävyydessä ajoradalla ja erillisellä pyörätiellä laskee.
 
 Mäkisyyden ja autoliikenteen vaikutusten jälkeen lopullinen miellyttävyys saa arvoja välillä 5 &ndash; v*1,5; missä v on yllä olevan taulukon mukainen miellyttävyys tasaisella. Tästä poikkeuksena baanoilla miellyttävyys alamäessä voi olla maksimissaan jopa 35, johtuen selkeästä erottelusta muista liikennemuodoista.
+
+## Katuverkon koodausperiaatteet
 
 ### Kaksiajorataiset kadut
 
