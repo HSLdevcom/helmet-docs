@@ -461,7 +461,7 @@ Autosyöttölinkkejä lähtee kultakin alueelta pääsääntöisesti vain yksi, 
 Tiheästi asutuilla alueilla, joilla verkko on tiheä, syöttölinkkejä on usein neljä (yksi joka suuntaan),
 ja harvaan asutuilla alueilla taas on usein järkevää, että syöttölinkkejä on 1 tai 2 (vain lähimmälle tielle). 
 
-Syöttölinkkejä koodatessa on tärkeää pitää huolta siitä, että eri sijoittelualueiden syöttölinkit eivät liity muulle verkolle saman solmun kautta, jotta liikenne sijoittelualueiden välillä kuormittaa liikenneverkkoa. Syöttölinkkien ei myöskään koskaan tule ristetä toisten syöttölinkkien kanssa. Syöttölinkkejä koodatessa voi olla hyödyllistä lisätä EMMEen taso GIS Overlay kerros, ja valita sitten HSL:n sijoittelualuejakoa kuvaava paikkatietoaineisto (.shp muodossa). EMMEn datakerroksia lisättäessä on myös hyvä huomata, että kerrokset piirretään alhaalta ylöspäin, eli paikkatietoaineisto ei tule näkyviin, jos se on piirretty ennen taustakarttaa.
+Syöttölinkkejä koodatessa on tärkeää pitää huolta siitä, että eri sijoittelualueiden syöttölinkit eivät liity muulle verkolle saman solmun kautta, jotta liikenne sijoittelualueiden välillä kuormittaa liikenneverkkoa. Syöttölinkkien ei myöskään koskaan tule ristetä toisten syöttölinkkien kanssa. Syöttölinkkejä koodatessa voi olla hyödyllistä lisätä EMMEen GIS Overlay -datakerros, ja valita sitten HSL:n sijoittelualuejakoa kuvaava paikkatietoaineisto (.shp muodossa). EMMEn datakerroksia lisättäessä on myös hyvä huomata, että kerrokset piirretään alhaalta ylöspäin, eli paikkatietoaineisto ei tule näkyviin, jos se on piirretty ennen taustakarttaa.
 Syöttölinkkien ei tulisi mennä suoraan moottoritielle tai raideliikenteen asemille. 
 
 ### Vaihtolinkit
