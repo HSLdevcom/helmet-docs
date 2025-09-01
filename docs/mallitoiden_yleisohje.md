@@ -9,20 +9,18 @@ On tärkeää, että mallia käytetään ja muokataan yhtenäisillä periaatteil
 Näin saadaan mahdollisimman luotettavia tuloksia, ja mahdollistetaan aineistojen  hyödyntäminen myös muissa projekteissa. 
 Myös työn huolellinen dokumentointi on tärkeää, sillä se auttaa aineistojen tulkinnassa ja myöhemmässä hyödyntämisessä. 
 
-Mallin käyttämiä lähtötietoja on kuvattu [täällä](mallin_lahtotietotiedostot.md). 
-HSL:n lähtötietoaineistot (mm. maankäytöt ja verkkojen tiedot) saat ladattua zip-pakettina, kun olet täyttänyt aineistojen luovutuksen hakemuslomakkeen.
-Näistä löydät yleistietoa [täältä](mallin_lahtotietotiedostot.md).
-Hakemuslomake löytyy Teams-ryhmästä EXT-Helmet, jonne saat käyttöoikeuden HSL:n Liikennejärjestelmäyksiköstä (Johanna Piipponen).
+HSL:n [lähtötietoaineistot](mallin_lahtotietotiedostot.md) (mm. maankäytöt ja verkkojen tiedot) saat ladattua zip-pakettina, kun olet täyttänyt aineistojen luovutuksen hakemuslomakkeen.
+Hakemuslomake löytyy HSL:n Teams-ryhmästä EXT-Helmet, jonne saat käyttöoikeuden HSL:n Liikennejärjestelmäyksiköstä ([liikennemalli@hsl.fi](mailto:liikennemalli@hsl.fi)).
 Kutakin projektia varten tulee hakea uudet aineistot, jotta aineistojen käyttöä voidaan seurata sekä varmistutaan, että lähtötiedot ovat aina ajan tasalla.
 
-Mallin asennusohjeet löydät [täältä](kaytto-ohje.md), ja EMME-pankin perustamisen ohjeet [täältä](sijopankki.md).
+Voit aloittaa malliprojektin seuraamalla "[Asennus](kaytto-ohje.md)"- ja "[Sijoittelupankin perustaminen](sijopankki.md)" -ohjeita.
 Kutakin projektia varten kannattaa luoda yksi yhteinen EMME-pankki, johon kootaan eri HELMET-skenaariot (esim. eri linjastovaihtoehdot).
 Pääosin suositellaan käytettäväksi vain HSL:n julkaisemia skriptejä ja näiden oletusparametrejä.
-Poikkeamat näihin on syytä dokumentoida huolella (ks. [dokumentointiohje](HSL-toiden_dokumentointi.md)).
+Poikkeamat näihin on syytä dokumentoida huolella (ks. [HSL:n mallitöiden dokumentointiohje](HSL-toiden_dokumentointi.md)).
 
 ## Malliajojen ohje
 
-HELMET-käyttöliittymän (UI) kautta pääset määrittämään projektin asetukset ja lähtötiedot. HELMET-käyttöliittymä on saatavilla [täältä](https://github.com/HSLdevcom/helmet-ui)
+HELMET-käyttöliittymän kautta pääset määrittämään projektin asetukset ja lähtötiedot. Käyttöliittymän asennusohjeet löydät sivulta [Asennus -> HELMET-asennus](https://hsldevcom.github.io/helmet-docs-h5/kaytto-ohje.html#helmet-asennus).
 
 ### Asetukset
 
@@ -42,23 +40,23 @@ Mallin ajoa varten tulee määritellä seuraavat asetukset.
   - Tänne talletetaan HELMET-skenaarioiden (malliajojen) määrittelyt (.json)
   - Tämä **ei** siis viittaa EMMEn projektitiedostoon (.emp)
 - Lähtödatan sisältävä kansio
-  - Tässä ovat omissa alakansioissaan pohjakysyntämatriisit ja nykytilanteen syöttötiedot (2018)
-  - Kansion sisällön saa HSL:ltä (ks. [lähtötietotiedostojen ohje](mallin_lahtotietotiedostot.md))
+  - Tässä ovat omissa alakansioissaan pohjakysyntämatriisit ja nykytilanteen syöttötiedot (2023)
+  - Kansion sisällön saa HSL:ltä (ks. [Lähtötiedot](mallin_lahtotietotiedostot.md))
 - Tulosten tallennuspolku
   - Tänne talletetaan ennusteajojen tulokset
 
 Näiden asetusten lisäksi on kehittäjille tarkoitettuja asetuksia helmet-model-system -kansion tiedostossa `dev-config.json`.
 Tyypillisesti tavallisilla käyttäjillä ei ole tarvetta muokata näitä lisäasetuksia, mutta joissain käyttötapauksissa voi olla hyötyä myös sellaisista asetuksista, joita ei ole vielä implementoitu käyttöliittymään.
 Lisää tietoja `dev-config.json`-tiedoston asetuksista löytyy 
-[tästä](https://github.com/HSLdevcom/helmet-model-system/tree/olusanya/Scripts#configuring-the-model-run-with-dev-configjson).
+[Scripts-kansion README-tiedostosta](https://github.com/HSLdevcom/helmet-model-system/tree/olusanya/Scripts#configuring-the-model-run-with-dev-configjson).
 
 ### Malliajon määrittely
 
-Jokaista ajettavaa HELMET-skenaariota kohden on tehtävä seuraavat määrittelyt:
+Käyttöliittymässä on tehtävä seuraavat määrittelyt jokaista ajettavaa HELMET-skenaariota kohden:
 
 1.	Skenaarion tai ajon nimi
     - *Skenaario* ei tässä viittaa EMME-skenaarioon, vaan tässä annetaan nimi verkkokuvaus- ja maankäyttötietoyhdistelmälle joka menee yhteen malliajoon.
-2.	EMMEn project-tiedosto (.emp)
+2.	EMMEn project-tiedosto (`.emp`)
 3.	EMME-skenaarion numero. 
    Asetuksista riippuen sijoittelutulokset tallennetaan tähän skenaarioon tai erikseen seuraavaan neljään skenarioon (vrk, aht, pt, iht).
 4.	Kansio, jossa ovat syöttötiedot
@@ -86,20 +84,20 @@ Jokaista ajettavaa HELMET-skenaariota kohden on tehtävä seuraavat määrittely
 
 ### Hyöty-kustannusanalyysin (hankearvioinnin) määrittely
 
-H/K-analyysillä voidaan verrata ajettujen skenaarioiden hyötyjä ja kustannuksia. Tulokset tulostuvat excel-tiedostoon tuloskansiossa. Analyysia varten on määriteltävä:
+H/K-analyysillä voidaan verrata ajettujen skenaarioiden hyötyjä ja kustannuksia. Tulokset tulostuvat Excel-tiedostoon tuloskansiossa. Analyysia varten on määriteltävä:
 
 1. Vertailuvaihtoehdon (ve0) tuloskansio (`Tulosten tallennuspolku\Skenaarion nimi`)
 2. Hankevaihtoehdon (ve1) tuloskansio
 
-Jos ennusteita on ajettu kahdelle vuodelle (esim. 2040 ja 2060), vertailuvaihtoehto ja hankevaihtoehto on mahdollista määrittää toisellekin ennustevuodelle. Lisätietoa H/K laskennasta ja vaikutustenarvioinnista löytyy [täältä](vaikutusten_arvionti.md).
+Jos ennusteita on ajettu kahdelle vuodelle (esim. 2040 ja 2060), vertailuvaihtoehto ja hankevaihtoehto on mahdollista määrittää toisellekin ennustevuodelle. Lisätietoa H/K-laskennasta ja vaikutusten arvioinnista on "[Vaikutusten arviointi](vaikutusten_arvionti.md)" -sivulla.
 
 ## Tulosten käsittely ja tulkinta
 
-Lisätietoa mallin tuottamista tulostiedostoista ja tulosten tulkinnasta [täällä](tulokset.md).
-Esimerkkejä mallituloksista tehtävistä visualisoinneista [täällä](esimerkkeja_tuloksista.md).
+Voit lukea lisätietoa mallin tuottamista tulostiedostoista ja tulosten tulkinnasta [Tulokset](tulokset.md)-sivulla ja
+esimerkkejä mallituloksista tehtävistä visualisoinneista [Esimerkkejä tuloksista](esimerkkeja_tuloksista.md)-sivulla.
 
 ## Dokumentointi ja aineistojen luovutus
 
 Työn lopuksi kannattaa dokumentoida huolella tehdyt muutokset. 
 Yleensä työn tilaajalla on tietyt toiveet siitä, millaiset dokumentit mallitöistä halutaan. 
-HSL:n tilaamissa töissä kaikki tehdyt muutokset tulee dokumentoida ja aineistot luovuttaa [tämän ohjeen](HSL-toiden_dokumentointi.md) mukaan.  
+HSL:n tilaamissa töissä kaikki tehdyt muutokset tulee dokumentoida ja aineistot luovuttaa [HSL:n mallitöiden dokumentointiohjeen](HSL-toiden_dokumentointi.md) mukaan.  

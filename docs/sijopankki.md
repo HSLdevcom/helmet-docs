@@ -56,7 +56,7 @@ Perusta tyhjä skenaario kohdassa _First scenario_:
 -	Title: esim. 2018_20211130
 
 Valitse koordinaatisto:
--	Spatial reference: Edit - ETRS89 / GK25FIN (Ei ETRS89 / ETRS-GK25FIN)
+-	Spatial reference: Edit - **ETRS89 / GK25FIN** (ei ETRS89 / ETRS-GK25FIN)
 -	Tarkenna kartta Helsingin kantakaupungin alueelle, jotta UTM-vyöhyke menee muotoon 35N
 - Koordinaatistoa voi myöhemmin muuttaa valikossa File - Project Settings – GIS.
 
@@ -64,7 +64,7 @@ Valitse koordinaatisto:
 
 Verkkojen sisäänajo tapahtuu Modeller-työkalun kautta (Tools - Modeller...). 
 HSL:n tarjoamien valmiiden lähtötietojen osalta tarvittavat aineistot eri tarkasteluvuosille löytyvät jakokansiosta
-`Verkot` (lisätietoja [täällä](mallin_lahtotietotiedostot.md)).
+"Verkot" (lisätietoja [Lähtötiedot](mallin_lahtotietotiedostot.md)-sivulla).
 Valitse moduuli `Data management/Scenario/Import scenario`.
 `Folder containing scenario to import:` -valikossa, valitse jakokansiosta `Verkot` yksi kansio, esim. `2018`.
 Valitse olemassa oleva skenaarionumero (`Overwrite scenario`) tai luo uusi.
@@ -86,4 +86,4 @@ Moduuli lukee skenaarioon tarpeelliset tiedot tiedostoista
 
 ## Muut lähtötiedot
 
-Muut tarvittavat lähtötiedot (mm. maankäyttö, kustannukset, pohjakysyntä) ajetaan automaattisesti sisään ennusteprosessin aikana. Lähtötiedot kuvaavat mallin estimointivuoden tilannetta, ja lisäksi malliin syötetään syöttötietoja, jotka kuvaavat ennusteskenaarion tilannetta (lisätietoja [täällä](mallin_lahtotietotiedostot.md)).
+Muut tarvittavat lähtötiedot (mm. maankäyttö, kustannukset, pohjakysyntä) ajetaan automaattisesti sisään ennusteprosessin aikana. Lähtötiedot kuvaavat mallin estimointivuoden tilannetta, ja lisäksi malliin syötetään syöttötietoja, jotka kuvaavat ennusteskenaarion tilannetta (lisätietoja [Lähtötiedot](mallin_lahtotietotiedostot.md)-sivulla).

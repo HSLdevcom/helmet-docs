@@ -35,7 +35,7 @@ Merkinnästä tulee käydä ilmi, mitä kysyntä- ja tarjontakuvauksen tai malli
 Merkitse myös muutosmakro (ems-tiedosto), jolla muutos on toistettavissa ja josta käyvät ilmi käytetyt lukuarvot, tai lähtötietotiedosto, johon muutokset on viety.
 Jos olet lisännyt verkolle solmuja, listaa käyttämäsi uudet solmunumerot.
 HUOM. Virallisia solmuja saa koodata vain, jos siitä sovitaan erikseen HSL:n kanssa.
-Pääsääntönä käytetään aina villejä solmunumeroita (ks. raportti Helsingin seudun liikenteen EMME-verkon kuvaus, joka on saatavilla EXT-Helmet -Teams-ryhmässä).
+Pääsääntönä käytetään aina villejä solmunumeroita (ks. [EMME-verkon kuvaus](emme_verkko.md)).
 Kirjaa muistioon, mistä tiedostoista ja/tai kansioista eri tiedot löytyvät.
 
 Dokumentoi muistioon myös muutosten perustelut.

@@ -5,17 +5,17 @@ sort: 6
 
 # Tulokset
 
-Tulosten tallennuskansiopolku määritellään HELMET-käyttöliittymän projektiasetuksissa (ks. [ohjeet](kaytto-ohje.md)). 
-Kunkin HELMET-skenaarion (malliajon) tulokset tallentuvat kyseisen HELMET-skenaarion nimellä nimettyyn alikansioon. 
+Tulosten tallennuskansiopolku määritellään Helmet-käyttöliittymän projektiasetuksissa (ks. "[Asennus](kaytto-ohje.md)"). 
+Kunkin Helmet-skenaarion (malliajon) tulokset tallentuvat kyseisen Helmet-skenaarion nimellä nimettyyn alikansioon. 
 Näihin kansioihin tallentuu kahdentyyppisiä tiedostoja matriiseja ja tekstitiedostoja, joita on kuvattu tässä ohjeessa tarkemmin.
 
-Näiden lisäksi sijoittelutulokset jäävät talteen EMME-pankkiin.
-Lisää tietoja sijoittelun tuloksista ja niiden analysoinnista löytyy EMMEn dokumentaatiosta. 
-Huom! Jos ajat samassa EMME-pankissa useita HELMET-skenaarioita, tarkat matriisitulokset jäävät EMMEen talteen vain, 
-jos config-tiedostoon on määritelty matriiseille omat tallennuspaikat (ks. [ohjeet](kaytto-ohje.md)).
+Näiden lisäksi sijoittelutulokset jäävät talteen Emme-pankkiin.
+Lisää tietoja sijoittelun tuloksista ja niiden analysoinnista löytyy Emmen dokumentaatiosta. 
+Huom! Jos ajat samassa Emme-pankissa useita Helmet-skenaarioita, tarkat matriisitulokset jäävät Emmeen talteen vain, 
+jos config-tiedostoon on määritelty matriiseille omat tallennuspaikat (ks. [Mallijärjestelmän käyttö](mallitoiden_yleisohje.md)).
 
 Lisää tietoja kysyntämallien toiminnallisuuksista ja niiden tulosten merkityksestä saat
-[malliraportista](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf).
+(KORJAA) [malliraportista](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf).
 
 ## Tulokset verrattuna HELMET 4.1:een
 
@@ -130,8 +130,8 @@ mutta ne ovat autosijoittelussa taustaliikenteenä.
 | helsinki_cbd   | Helsingin kantakaupunki                         | 0 - 999          |
 | helsinki_other | Muu Helsinki                                    | 1 000 - 1 999    |
 | espoo_vant_kau | Muu pääkaupunkiseutu                            | 2 000 - 5 999    |
-| surrounding    | Kehyskunnat + Siuntio                           | 6 000 - 15 999   |
-| surround_train | Junaliikenteeseen <br /> tukeutuvat kehyskunnat + Siuntio | 6 000 - 6 999 <br /> 10 000 - 11 999 <br /> 13 000 - 14 999 <br /> 15 500 - 15 999 |
+| surrounding    | Kehyskunnat                           | 6 000 - 15 999   |
+| surround_train | Junaliikenteeseen <br /> tukeutuvat kehyskunnat | 6 000 - 6 999 <br /> 10 000 - 11 999 <br /> 13 000 - 14 999 <br /> 15 500 - 15 999 |
 | surround_other | Muut kehyskunnat                                | 7 000 - 9 999 <br /> 12 000 - 12 999 <br /> 15 000 - 15 499 |
 | peripheral     | Ympäryskunnat                                   | 16 000 - 30 999  |
 

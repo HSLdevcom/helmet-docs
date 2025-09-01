@@ -57,17 +57,11 @@ Sovellus asentuu käyttäjän koneelle kansioon `%HOMEPATH%/AppData`. Varsinaine
 kansiossa `AppData\Roaming`. 
 Jos käyttäjällä jostain syystä ei ole pääsyä `AppData`-kansioon, vaihtoehto on sovelluksen lataaminen zip-tiedostona ja purku haluamaansa kansioon.
 
-:exclamation: Projektiasetukset nollautuvat, kun käyttöliittymän päivittää vanhemmasta versiosta
-versioon 4.1 (mm. Kaivoksela-, Tikkurila-versiot). Jos et muista, mitkä vanhat asetukset
-olivatkaan, voit tarkistaa ne polusta
-`C:\Users\KÄYTTÄJÄTUNNUS\AppData\Roaming\Helmet 4\config.json`. Tiedosto aukeaa esimerkiksi
-Notepadilla. Tiedostossa olevat polut syötetään käyttöliittymän projektiasetuksiin.
-
 Kun sovellus käynnistetään ensimmäistä kertaa, se yrittää löytää työasemalta EMME-asennuksen ja ladata 
 [HELMET 5.0 -liikenne-ennustejärjestelmän (model system)](https://github.com/HSLdevcom/helmet-model-system) 
-uusimman version skriptit. Sovellus suorittaa myös komennon ’pip install’. 
+uusimman version skriptit. Sovellus suorittaa myös komennon `pip install`. 
 Nämä kommennot pyörivät hiljaa taustalla, ja sovellus alkaa reagoida vasta niiden valmistuttua.
 
 EMMEn Python-polussa oleva määrittely saattaa epäonnistua, 
-jos ympäristömuuttujaa ’EMMEPATH’ ei ole määritelty tai jos sovellus on asennettu epätavallisella tavalla. Jos näin käy, suorituskelpoisen 
-Python-kielen ja kansion Scripts sijainti on määriteltävä manuaalisesti Asetukset-valikosta.
+jos ympäristömuuttujaa `EMMEPATH` ei ole määritelty tai jos sovellus on asennettu epätavallisella tavalla. Jos näin käy, suorituskelpoisen 
+Python-kielen ja Scripts-kansion sijainti on määriteltävä manuaalisesti Asetukset-valikosta.
