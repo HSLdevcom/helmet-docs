@@ -19,42 +19,34 @@ Lisää tietoja kysyntämallien toiminnallisuuksista ja niiden tulosten merkityk
 
 ## Tulokset verrattuna HELMET 4.1:een
 
-### PÄIVITETTÄVÄ
 
+Suurimmat eroavaisuudet HELMET 5 ja HELMET 4.1 malliversioiden välillä johtuvat mallin estimoinnista, joka on tehty vuoden 2023 Liikkumistutkimusaineistolla. Uudessa liikkumistutkimuksessa vuorokauden keskimääräinen matkamäärä on laskenut aiemmasta, johtuen oletettavasti koronaviruspandemian aiheuttamasta etätyön lisääntymisestä. Kulkutapajakauma on myös muuttunut aiemmasta. Kävelyn osuus on hieman kasvanut, kun muiden on laskenut.
 
-Autoliikenteen liikennemäärät ovat pääväylillä hieman pienempiä kuin HELMET 3.1 versiossa ja vastaavasti poikittaisessa liikenteessä kehäteillä on enemmän kuormitusta.
-Uudet liikennemäärät vastaavat hieman paremmin laskentatietoja, mutta molemmissa malliversiossa vastaavuus on hyvällä tasolla.
+Vapaa-ajan matkoista aiempaa suurempi osuus tehdään joukkoliikenteellä. Autolla tehtyjen vapaa-ajan matkojen suorite on laskenut huomattavasti, kun taas joukkoliikenteellä tehtyjen vapaa-ajan matkojen suorite on kasvanut hieman.
 
-Joukkoliikennekulkutapojen väliset painosuhteet muuttuvat siten, että uusi malliversio ennustaa enemmän juna- ja raitiotiematkoja,
-mikä on todennäköisesti seurausta joukkoliikenteen ruuhkasijoittelun käyttöönotosta malliversioiden välillä.
-Muutos on juna- ja raitioliikenteessä oikeansuuntainen suhteessa laskentatietoihin.
+Pyöräilyn matkamäärät mallissa ovat huomattavasti alhaisemmalla tasolla kuin HELMET 4.1:ssä. Syynä on kuitenkin HELMET 4.1:n virhe; mallin validoinnissa oli oletettavasti käytetty kesällä laskettuja arkivuorokauden pyöräliikenteen määriä. HELMET 5:ssä pyöräliikenteen mallintamisen kehittäminen on ollut keskeinen kehitystyön kohde, ja pyöräilyn matkamäärät ovat nyt oikeassa suhteessa verrattuna muuhun liikenteeseen.
 
-Muutoksiin reagoimisen osalta malli toimii vähemmän herkästi suhteessa HELMET 3.1 -malliin.
-Erityisenä huomiona muutoksien osalta aiemman malliversion jalankulkumalli reagoi hyvin voimakkaasti pysäköintimaksujen nostoon,
-koska kustannus oli mallissa mukana suorana matkojen määrää ennustavana muuttujana ja kulkutavan valinta ei ollut liitoksissa muiden kulkutapojen
-valintaan ja olosuhteiden kehitykseen.
+Kantakaupungissa aiemmin havaitut liian suuret autoliikenteen määrät on pääosin saatu korjattua tarkistamalla sisääntuloväylien välityskykyä ja lisäämällä pysäköintiin kuluvan ajan apumalli.
+
+Seuraavissa kuvissa on esitetty eroja malliversioiden tuloksissa verrattuna vuoden 2023 Liikkumistutkimukseen. 
+
+***Lisättävä kuvia, kun niitä on tuotettu lopullisesta mallista***
 
 ## HELMET 5.0 -tuloksiin liittyviä epävarmuuksia
 
-### PÄIVITETTÄVÄ
 
 Mallia laadittaessa sen antamia tuloksia on verrattu monipuolisesti erilaiseen havaintoaineistoon ja pyritty saamaan tulokset vastaamaan mahdollisimman hyvin havaintoja.
 Tuloksiin liittyy silti tiettyjä epävarmuuksia ja rajoitteita, joista on nostettu tähän keskeisimpiä havaintoja.
 Mallin testausta ja testien tuloksia on kuvattu laajemmin raportissa
 [Helsingin seudun työssäkäyntialueen liikenne-ennustejärjestelmän kysyntämallit 2020](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf)) (luvut 12 ja 13).
 
-Nykytilanteen osalta malli toimii hyvin, eikä kysynnän ennustamiseen liittyviä systemaattisia virheitä testauksessa havaittu.
-Malli tuottaa suuntautumisen, autoliikennemäärien ja pyöräliikennemäärien osalta ulkopuolisia havaintoja vastaavia nykytilanteen ennusteita.
-Mallin tulokset eivät poikkea nykytilanteen osalta merkittävästi HELMET 3.1-versiosta.
+Malli ennustaa nykytilanteen liikkumista aiempaa paremmin, eikä kysynnän ennustamiseen liittyviä merkittäviä järjestelmätason virheitä ole havaittu.
 
-Joukkoliikenteen osalta havaittiin kuitenkin ongelma, joka on syytä huomioida hanketarkasteluissa.
-Vuorokauden matkustajamääräarviot on aliarvioitu runkoyhteyksillä metrolla, junalla ja raitiovaunuilla, kun taas bussien matkustajamäärät on hieman yliarvioitu.
-Huipputuntien osalta nykyennuste vastaa laskentoja hyvin, joten ongelma on todennäköisesti vuorokausilaajennuskertoimissa,
-jotka eivät nykyisellään huomioi runkoyhteyksien ja muiden yhteyksien erilaisia liikennöintiaikoja.
+Kuitenkin paikallisia puutteita on edelleen. Esimerkiksi kehäteiden liikenne hidastuu liikaa ruuhkautumisen vaikutuksesta, mitä ei ole pystytty korjaamaan HELMET 5.0 malliversioon. Mallissa käytössä oleva teiden luokittelu on mahdollisesti liian karkea, jotta sillä voitaisiin kuvata kaikkia tieyhteyksiä riittävällä tarkkuudella. Kehäteiden liikennemäärät ovat kuitenkin niin merkittäviä, että HSL selvittää ongelman syyt, ja se korjataan myöhempään malliversioon.
 
-HELMET 4 -mallin avulla tehtäviä H/K-laskelmia kannattanee hyödyntää vain suurille liikennejärjestelmätason hankkeille.
+Joukkoliikenteen osalta etenkin Itä-Helsingissä metron houkuttelemat nousijamäärät ovat liian korkeita, mihin ei ole löydetty selkeää selitystä. 
 
-
+<!-- Muuta? -->
 
 ## Tuloskansion tekstitiedostojen kuvaukset
 
