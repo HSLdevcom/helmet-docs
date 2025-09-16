@@ -18,22 +18,9 @@ Jos teet merkittäviä muutoksia, esim. lisäät uuden kulkumuodon, sovi tästä
 
 ## Ohjeen muutoshistoria
 
+- 2025-09-16: Laskettu linkkityypin 42 välityskykyä
+- 2025-09-12: Numeroavaruudet päivitetty vastaamaan HELMET 5 numeroavaruuksia
 - 2024-02-05: Lisätty linkkityyppi 43 (hidas pääkatu)
-- 2023-05-23: Korjattu virhe sentroidien numeroinnissa (erikoissentroidit 30 000 -> 31 000 ja Siuntion viimeinen sentroidi)
-- 2022-01-03: Lisätty tarkennuksia type-attribuutin koodaukseen ja
-  us2-kertoimen laskentaan. ([HSLdevcom/helmet-ui#156](https://github.com/HSLdevcom/helmet-ui/pull/156))
-- 2022-09-29: Korjattu kolme kuvaa, joista puuttui merkintöjä; lisätty
-  muutoshistoria tämän ohjeen yhteyteen
-  ([HSLdevcom/helmet-ui#152](https://github.com/HSLdevcom/helmet-ui/pull/152))
-- 2022-09-12: Ohje siirretty nettiin; tarkennettu kulkumuoto `h`:n
-  ohjeistusta; linkkien `type` ylikirjoittaa `vdf`-, `ul1`- ja
-  `ul2`-attribuutit.
-  ([HSLdevcom/helmet-ui#145](https://github.com/HSLdevcom/helmet-ui/pull/145))
-- 2021-08-12: Kulkumuoto h
-- 2021-02-10: Lisätty: Pyörätiet käyttävät autoverkon solmuja.
-- 2021-01-28: Lisätty Pikaratikkapysäkki ui2 =8
-- 2020-12-28: Täsmennetty ohjetta syöttölinkeistä. Syöttölinkit koodattava aina bussiverkkoon /kävelyverkkoon ja siitä vaihtolinkillä raideliikenteeseen. Lisätietoja luku 6.6.
-- 2020-08-05: Korjattu ja täydennetty
 
 <br>
 
@@ -197,7 +184,7 @@ Verkolla käytetyt kulkumuodot (modes) ja joukkoliikenteen ajoneuvotyypit (vehic
   - Autosijoittelussa h on sallittu vain autolinkeillä (c)
   - Polkupyöräsijoittelussa h on sallittu vain pyörälinkeillä (f)
 - Bussiliikenteessä on erotettu erilaisen pysähtymiskäyttäytymisen linjat:
-  HSL:n alueella runko-linjat tavallisista bussilinjoista ja VALLU-linjoissa pikavuorot tavallisista vuoroista.
+  HSL:n alueella runko-linjat tavallisista bussilinjoista ja kaukobusseisa pikavuorot tavallisista vuoroista.
 - Tavaraliikenteessä on kolme erilaista kulkumuotoa.
 
 *Taulukko 7. Kulkumuotojen (modes) kuvaus*
@@ -517,7 +504,7 @@ Verkon koodauksessa noudatetaan bussipysäkkien osalta seuraavia periaatteita:
 **Moottoritiemäiset bussirampit** on koodattu siten, että niillä on autokulkutavat kielletty (kuva 7, siniset linkit).
 Moottoritiemäisillä väylillä, kun bussipysäkit ovat rampeilla, on busseilta kielletty ajaminen suoraan moottoritietä pitkin,
 jotta bussilinjat varmasti kulkevat pysäkkien kautta (kuva 7).
-Tämä yhtenäistää samalla myös VALLU-linjojen pysähtymiskäyttäytymisen: mallissa kaikki linjat pysähtyvät samoilla pysäkeillä (paitsi pikavuorot
+Tämä yhtenäistää samalla myös kaukobussien pysähtymiskäyttäytymisen: mallissa kaikki linjat pysähtyvät samoilla pysäkeillä (paitsi pikavuorot
 vain pikavuoropysäkeillä), vaikka todellisuudessa kaikki kaukoliikenteen bussit eivät pysähdy kaikilla pysäkeillä.
 
 ![image](images/emme_bussikulkutavat-moottoritiemaisilla-vaylilla.png)
@@ -531,8 +518,8 @@ Vihreät linkit ovat kävely- ja pyöräilylinkkejä. Bussi-pysäkit ovat vihrei
 laskee bussien, ratikoiden ja pikaratikoiden pysähtymistiedot solmutyypin (ui2) ja lippuvyöhykkeen perusteella.
 Pysäkin label-attribuutin lippuvyöhykkeen tiedon perusteella lasketaan tieto HSL-alueesta.
 HSL-alueen vyöhykkeitä ovat A, B, C, D ja E (varaus).
-HSL-aluetieto käytetään Vallu-linjojen pysähtymisiin HSL-alueella.
-Vallu-linjojen linjatunnuksessa on oltava täsmälleen 6 merkkiä, joista viimeinen kuvaa linjan suuntaa.
+HSL-aluetieto käytetään kaukobussien pysähtymisiin HSL-alueella.
+Muiden kuin HSL:n järjestämien linjojen pysähtymiskäyttäytmisessä hyödynnetään suuntatunnusta, joka on linjatunnuksen viimeinen numero.
 Suunta 1 on Helsingistä poispäin ja suunta 2 Helsinkiin. Lisäksi muutamilla linjoilla käytetään suuntatunnusta 3, jolla kuvataan ympyrälinjoja, mutta se ei vaikuta pysähtymiseen koska linjat eivät ylitä HSL-alueen rajaa.
 HSL-alueen ulkopuolella kulkevilla linjoilla suunnalla ei ole väliä.
 
@@ -614,16 +601,19 @@ HSL ylläpitää joukkoliikennelinjoista vain yhtä versiota hankevaihtoehtoa ko
 Eri vuorokaudenaikojen erilaiset vuorovälit huomioidaan vuorovälitietojen ja skriptin avulla.
 Myös linjojen pysäkkipysähtymiset määräytyvät skriptin avulla, joka lukee verkolta tiedon solmutyypeistä.
 
-HSL:n julkaisemien verkkojen liitteenä on taulukko Tarjonnan kuvaus, jossa on mm. verkkojen sisältämien eri vuosien ja aikajaksojen vuorovälit.
-Taulukon välilehdeltä Vuorovälien EMME-siirto tiedot voi kopioida mallin ymmärtämässä muodossa ja lukea makrona sisään järjestelmään.
+HSL:n julkaisemien verkkojen liitteenä on taulukko Tarjonnan kuvaus, jossa on mm. verkkojen sisältämien eri vuosien ja aikajaksojen vuorovälit linjakohtaisesti.
 
 Linjastomuutokset dokumentoidaan mallitekniseen muistioon. Myös linjojen otsikot tulee päivittää linjatiedostoon reittimuutosten yhteydessä.
 
 ### Joukkoliikenteen nopeus ja joukkoliikenteen funktioskripti
-
+<!--Korjattava raporttiviittaus -->
 Joukkoliikenteen nopeudet määräytyvät segmenttikohtaisesti funktioina.
 Nopeuden määräytymisperusteet on selostettu tarkemmin [liikennemalliraportin](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2019/helsingin-seudun-tyossakayntialueen-liikenne-ennustejarjestelman-tarjontamallit-6-2019.pdf) osassa D, s. 91-92.
-Junille ja metroille määritetään segmenttikohtaiset matka-ajat linjoja koodattaessa, ja raitio- ja pikaraitiolinjojen nopeudet koodataan linkkiattribuuttiin ul1. 
+
+Junille ja metroille määritetään segmenttikohtaiset matka-ajat linjoja koodattaessa segmenttiattribuuttiin us1, eli samoilla linkeillä kulkevat junat voivat liikkua eri nopeuksilla. 
+
+Raitio- ja pikaraitiolinjojen nopeudet koodataan raitiotiekohtaisesti linkkiattribuuttiin ul1, jolloin samaa raitiotieosuutta käyttävät linjat kulkevat aina samalla nopeudella. 
+<!--Korjattava raporttiviittaus -->
 
 Bussien nopeuden määrittävä us2-kerroin lasketaan [skriptillä](https://github.com/HSLdevcom/helmet-model-system/blob/4939e0505b8bde26f53116c89c31ff747cf74c45/Scripts/assignment/assignment_period.py#L292).
 Samalla tehdään oikeiden joukkoliikennefunktioiden valinta kaikille kulkumuodoille. Skriptin
