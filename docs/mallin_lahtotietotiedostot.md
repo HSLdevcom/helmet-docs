@@ -23,13 +23,28 @@ Tiedostojen nimillä ei ole merkitystä, ja ne voivat poiketa toisistaan (kansio
 <ul>
 <li> <b>car</b> = <i>valinnainen tiedosto</i>, johon voi syöttää aluekohtaiset pysäköintinormit (autoa/asukas) sarakkeeseen `prknorm`, esimerkiksi tällä tavalla:  
 
-|     | prknorm |
-|-----|---------|
-| 191 |     0.7 |
-| 192 |     0.6 |
-| 301 |     1.0 |
+  <table><thead>
+    <tr>
+      <th></th>
+      <th>prknorm</th>
+    </tr></thead>
+  <tbody>
+    <tr>
+      <td>191</td>
+      <td>0.7</td>
+    </tr>
+    <tr>
+      <td>192</td>
+      <td>0.6</td>
+    </tr>
+    <tr>
+      <td>301</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+  </table>
 
-Pysäköintinormit vaikuttavat vain uusien asukkaiden autonomistukseen.</li>
+  Pysäköintinormit vaikuttavat vain uusien asukkaiden autonomistukseen.</li>
 
 <li> <b>cco</b> = autoilun kilometrikustannus</li>
 <li> <b>edu</b> = kunkin ennustealueen oppilaspaikkamäärät peruskoulussa, toisella asteella ja korkeakouluissa</li>
