@@ -86,4 +86,4 @@ Moduuli lukee skenaarioon tarpeelliset tiedot tiedostoista
 
 ## Muut lähtötiedot
 
-Muut tarvittavat lähtötiedot (mm. maankäyttö, kustannukset, pohjakysyntä) ajetaan automaattisesti sisään ennusteprosessin aikana. Lähtötiedot kuvaavat mallin estimointivuoden tilannetta, ja lisäksi malliin syötetään syöttötietoja, jotka kuvaavat ennusteskenaarion tilannetta (lisätietoja [Lähtötiedot](mallin_lahtotietotiedostot.md)-sivulla).
+Muut tarvittavat lähtötiedot (mm. maankäyttö, kustannukset, alkukysyntämatriisit) ajetaan automaattisesti sisään ennusteprosessin aikana. Lähtötiedot kuvaavat mallin estimointivuoden tilannetta, ja lisäksi malliin syötetään syöttötietoja, jotka kuvaavat ennusteskenaarion tilannetta (lisätietoja [Lähtötiedot](mallin_lahtotietotiedostot.md)-sivulla).

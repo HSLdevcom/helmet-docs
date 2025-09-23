@@ -15,29 +15,26 @@ Huom! Jos ajat samassa Emme-pankissa useita Helmet-skenaarioita, tarkat matriisi
 jos config-tiedostoon on määritelty matriiseille omat tallennuspaikat (ks. [Mallijärjestelmän käyttö](mallitoiden_yleisohje.md)).
 
 Lisää tietoja kysyntämallien toiminnallisuuksista ja niiden tulosten merkityksestä saat
-(KORJAA) [malliraportista](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf).
+(KORJATTAVA) [malliraportista](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf).
 
 ## Tulokset verrattuna HELMET 4.1:een
 
 
 Suurimmat eroavaisuudet HELMET 5 ja HELMET 4.1 malliversioiden välillä johtuvat mallin estimoinnista, joka on tehty vuoden 2023 Liikkumistutkimusaineistolla. Uudessa liikkumistutkimuksessa vuorokauden keskimääräinen matkamäärä on laskenut aiemmasta, johtuen oletettavasti koronaviruspandemian aiheuttamasta etätyön lisääntymisestä. Kulkutapajakauma on myös muuttunut aiemmasta. Kävelyn osuus on hieman kasvanut, kun muiden on laskenut.
 
-Vapaa-ajan matkoista aiempaa suurempi osuus tehdään joukkoliikenteellä. Autolla tehtyjen vapaa-ajan matkojen suorite on laskenut huomattavasti, kun taas joukkoliikenteellä tehtyjen vapaa-ajan matkojen suorite on kasvanut hieman.
+Vapaa-ajan matkoista aiempaa suurempi osuus tehdään joukkoliikenteellä. Autolla tehtyjen vapaa-ajan matkojen suorite on laskenut, kun taas joukkoliikenteellä tehtyjen vapaa-ajan matkojen suorite on kasvanut.
 
 Pyöräilyn matkamäärät mallissa ovat huomattavasti alhaisemmalla tasolla kuin HELMET 4.1:ssä. Syynä on kuitenkin HELMET 4.1:n virhe; mallin validoinnissa oli oletettavasti käytetty kesällä laskettuja arkivuorokauden pyöräliikenteen määriä. HELMET 5:ssä pyöräliikenteen mallintamisen kehittäminen on ollut keskeinen kehitystyön kohde, ja pyöräilyn matkamäärät ovat nyt oikeassa suhteessa verrattuna muuhun liikenteeseen.
 
 Kantakaupungissa aiemmin havaitut liian suuret autoliikenteen määrät on pääosin saatu korjattua tarkistamalla sisääntuloväylien välityskykyä ja lisäämällä pysäköintiin kuluvan ajan apumalli.
 
-Seuraavissa kuvissa on esitetty eroja malliversioiden tuloksissa verrattuna vuoden 2023 Liikkumistutkimukseen. 
-
-***Lisättävä kuvia, kun niitä on tuotettu lopullisesta mallista***
 
 ## HELMET 5.0 -tuloksiin liittyviä epävarmuuksia
 
 
 Mallia laadittaessa sen antamia tuloksia on verrattu monipuolisesti erilaiseen havaintoaineistoon ja pyritty saamaan tulokset vastaamaan mahdollisimman hyvin havaintoja.
 Tuloksiin liittyy silti tiettyjä epävarmuuksia ja rajoitteita, joista on nostettu tähän keskeisimpiä havaintoja.
-Mallin testausta ja testien tuloksia on kuvattu laajemmin raportissa
+Mallin testausta ja testien tuloksia on kuvattu laajemmin raportissa (KORJATTAVA)
 [Helsingin seudun työssäkäyntialueen liikenne-ennustejärjestelmän kysyntämallit 2020](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf)) (luvut 12 ja 13).
 
 Malli ennustaa nykytilanteen liikkumista aiempaa paremmin, eikä kysynnän ennustamiseen liittyviä merkittäviä järjestelmätason virheitä ole havaittu.
@@ -65,7 +62,7 @@ Joukkoliikenteen osalta etenkin Itä-Helsingissä metron houkuttelemat nousijam�
 | oo    | muu kiertomatka       |
 | *wh*  | työ - koti [1]        |
 
-[1] Tyyppi *wh* on invertoitu versio kotiperäisten työmatkojen (hw) mallista. Sitä käytetään työvoiman saavutettavuuslaskennassa.
+[1] Tyyppi *wh* on käännetty versio kotiperäisten työmatkojen (hw) mallista. Sitä käytetään työvoiman saavutettavuuslaskennassa.
 
 #### Ympäryskunnissa alkavien kiertomatkojen päätyypit
 
@@ -145,6 +142,7 @@ mutta ne ovat autosijoittelussa taustaliikenteenä.
 | generation.txt                               | Vuorokauden kiertomatkatuotos kiertomatkatyypeittäin sijoittelualueittain |  |
 | impedance_ratio.txt                          | Joukkoliikenteen ja henkilöautoliikenteen matka-aika- ja matkakustannussuhteet aamuruuhkassa sijoittelualueittain | Eri matkakohteiden matka-ajat ja -kustannukset on painotettu työmatkojen määrillä kulkutavoittain. Lukuja käytetään autonomistusmallin muuttujina. |
 | link_lengths.txt                             | Väylätyyppien yhteenlaskettu pituus (km) verkolla | |
+| mode_analysis.csv                            | Kulkutapajakauman muutos alkukysynnästä viimeiseen iteraatioon | :exclamation: Uusi versiossa 5.0 |
 | mode_share.txt                               | Kokonaiskulkutapajakaumat kiertomatkatyyppeittäin |
 | noise_areas.txt                              | Suuralueiden melualueiden pinta-alat ja väestömäärät |  |
 | origins_demand.txt                           | Vuorokauden kiertomatkatuotokset kulkutavoittain ja sijoittelualueittain |
@@ -155,12 +153,14 @@ mutta ne ovat autosijoittelussa taustaliikenteenä.
 | result_summary.txt                           | Yhteenveto mallialueen tuloksista: työpaikkojen kasautuminen, työvoimasaavutettavuus, sijoiteltu kysyntä (meno-paluumatkoja), etäisyyssuoritteet, saavutettavuus, kulkutapajakauma  | Kävely ei sisälly kysyntään, koska sitä ei sijoitella |
 | savu.txt                                     | SAVU-vyöhyke, jolle sijoittelualue kuuluu |  |
 | sustainable_accessibility.txt                | Kysyntämallin logsum-muuttujat ilman autokulkutapaa sijoittelualueittain ja kiertomatkatyypeittäin |  |
-| tour_combinations.txt<br />tour_combinations.xlsx | Vuorokauden kiertomatkayhdistelmien tuotosluvut ikäryhmittäin |  |
-| transit_congestion.txt                       | Joukkoliikennelinjojen täyttöaste suhteessa istuma- ja kokonaiskapasiteettiin | :exclamation: Uusi versiossa 5.0 |
+| tour_combinations.txt  | Vuorokauden kiertomatkayhdistelmien tuotosluvut ikäryhmittäin |  |
+| tour_combinations.xlsx | Vuorokauden kiertomatkayhdistelmien tuotosluvut ikäryhmittäin |  |
+| transit_congestion.csv                       | Joukkoliikennelinjojen täyttöaste suhteessa istuma- ja kokonaiskapasiteettiin | :exclamation: Uusi versiossa 5.0 |
 | transit_kms.txt                              | Vuorokauden etäisyys- ja ajo-aikasuoritteet (km, min) joukkoliikenteen ajoneuvoille |
 | transit_stations.txt                         | Juna- ja metroasemien lukumäärä |  |
 | trip_lengths.txt                             | Vuorokauden kiertomatkatuotokset kiertomatkatyyppeittäin, kulkutavoittain ja etäisyysluokittain | Etäisyysluokka perustuu henkilöauton ajoetäisyyteen kilometreissa. |
 | trips_areas.txt                              | Vuorokauden (meno+paluu)matkatuotokset kulkutavoittain ja suuralueittain |  |
+| validation.html                              | Automaattisen validoinnin tulokset. Ajanjaksokohtaiset liikennemäärien ja nopeuksien vertailut laskentapisteissä | :exclamation: Uusi versiossa 5.0 |
 | vehicle_kms_areas.txt                        | Sijoitteluluokkien (sekä joukkoliikenteen liityntäkävely erikseen) ja bussien etäisyyssuoritteet (km) koko vuorokaudelle suuralueittain |  |
 | vehicle_kms_vdfs.txt                         | Sijoitteluluokkien (sekä joukkoliikenteen liityntäkävely erikseen) ja bussien etäisyyssuoritteet (km) koko vuorokaudelle väylätyypeittäin |  |
 | vehicle_kms_vdfs_areas.txt                   | Kokonaisetäisyyssuoritteet (km) koko vuorokaudelle väylätyypeittäin ja suuralueittain |  |

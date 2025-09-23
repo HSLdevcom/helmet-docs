@@ -40,7 +40,7 @@ Mallin ajoa varten tulee määritellä seuraavat asetukset.
   - Tänne talletetaan HELMET-skenaarioiden (malliajojen) määrittelyt (.json)
   - Tämä **ei** siis viittaa EMMEn projektitiedostoon (.emp)
 - Lähtödatan sisältävä kansio
-  - Tässä ovat omissa alakansioissaan pohjakysyntämatriisit ja nykytilanteen syöttötiedot (2023)
+  - Tässä ovat omissa alakansioissaan alkukysyntämatriisit ja nykytilanteen syöttötiedot (2023)
   - Kansion sisällön saa HSL:ltä (ks. [Lähtötiedot](mallin_lahtotietotiedostot.md))
 - Tulosten tallennuspolku
   - Tänne talletetaan ennusteajojen tulokset

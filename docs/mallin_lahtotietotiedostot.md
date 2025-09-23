@@ -61,8 +61,8 @@ Tiedostojen nimillä ei ole merkitystä, ja ne voivat poiketa toisistaan (kansio
 ### Lähtödata
 
 Kansio sisältää perusvuoden (lähtökohtaisesti 2023, mutta jotkut tiedot voivat olla vanhempia) syöttötietoja (kuvattu yllä)
-ja [pohjakysyntämatriiseja](tulokset.md#tuloskansion-matriisitiedostojen-kuvaukset).
-Pohjakysyntämatriisit menevät ensimmäiseen sijoitteluun, josta kysyntälaskenta alkaa. Pohjakysyntä kuvaa kysyntää estimointivuoden tilanteessa estimoinnissa käytetyllä verkolla ja syttötiedoilla. Pohjakysyntä ei käytännössä vaikuta malllin tuloksiin, mutta malli on sitä nopeampi, mitä lähempänä pohjakysyntä on lopullista malliajossa laskettua kysyntää.
+ja [alkukysyntämatriiseja](tulokset.md#tuloskansion-matriisitiedostojen-kuvaukset).
+Alkukysyntämatriisit menevät ensimmäiseen sijoitteluun, josta kysyntälaskenta alkaa. Alkukysyntä kuvaa kysyntää estimointivuoden tilanteessa estimoinnissa käytetyllä verkolla ja syttötiedoilla. Alkukysyntä ei käytännössä vaikuta malllin tuloksiin, mutta malli on sitä nopeampi, mitä lähempänä alkukysyntä on lopullista malliajossa laskettua kysyntää.
 Perusvuoden syöttötiedot menevät tavaraliikennemalliin ja autonomistusmalliin, jotka molemmat ovat muutosmalleja.
 Perusvuoden syöttötiedoissa `car`-tiedosto on (toisin kuin ennusteskenaarion syöttötiedoissa) pakollinen:
 
