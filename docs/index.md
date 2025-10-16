@@ -38,8 +38,7 @@ Laajemmin aihetta on kuvattu raportissa
 
 ### Kulkutapa- ja suuntautumismallien rakenne
 
-Kuten HELMET 4 -malliversiossa, kulkutapa- ja suuntautumismallien rakenne on HS15-alueella sellainen,
-että kulkutavanvalinta on ylemmällä tasolla kuin määräpaikan valinta (eli suuntautuminen).
+Kuten HELMET4 4 -malliversiossa, kulkutapa- ja suuntautumismallien rakenne on HS15 -alueella kaksitasoinen: Kulkutapa- ja suuntautumismallissa yksittäinen vaihtoehto koostuu sekä kulkutavasta että suuntautumisesta yhdessä siten, että suuntautumisvaihtoehdon hyöty on kulkutavasta riippuva. Liityntäpysäköinti mallinnetaan uutena, omana kulkutapanaan, ja se jaetaan sijoittelussa auto- ja joukkoliikenneosamatkoiksi.
 
 ![Kulkutapa- ja suuntautumismallien rakenne eri HELMET-versioissa](images/Kulkutapa-%20ja%20suuntautumismallien%20rakenne%20eri%20Helmet-versioissa.png)
 
