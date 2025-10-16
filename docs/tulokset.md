@@ -20,11 +20,11 @@ Lisää tietoja kysyntämallien toiminnallisuuksista ja niiden tulosten merkityk
 ## Tulokset verrattuna HELMET 4.1:een
 
 
-Suurimmat eroavaisuudet HELMET 5 ja HELMET 4.1 malliversioiden välillä johtuvat mallin estimoinnista, joka on tehty vuoden 2023 Liikkumistutkimusaineistolla. Uudessa liikkumistutkimuksessa vuorokauden keskimääräinen matkamäärä on laskenut aiemmasta, johtuen oletettavasti koronaviruspandemian aiheuttamasta etätyön lisääntymisestä. Kulkutapajakauma on myös muuttunut aiemmasta. Kävelyn osuus on hieman kasvanut, kun muiden on laskenut.
+Suurimmat eroavaisuudet HELMET 5 ja HELMET 4.1 malliversioiden välillä johtuvat mallin estimoinnista, joka on HELMET 5:ssä tehty vuoden 2023 Liikkumistutkimusaineistolla. Uudessa liikkumistutkimuksessa vuorokauden keskimääräinen matkamäärä on laskenut aiemmasta, johtuen oletettavasti koronaviruspandemian aiheuttamasta etätyön lisääntymisestä. Kulkutapajakauma on myös muuttunut aiemmasta. Kävelyn osuus on hieman kasvanut, kun muiden on laskenut.
 
-Vapaa-ajan matkoista aiempaa suurempi osuus tehdään joukkoliikenteellä. Autolla tehtyjen vapaa-ajan matkojen suorite on laskenut, kun taas joukkoliikenteellä tehtyjen vapaa-ajan matkojen suorite on kasvanut.
+Vapaa-ajan matkoista aiempaa suurempi osuus tehdään joukkoliikenteellä: Autolla tehtyjen vapaa-ajan matkojen suorite on laskenut, kun taas joukkoliikenteellä tehtyjen vapaa-ajan matkojen suorite on kasvanut.
 
-Pyöräilyn matkamäärät mallissa ovat huomattavasti alhaisemmalla tasolla kuin HELMET 4.1:ssä. Syynä on kuitenkin HELMET 4.1:n virhe; mallin validoinnissa oli oletettavasti käytetty kesällä laskettuja arkivuorokauden pyöräliikenteen määriä. HELMET 5:ssä pyöräliikenteen mallintamisen kehittäminen on ollut keskeinen kehitystyön kohde, ja pyöräilyn matkamäärät ovat nyt oikeassa suhteessa verrattuna muuhun liikenteeseen.
+Pyöräilyn matkamäärät mallissa ovat huomattavasti alhaisemmalla tasolla kuin HELMET 4.1:ssä. Syynä on kuitenkin HELMET 4.1:n virhe; mallin validoinnissa oli oletettavasti käytetty kesällä laskettuja arkivuorokauden pyöräliikenteen määriä, kun malli muuten kuvaa syksyn arkivuorokauden liikkumista. HELMET 5:ssä pyöräliikenteen mallintamisen kehittäminen on ollut keskeinen kehitystyön kohde, ja pyöräilyn matkamäärät ovat nyt oikeassa suhteessa verrattuna muuhun liikenteeseen.
 
 Kantakaupungissa aiemmin havaitut liian suuret autoliikenteen määrät on pääosin saatu korjattua tarkistamalla sisääntuloväylien välityskykyä ja lisäämällä pysäköintiin kuluvan ajan apumalli.
 
@@ -35,9 +35,9 @@ Kantakaupungissa aiemmin havaitut liian suuret autoliikenteen määrät on pää
 Mallia laadittaessa sen antamia tuloksia on verrattu monipuolisesti erilaiseen havaintoaineistoon ja pyritty saamaan tulokset vastaamaan mahdollisimman hyvin havaintoja.
 Tuloksiin liittyy silti tiettyjä epävarmuuksia ja rajoitteita, joista on nostettu tähän keskeisimpiä havaintoja.
 Mallin testausta ja testien tuloksia on kuvattu laajemmin raportissa (KORJATTAVA)
-[Helsingin seudun työssäkäyntialueen liikenne-ennustejärjestelmän kysyntämallit 2020](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf)) (luvut 12 ja 13).
+[Helsingin seudun työssäkäyntialueen liikenne-ennustejärjestelmän kysyntämallit 2020](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf) (luvut 12 ja 13).
 
-Malli ennustaa nykytilanteen liikkumista aiempaa paremmin, eikä kysynnän ennustamiseen liittyviä merkittäviä järjestelmätason virheitä ole havaittu.
+Mallin tuottama kuvaus nykytilanteen liikkumisesta on aiempaa parempi, eikä kysynnän mallintamiseen liittyviä merkittäviä järjestelmätason virheitä ole havaittu.
 
 Kuitenkin paikallisia puutteita on edelleen. Esimerkiksi kehäteiden liikenne hidastuu liikaa ruuhkautumisen vaikutuksesta, mitä ei ole pystytty korjaamaan HELMET 5.0 malliversioon. Mallissa käytössä oleva teiden luokittelu on mahdollisesti liian karkea, jotta sillä voitaisiin kuvata kaikkia tieyhteyksiä riittävällä tarkkuudella. Kehäteiden liikennemäärät ovat kuitenkin niin merkittäviä, että HSL selvittää ongelman syyt, ja se korjataan myöhempään malliversioon.
 

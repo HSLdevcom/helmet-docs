@@ -7,7 +7,7 @@ sort: 5
 
 ## Syöttö- ja lähtötietojen kuvaus
 
-Malliajo vaatii aina sekä syöttö- että lähtötietoja. Lähtötiedot kuvaavat malliajon lähtötilannetta, johon syöttötiedoissa kuvattua skenaariota verrataan. Käytännössä lähtötiedot kuvaavat estimoinnin aikaista tilannetta, ja syöttötiedot kuvaavat tarkasteltavana olevaa skenaariota, esimerkiksi MAL suunnitelman tarkasteluvuoden tavoitetilannetta.
+Malliajo vaatii aina sekä syöttö- että lähtötietoja. Lähtötiedot kuvaavat malliajon lähtötilannetta, johon syöttötiedoissa kuvattua skenaariota verrataan. Käytännössä lähtötiedot kuvaavat estimoinnin aikaista tilannetta, HELMET 5:ssä syksyä 2023, ja syöttötiedot kuvaavat tarkasteltavana olevaa skenaariota, esimerkiksi MAL suunnitelman tarkasteluvuoden tavoitetilannetta.
 
 ### Ennusteskenaarioiden syöttötiedot
 
@@ -91,8 +91,9 @@ Lisäksi joissakin skenaarioissa verkot voivat sisältää tiedostoja, jotka mä
 
 ## Lähtötietojen muokkaaminen
 
-Lähtötietoja voi muokata joko suoraan lähtötietotiedostoihin tai EMME-ohjelmiston (Modeller, Network Editor, Prompt) kautta.
+Syöttö- ja lähtötiedot ovat käytännössä taulukkoja, joissa jokaisella sijoittelualueella on tiettyjä arvoja eri muuttujilla. Näitä voidaan muokata esimerkiksi Excelillä, Pythonilla [helmet-utils](https://github.com/HSLdevcom/helmet-utils) -kirjastoa apuna käyttäen, tai käsin suoraan tekstitiedostoon.
 
+Verkkoja voi muokata joko suoraan verkkotiedostoihin tai EMME-ohjelmiston (joko Modeller, Network Editor tai Prompt) kautta.
 Verkkokuvausperiaatteita on kuvattu tarkemmin "[EMME-verkon kuvaus](emme_verkko.md)" -sivulla.
 Noudatathan näitä periaatteita verkonkuvauksia koodatessa, jotta varmistutaan tulosten oikeellisuudesta ja aineistojen yhteiskäyttöisyydestä.
 
@@ -105,17 +106,16 @@ Noudatathan näitä periaatteita verkonkuvauksia koodatessa, jotta varmistutaan 
   * Asukasmäärä ikäryhmittäin
   * Autonomistus
 * Kulkutavan valinta
-  * Alueparien väliset matka-ajat autolla ja joukkoliikenteellä
+  * Alueparien väliset matka-ajat autolla, polkupyörällä ja joukkoliikenteellä
   * Alueparien väliset etäisyydet polkupyörällä ja autolla
-  * Alueparien väliset matkakustannukset: joukkoliikennelipun hinta, autoiun muuttuvat kustannukset (polttoaine, renkaat) ja mahdollinen ruuhkamaksu/tietulli
+  * Alueparien väliset matkakustannukset: joukkoliikennelipun hinta, autoilun muuttuvat kustannukset (polttoaine, renkaat) ja mahdollinen ruuhkamaksu/tietulli
   * Autonomistus alueittain
 * Matkakohteiden valinta
   * Saavutettavuus (matka-aika, etäisyys ja matkakustannus määräpaikkaan eri kulkutavoilla)
   * Työpaikkamäärä määräpaikassa
   * Oppilaspaikkojen määrä määräpaikassa
 * Reitin valinta
-  * Auto- ja joukkoliikennelinkin matka-aika
-  * Pyörälinkin pituus
+  * Auto-, pyörä- ja joukkoliikennelinkin matka-aika
   * Autolinkin matkakustannus
 
 
@@ -128,24 +128,19 @@ maankäyttöjen ja muiden lähtötietojen yhdistelmää.
 Tässä on kuvattu yleisesti HSL:n ylläpitämiä lähtötietoaineistoja ja niiden rakennetta.
 Ohjeita aineistojen lataamiseen ja käyttöön löydät "[Mallijärjestelmän käyttö](mallitoiden_yleisohje.md)"-sivulta.
 
-### Ennusteskenaarioiden syöttötiedot (maankäyttö, kustannukset ym)
 
 **Lähtötietoja tuotetaan MAL-suunnittelun yhteydessä n. neljän vuoden välein seuraaville skenaarioille:**
 * Nykytilan kuvaus
 * MAL-suunnitelman tavoitevuoden skenaario
 * MAL-suunnitelman pitkän aikavälin tavoiteskenaario
-* Välivuosiskenaario
-
-Aineistojen sisältöjä on kuvattu tarkemmin aineiston jakokansiossa, johon saat käyttöoikeuden täyttämällä hakemuslomakkeen EXT-helmet-Teams-ryhmässä.
-Tiedostopolun juuren on dokumentit sisältävät aineistojen yleiskuvauksen,
-ja tarkempia tietoja löytyy kunkin tiedoston sisältä kommmentteina.
+* Välivuosiskenaariot (esim. 2030 ja 2035, kun tavoitevuosi on 2040. Interpoloitu tavoitevuodesta)
 
 ### Verkkokuvaukset
 
 Vuosittain päivitetään tuore nykytilan kuvaus sekä mahdolliset muutokset tulevien vuosien kuvauksiin HSL:n ja kuntien tuottamiin suunnitelmiin perustuen.
 Päivitetyt versiot julkaistaan syksyisin. Verkkojen vuosipäivityksiä laaditaan vuosittain kuvaamaan kunkin syksyn liikennetilannetta HSL-liikenteessä. 
 Muutostyö käynnistyy tammikuussa HSL:n Liikennöintisuunnitelman hyväksymisen jälkeen, ja viimeistellään kesällä, kun kaikki syksyn muutokset ovat varmistuneet.
-Tässä yhteydessä samat muutokset kuvataan myös MAL-verkkojen päivitettäviin versioihin sekä välivuosien verkoille.
+Tässä yhteydessä samat muutokset kuvataan myös MAL-verkkojen päivitettäviin versioihin MAL-työn aikana, sekä välivuosien verkoille. MAL-suunnitelman hyväksymisen jälkeen MAL-suunnitelmaverkkoa ei enää päivitetä vaan se jäädytetään kuvaamaan vaikutusten arvioinnin tilannetta.
 Lisäksi tulevaisuuden verkkoihin viedään tiedot esim. valmistuneiden linjastosuunnitelmien tuomista muutoksista. 
 
 Kaukojunaliikennettä ja muiden kuin HSL-alueen bussilinjoja ei päivitetä säännöllisesti vuosipäivitysten yhteydessä.
@@ -154,11 +149,7 @@ Muiden kuin HSL:n järjestämän linja-autoliikenteen viimeisin päivitys on vuo
 
 Laajempia muutoksia tehdään MAL-suunnittelun yhteydessä n. neljän vuoden välein, ja tässä pohjana käytetään viimeisimmän vuosipäivityksen mukaisia verkkoja.
 
-**Lähtötietoja tuotetaan seuraaville skenaarioille:**
-* Nykytilan kuvaus
-* MAL-suunnitelman tavoitevuoden skenaario
-* MAL-suunnitelman pitkän aikavälin tavoiteskenaario
-* Välivuosiskenaario
+## Lähtötietojen jakelu
 
 Aineistojen sisältöjä on kuvattu tarkemmin aineiston jakokansiossa, johon saat käyttöoikeuden täyttämällä hakemuslomakkeen EXT-helmet-Teams-ryhmässä.
 Kullekin vuodelle on oma alikansionsa ja niistä löytyy readme-tiedostot, joissa on selostettu yleiskuvaus aineistosta.

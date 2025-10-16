@@ -68,19 +68,18 @@ Käyttöliittymässä on tehtävä seuraavat määrittelyt jokaista ajettavaa HE
       loppusijoittelun tekeminen vaatii, että kysyntämatriisit omx-muodossa aiemmasta malliajosta
       löytyvät skenaarion tuloskansiosta.
     - Kaikkia iteraatiokierroksia ei ajeta, mikäli kysyntä konvergoituu aiemmin
-6.	Valinta, lasketaanko joukkoliikenteen kustannusmatriisi vai käytetäänkö aiemmin laskettua 
+6.	Valinta, lasketaanko joukkoliikenteen kustannusmatriisi vai käytetäänkö mallijärjestelmän aiemmin laskemaa matriisia 
    (sijaitsee tämän skenaarion tuloskansiossa `Tulosten tallennuspolku\Skenaario nimi`).
-7.  Valinta, poistetaanko sijoittelun strategiatiedostot malliajon jälkeen.
+7.  Valinta, poistetaanko sijoittelun strategiatiedostot malliajon jälkeen. Strategiatiedostoja tarvitaan erilaisissa analyyseissä, joita voidaan tehdä EMMEn modellerilla malliajon jälkeen.
 8.  Valinta, tallennetaanko eri ajanjaksot erillisiin EMME-skenaarioihin.
-9.  Valinta, tallennetaanko mm. joukkoliikenteen matka-ajan osamatriisit (in-vehicle time, first
-    waiting time, jne.). Malliajoon ja hankearviointiin tarpeelliset matriisit tallennetaan
+9.  Valinta, tallennetaanko eri ajanjaksojen (aht, pt, iht) matriisit EMMEn Database-kansioon. Malliajoon ja hankearviointiin tarpeelliset matriisit tallennetaan
     aina .omx-muodossa riippumatta tästä valinnasta.
-    - EMME-projektissa matriisit on aina jaettu kaikkien skenaarioiden kesken, eli jos valintaa ei erikseen tehdä, matriisit yliajetaan jokaisen malliajon jälkeen ja eri skenaarioiden matriisien tarkastelu on mahdotonta EMMEssä.
     - Mikäli halutaan useiden HELMET-skenaarioiden kaikki EMME-matriisit talteen samaan
       EMME-projektiin (.emx-tiedostoihin), voidaan lisäksi ennen jokaista malliajoa määrittää
-      ensimmäisen matriisin numero. Yhteen malliajoon tarvitaan aina 300 matriisin numeroavaruus,
-      joten jos ensimmäiseen malliajoon on käytetty 100 (oletus), toiseen malliajoon kannattaa
-      laittaa 400.
+      ensimmäisen matriisin numero. Yhteen malliajoon tarvitaan aina 300 matriisin numeroavaruus (100 per ajanjakso),
+      joten jos ensimmäiseen malliajon matriisit alkavat luvusta 100 (oletus), toisen skenaarion matriisien alku kannattaa asettaa lukuun 400.
+    - Ensimmäiset 100 matriisia ovat sijoittelun käytössä sijoittelussa, ja niitä yliajetaan jokaisessa malliajossa.
+    - EMME-projektissa matriisit on aina jaettu kaikkien skenaarioiden kesken, eli jos valintaa ei erikseen tehdä, matriisit yliajetaan jokaisen malliajon jälkeen ja eri skenaarioiden matriisien tarkastelu on mahdotonta EMMEssä.
 
 ### Hyöty-kustannusanalyysin (hankearvioinnin) määrittely
 

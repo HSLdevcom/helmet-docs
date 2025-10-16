@@ -36,9 +36,11 @@ Kutakin projektia varten kannattaa luoda yksi yhteinen EMME-projektipankki, joho
 
 ## HELMET-asennus
 
+### Helmet käyttöliittymä
+
 HELMET-käyttöliittymän asennustiedosto ladataan [releases-sivulta](https://github.com/HSLdevcom/helmet-ui/releases).
-Asennustiedosto on nimeltään `Helmet.4.1-x.y.z.Setup.exe`, jossa `x.y.x` on käyttöliittymän
-versionumero. Suosittelemme uusimman version eli sivulla ylimpänä olevan version lataamista.
+Asennustiedosto on nimeltään `Helmet-UI.x.y.z.Setup.exe`, jossa `x.y.x` on käyttöliittymän
+versionumero. Käyttöliittymällä voidaan käyttää mallijärjestelmän eri versioita, eikä se ole riippuvainen mistään tietystä versiosta. Suosittelemme uusimman version eli sivulla ylimpänä olevan version lataamista.
 
 :warning: **Sovellus on niin harvoin asennettu, että Windows tai selain voi huomauttaa siitä ja
 estää asennuksen suorituksen. Tämä voidaan ohittaa eri tavoin, joista voit joutua käyttämään
@@ -59,9 +61,13 @@ Jos käyttäjällä jostain syystä ei ole pääsyä `AppData`-kansioon, vaihtoe
 
 Kun sovellus käynnistetään ensimmäistä kertaa, se yrittää löytää työasemalta EMME-asennuksen ja ladata 
 [HELMET 5.0 -liikenne-ennustejärjestelmän (model system)](https://github.com/HSLdevcom/helmet-model-system) 
-uusimman version skriptit. Sovellus suorittaa myös komennon `pip install`. 
+uusimman version skriptit, jos asennusta ei ole valmiina. Sovellus suorittaa myös komennon `pip install --user -r requirements.txt`, joka asentaa mallijärjestelmän vaatimat Python kirjastot. 
 Nämä kommennot pyörivät hiljaa taustalla, ja sovellus alkaa reagoida vasta niiden valmistuttua.
 
 EMMEn Python-polussa oleva määrittely saattaa epäonnistua, 
-jos ympäristömuuttujaa `EMMEPATH` ei ole määritelty tai jos sovellus on asennettu epätavallisella tavalla. Jos näin käy, suorituskelpoisen 
-Python-kielen ja Scripts-kansion sijainti on määriteltävä manuaalisesti Asetukset-valikosta.
+jos ympäristömuuttujaa `EMMEPATH` ei ole määritelty tai jos sovellus on asennettu epätavallisella tavalla. HELMET-käyttöliittymän pitäisi asettaa ympäristömuuttuja automaattisesti samalla, kun valitaan käytettävä EMMEn Python asennus.
+
+### Helmet mallijärjestelmä
+Uusimman HELMET mallijärjestelmän julkaisun voi ladata suoraan HELMET käyttöliittymässä, ja käyttöliittymä ehdottaa sen lautausta myös automaattisesti, jos mallijärjestelmää ei ole valmiiksi asetettuna. 
+
+Jos kuitenkin halutaan käyttää jotakin muuta mallijärjestelmän versiota, esimerkiksi jotakin kehitysversiota, tai vanhaa mallijärjstelmäversiota, mallijärjestelmä voidaan myös ladata erikseen [GitHubista](https://github.com/HSLdevcom/helmet-model-system), ja valita se sitten HELMET käyttöliittymän Asetukset valikossa.

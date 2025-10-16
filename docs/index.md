@@ -5,8 +5,8 @@ title: Etusivu
 ---
 # HSL:n liikenne-ennustejärjestelmän yleiskuvaus
 
-HELMET on HSL:n liikenne-ennustemallijärjestelmä, joka kattaa Helsingin seudun 14 kuntaa ja Siuntion sekä niitä ympäröivän työssäkäyntialueen, johon kuuluu koko Uusimaa ja lisäksi Varsinais-Suomen, Kanta-Hämeen ja Päijät-Hämeen kuntia.
-Uusin malliversio HELMET 5 julkaistiin marraskuussa 2025. Järjestelmä käyttää OpenPaths Emme-ohjelmistoa.
+HELMET on HSL:n liikenne-ennustemallijärjestelmä, joka kattaa Helsingin seudun 14 kuntaa ja Siuntion (Tästä Helsingin seutu + Siuntio joukosta käytetään usein termiä HS15), sekä niitä ympäröivän työssäkäyntialueen, johon kuuluu koko Uusimaa ja lisäksi Varsinais-Suomen, Kanta-Hämeen ja Päijät-Hämeen kuntia.
+Uusin malliversio HELMET 5 julkaistiin marraskuussa 2025. Järjestelmä käyttää Bentleyn julkaisemaa OpenPaths Emme-ohjelmistoa.
 
 HSL:n HELMET-liikenne-ennustemallia voidaan käyttää arvioimaan erilaisten muutostekijöiden vaikutuksia liikennejärjestelmään.
 Mallia hyödynnetään ja kehitetään erityisesti palvelemaan seudullisen MAL-suunnitelman vaikutusten arviontia.
@@ -99,7 +99,7 @@ Pyöräilyn mallintamista on kehitetty HELMET 5 -versiossa aiemman HELMET 4 -ver
 
 Mallin käytettävyyttä on pyritty parantamaan selkeyttämällä virhetilanteiden viestintää ja kehittämällä verkkovalidointia ennen malliajoa
 
- * Tapaukset joissa joukkoliikennelinjat kulkevat samojen linkkien yli useita kertoja ilmoitetaan käyttäjälle
+ * Tapaukset, joissa joukkoliikennelinjojen reitti ylittää saman linkin useita kertoja ilmoitetaan käyttäjälle
  * Täyttyneistä joukkoliikennelinjoista ilmoitetaan käyttäjälle
  * Mallijärjestelmä ilmoittaa ongelmasta aiempaa nopeammin ja selkeämmin, jos käyttäjä haluaa käyttää esilaskettua joukkoliikenteen kustannusmatriisia tai ajaa vain loppusijoittelun, mutta skenaarion tuloskansiosta puuttuu vaaditut matriisit.
  * Ja muita pienempiä käytettävyysparannuksia
@@ -110,7 +110,7 @@ Mallin käytettävyyttä on pyritty parantamaan selkeyttämällä virhetilanteid
 
 * **Malli:** Matemaattinen kuvaus järjestelmästä (tässä tapauksessa Helsingin seudun liikkumisesta)
 * **Mallin estimointi:** Mallin parametrien määritys niin, että malli kuvaa käytetyillä lähtötiedoilla mahdollisimman hyvin lähtöaineistossa (nykytila) havaittua käyttäytymistä 
-* **Mallin validointi:** Testaus, että malli tosiaan ennakoi nykytilalle oikean tuloksen
+* **Mallin validointi:** Testaus, että malli tuottaa nykytilalle oikean tuloksen
 * **Ennusteskenaario:** Mallin käyttö _samoilla parametreilla_, mutta _eri lähtötiedoilla_ kuin estimoinnissa
 
 ### Mallin oletuksia, perusteluita ja rajoituksia

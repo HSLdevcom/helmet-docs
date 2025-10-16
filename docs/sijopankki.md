@@ -20,10 +20,10 @@ Tarvittavat skenaario-, matriisi- ja ekstra-attribuuttimäärät riippuvat HELME
   tarvitaan viisi EMME-skenaariota kutakin tarkasteltavaa HELMET-skenaariota kohti.
   Ensimmäinen niistä toimii lähtötietona (verkko ja linjasto) malliajoon ja muut luodaan automaattisesti
   malliajon aikana ajanjaksojen tuloksia varten (vrk, aht, pt, iht).
-  Tässä tapauksessa pärjätään pienemmällä ekstra-attribuuttimäärällä.
+  Tässä tapauksessa pärjätään pienemmällä ekstra-attribuuttimäärällä, sillä jokaiseen skenaarioon tallennetaan vain tietyn ajanjakson tulokset.
 - Jos malliajon määrittelyssä ei valita _Tallenna eri ajanjaksot erillisiin EMME-skenaarioihin_,
   tarvitaan yksi EMME-skenaario kutakin tarkasteltavaa HELMET-skenaariota kohti.
-  Tässä tapauksessa tarvitaan tuloksia varten enemmän ekstra-attribuuttitilaa.
+  Tässä tapauksessa tarvitaan tuloksia varten enemmän ekstra-attribuuttitilaa, sillä kaikkien ajanjaksojen tiedot tallennetaan samaan skenaarioon.
 - Jos malliajon määrittelyssä aiotaan valita _Tallenna eri ajanjaksojen matriisit EMME-projektin Database-kansioon_,
   tarvitaan enemmän tilaa matriiseille
 
