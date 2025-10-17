@@ -45,7 +45,7 @@ Jokainen väliotsikko kuvaa kunkin laskentakehikon välilehden sisältöä.
 
 ### Diskonttaus 
 
-Kuvassa 3 on esitelty diskonttauksen periaatteet erityisesti :exclamation: MAL 2019 –suunnitelman kustannushyötyanalyysiä varten. 
+Kuvassa 3 on esitelty diskonttauksen periaatteet erityisesti vuoden Helsingin seudun liikennejärjestelmäsuunnitelma 2027:n kustannushyötyanalyysiä varten. 
 
 ![image](images/diskonttaus.png)
 
