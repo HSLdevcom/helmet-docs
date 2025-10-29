@@ -62,7 +62,7 @@ Suunnitelman investoinnit viedään vuoden 2023 hintatasossa sellaisinaan vuodel
 
 ### Käyttäjähyödyt 
 
-Käyttäjähyödyt lasketaan HELMET:n avulla saatavista suoritematriiseista, joista automaattisesti tulostetaan tarpeelliset suoritemuutokset ”Kayttajahyodyt” –välilehdelle. Suoritteet on laskettu aamuhuipputunnille (AHT), huippujen ulkopuolisen ajan (päivä) ja iltapäivän huipputunnille (IHT) erikseen. Suoritemuutokset kerrotaan yksikköarvoilla, joiden myötä saadaan laskettua kuluttajaylijäämän muutokset.  
+Käyttäjähyödyt lasketaan HELMET:n avulla saatavista suoritematriiseista, joista automaattisesti tulostetaan tarpeelliset suoritemuutokset "Kayttajahyodyt"-välilehdelle. Suoritteet on laskettu aamuhuipputunnille (AHT), huippujen ulkopuolisen ajan (päivä) ja iltapäivän huipputunnille (IHT) erikseen. Suoritemuutokset kerrotaan yksikköarvoilla, joiden myötä saadaan laskettua kuluttajaylijäämän muutokset.  
 
 Tuottajahyötyjen ohessa lasketaan mahdollisten tienkäyttömaksujen kokonaissumma ja tätä käsitellään liikennetaloustieteen tutkimuskirjallisuuden perusteella yhteiskuntataloudellisena hyötyeränä. 
 
@@ -73,7 +73,7 @@ Erityishuomioita:
 
 ### Tuottajahyödyt 
 
-Tuottajahyötyihin lasketaan liikennöintikustannukset ja väylänpidon kustannukset. Lisäksi tuottajille koituvat verot ja maksut lasketaan tuottajahyödyissä kustannuksiksi ja vastaavasti kohdassa ”Julkistaloudelliset” hyödyksi.  
+Tuottajahyötyihin lasketaan liikennöintikustannukset ja väylänpidon kustannukset. Lisäksi tuottajille koituvat verot ja maksut lasketaan tuottajahyödyissä kustannuksiksi ja vastaavasti kohdassa "[Julkistaloudelliset](#julkistaloudelliset)" hyödyksi.  
 
 Liikennöintikustannukset lasketaan HELMET-mallista saatavilla kilometrisuoritetiedoilla sekä suoritetyypin mukaisilla kulkumuotokohtaisilla yksikköarvoilla kerrottuina. 
 
@@ -101,7 +101,7 @@ Erityishuomioita:
 
 Veroja ja maksuja pyritään käsittelemään mahdollisimman tarkalla tasolla, jotta saadaan riittävä määrä aineistoa julkistaloudellisten vaikutusten arviointia varten. On kuitenkin muistettava, että tavoitteena on yhteiskuntataloudellisen laskelman kehittämissä, minkä vuoksi verojen ja maksujen käsittelyyn jäi vielä kehittämisvaraa.  
 
-Suurin erä ovat verot ja maksut, jotka lasketaan ”käyttäjähyödyt”-välilehdeltä saatavista kilometrisuoritteista. ”Käyttäjähyödyt”-välilehdellä ajoneuvoliikenteen verot ovat laskettu valmiiksi ja ”julkistaloudelliset”-välilehdellä viitataan suoraan tähän arvoon. Mahdolliset tienkäyttömaksut myös lasketaan suoraan ”käyttäjähyödyt”-välilehdeltä sen vastalukuna tuottajahyödyissä ja täten siihen ei viitata ”julkistaloudelliset”-välilehdellä. 
+Suurin erä ovat verot ja maksut, jotka lasketaan "Käyttäjähyödyt"-välilehdeltä saatavista kilometrisuoritteista. "Käyttäjähyödyt"-välilehdellä ajoneuvoliikenteen verot ovat laskettu valmiiksi ja "Julkistaloudelliset"-välilehdellä viitataan suoraan tähän arvoon. Mahdolliset tienkäyttömaksut myös lasketaan suoraan "Käyttäjähyödyt"-välilehdeltä sen vastalukuna tuottajahyödyissä ja täten siihen ei viitata "Julkistaloudelliset"-välilehdellä. 
 
 Erityishuomioita: 
 * Pysäköintimaksujen käsittely vaatii selvityksen. 
@@ -111,6 +111,6 @@ Erityishuomioita:
 
 ### Investointikustannus 
 
-Investointikustannuksiksi lasketaan kaikki liikennejärjestelmään kohdistuvat kehittämistoimenpiteet, joista aiheutuu käyttökulujen lisäksi investointikuluja. Nämä investointikustannukset asetetaan laskentateknisistä syistä johtuen valmistumaan samana vuonna tarkasteluvuoden mukaisesti. Niiden kuluminen on määritetty ”Investointikustannus” –välilehdellä ja sen perusteella kehikko laskee kullekin toimenpiteelle valmiit jäännösarvot 30 vuoden poistoajalla mitattuna. 
+Investointikustannuksiksi lasketaan kaikki liikennejärjestelmään kohdistuvat kehittämistoimenpiteet, joista aiheutuu käyttökulujen lisäksi investointikuluja. Nämä investointikustannukset asetetaan laskentateknisistä syistä johtuen valmistumaan samana vuonna tarkasteluvuoden mukaisesti. Niiden kuluminen on määritetty "Investointikustannus"-välilehdellä ja sen perusteella kehikko laskee kullekin toimenpiteelle valmiit jäännösarvot 30 vuoden poistoajalla mitattuna. 
 
-Investoinnit muutetaan kukin estimoinnin hintatasojen vuodelle, eli HELMET 5:ssä 2023. Tämän muokkauksen jälkeen investoinnit ositetaan vuotuisiksi kustannuksiksi ”investointikustannus”-välilehdelle ylimpään taulukkoon. 
+Investoinnit muutetaan kukin estimoinnin hintatasojen vuodelle, eli HELMET 5:ssä 2023. Tämän muokkauksen jälkeen investoinnit ositetaan vuotuisiksi kustannuksiksi "Investointikustannus"-välilehdelle ylimpään taulukkoon. 
