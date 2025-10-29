@@ -22,11 +22,11 @@ Jos ennusteita on ajettu kahdelle vuodelle (esim. 2040 ja 2060), vertailuvaihtoe
 
 *Kuva 1. Työkalun käyttö HELMET käyttöliittymässä.*
 
-Työkalu tuottaa Excel-tiedoston, joka tallennetaan samaan kansioon, jossa vertailuvaihtoehdon tuloskansio sijaitsee. Excel tiedoston etusivulla on esitäytetty H/K laskelma, johon on käsin lisättävä hankkeen kustannukset, jotta lopullinen H/K laskelma voidaan tehdä. Excel-tiedoston muilla välilehdillä on mallin tuottamat tiedot, sekä yksikköarvot, joiden avulla yhteiskuntataloudelliset hyödyt lasketaan. Hankearviointeja tehtäessä on varmistettava, että yksikköarvot ovat ajantasaiset ja oikean vuoden hintatasossa. 
+Työkalu tuottaa Excel-tulostiedoston, joka tallennetaan samaan kansioon, jossa vertailuvaihtoehdon tuloskansio sijaitsee. Excel-tiedoston etusivulla on esitäytetty H/K-laskelma, johon on käsin lisättävä hankkeen kustannukset, jotta lopullinen H/K-laskelma voidaan tehdä. Excel-tiedoston muilla välilehdillä on mallin tuottamat tiedot sekä yksikköarvot, joiden avulla yhteiskuntataloudelliset hyödyt lasketaan. Hankearviointeja tehtäessä on varmistettava, että yksikköarvot ovat ajantasaiset ja oikean vuoden hintatasossa. 
 
 ## Excel-tulostiedoston kuvaus
 
-Laskentamalli on excel-taulukko, jossa on kuvattuna kustannus-hyötyanalyysin hyöty- ja kustannuserät sekä niiden laskentamenetelmät. Yksittäiset lukuja sisältävät solut ovat joko laskentakaavoja, yksikköarvoja, HELMET-mallin tuloksia, tavoitevuoden (2030 tai 2050) tai laskentaerän nykyarvon summia.  
+Laskentamalli on Excel-taulukko, jossa on kuvattuna hyöty-kustannusanalyysin hyöty- ja kustannuserät sekä niiden laskentamenetelmät. Yksittäiset lukuja sisältävät solut ovat joko laskentakaavoja, yksikköarvoja, HELMET-mallin tuloksia, tavoitevuoden (esim. 2030 tai 2050) tai laskentaerän nykyarvon summia.  
 
 Solujen määritelmät: 
 
@@ -51,7 +51,7 @@ Kuvassa 3 on esitelty diskonttauksen periaatteet erityisesti vuoden Helsingin se
 
 *Kuva 3. Diskonttauksen periaatteet kuvattuna.*
 
-Hankkeen vaikutukset alkavat avausvuodesta ja jatkuvat koko tarkastelujakson aikana. Tarkastelujakso on 30 vuotta.  
+Hankkeen vaikutukset alkavat avausvuodesta ja jatkuvat koko tarkastelujakson ajan. Tarkastelujakso on 30 vuotta.  
 
 Vaikutuksia voidaan laskea yhdestä tai kahdesta ennustevuodesta. Mikäli lasketaan vaikutuksia kahdesta ennustevuodesta, avausvuosi 1 määrittää milloin ensimmäisen ennustevuoden vaikutukset astuvat voimaan ja avausvuosi 2 määrittää milloin toisen ennustevuoden vaikutukset astuvat voimaan. Tarkastelujakso alkaa aina ensimmäisestä avausvuodesta. Avausvuosi ja ennustevuosi voi olla sama. 
 
