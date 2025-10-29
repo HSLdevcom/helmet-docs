@@ -9,9 +9,9 @@ Vaikutusten arviointi hyödyntää usein Väyläviraston ylläpitämää [hankea
 
 Arvioinneissa ei ennakoida tulevaisuuden poliittisia päätöksiä esimerkiksi eri kulkutapojen hinnoittelun tai priorisoinnin osalta. Vaikutusten arviointia tehtäessä ja niiden tuloksista viestiessä on myös oltava tietoinen niistä oletuksista, joita vaikutusten arvioinnissa on tehty. Yhteiset oletukset tulevaisuudesta mahdollistavat eri hankkeiden ja politiikkatoimenpiteiden vaikuttavuuden vertailtavuuden. Toisaalta strategiatyössä poliittiset päätökset sekä liikennehankkeista että muista toimenpiteistä kuten liikenteen ja pysäköinnin hinnoittelusta ovat tavoitteiden saavuttamisen välineitä. Tällöin tarvitaan skenaariotarkasteluita hankkeiden ja muiden politiikkatoimenpiteiden yhdistelmillä.
 
-## Hyöty/kustannuslaskennan-työkalu
+## Hyöty-kustannusanalyysin kannattavuuslaskelma
 
-HELMET-mallin käyttöliittymässä on mukana H/K-laskelmatyökalu, joka auttaa tuottamaan hankearvioinneissa käytettäviä vertailulaskelmia. Työkalulla voidaan verrata ajettujen skenaarioiden hyötyjä ja kustannuksia. Analyysia varten on määriteltävä:
+HELMET-mallin käyttöliittymässä on mukana hyöty-kustannusanalyysin kannattavuuslaskelmatyökalu (H/K-laskelma), joka auttaa tuottamaan hankearvioinneissa käytettäviä vertailulaskelmia. Työkalulla voidaan verrata ajettujen skenaarioiden hyötyjä ja kustannuksia. Analyysia varten on määriteltävä:
 
 1. Vertailuvaihtoehdon (ve0) tuloskansio (`Tulosten tallennuspolku\Skenaarion nimi`)
 2. Hankevaihtoehdon (ve1) tuloskansio 
