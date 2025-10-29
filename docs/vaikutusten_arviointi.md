@@ -5,7 +5,7 @@ sort: 7
 
 # Vaikutusten arviointi
 
-Vaikutusten arviointi nojaa usein Väyläviraston ylläpitämään [hankearviointiohjeistukseen](https://vayla.fi/suunnittelu/hankkeiden-suunnittelu/vaikutusten-arviointi/liikennevaylat) siinä, millaisia oletuksia voidaan tehdä. Edellä mainittujen ohjeiden noudattaminen on usein myös edellytys arvioinneissa, joissa valtio on mukana kumppanina tai joita valtio hyödyntää päätöksenteossaan. Myös useimmat liikennejärjestelmävertailut pohjautuvat hankearviointiohjeiden mittareihin, vaikka niitä hyödyntäisivät vain kuntatoimijat. 
+Vaikutusten arviointi hyödyntää usein Väyläviraston ylläpitämää [hankearviointiohjeistusta](https://vayla.fi/suunnittelu/hankkeiden-suunnittelu/vaikutusten-arviointi/liikennevaylat) siinä, millaisia oletuksia voidaan tehdä. Edellä mainittujen ohjeiden noudattaminen on usein myös edellytys arvioinneissa, joissa valtio on mukana kumppanina tai joita valtio hyödyntää päätöksenteossaan. Myös useimmat liikennejärjestelmävertailut pohjautuvat hankearviointiohjeiden mittareihin, vaikka niitä hyödyntäisivät vain kuntatoimijat. 
 
 Arvioinneissa ei ennakoida tulevaisuuden poliittisia päätöksiä esimerkiksi eri kulkutapojen hinnoittelun tai priorisoinnin osalta. Vaikutusten arviointia tehtäessä ja niiden tuloksista viestiessä on myös oltava tietoinen niistä oletuksista, joita vaikutusten arvioinnissa on tehty. Yhteiset oletukset tulevaisuudesta mahdollistavat eri hankkeiden ja politiikkatoimenpiteiden vaikuttavuuden vertailtavuuden. Toisaalta strategiatyössä poliittiset päätökset sekä liikennehankkeista että muista toimenpiteistä kuten liikenteen ja pysäköinnin hinnoittelusta ovat tavoitteiden saavuttamisen välineitä. Tällöin tarvitaan skenaariotarkasteluita hankkeiden ja muiden politiikkatoimenpiteiden yhdistelmillä.
 
@@ -41,7 +41,7 @@ Solujen määritelmät:
 *Kuva 2. Laskentamallin selitteet.*
  
 
-Jokainen väliotsikko kuvaa kunkin laskentakehikon välilehden sisältöä. 
+Seuraavissa luvuissa kuvataan Excel-tiedoston sisältämien välilehtien sisältöä. Jokainen välilehti kuvaa tiettyä laskentakehikkoa. 
 
 ### Diskonttaus 
 
@@ -85,7 +85,7 @@ Yksikköarvot ovat määritetty Liikenneviraston yksikköarvo-ohjeen sekä HSL:n
 
 Erityishuomioita: 
 
-* Lomien ja pyhäpäivien vuoksi vuositasolle viedyt kilometrisuoritteet on kerrottu kertoimella 300 eikä vuoden kokonaispäivämäärällä. 
+* HELMET mallintaa syksyn arkivuorokautta. Vuositasolle viedyt kilometrisuoritteet on lomien ja pyhäpäivien vuoksi kerrottu kertoimella 300 eikä vuoden kokonaispäivämäärällä. 
 
 ### Ulkoisvaikutukset 
 
