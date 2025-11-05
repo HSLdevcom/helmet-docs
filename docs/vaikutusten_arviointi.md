@@ -5,13 +5,13 @@ sort: 7
 
 # Vaikutusten arviointi
 
-Vaikutusten arviointi nojaa usein Väyläviraston ylläpitämään [hankearviointiohjeistukseen](https://vayla.fi/suunnittelu/hankkeiden-suunnittelu/vaikutusten-arviointi/liikennevaylat) siinä, millaisia oletuksia voidaan tehdä. Edellä mainittujen ohjeiden noudattaminen on usein myös edellytys arvioinneissa, joissa valtio on mukana kumppanina tai joita valtio hyödyntää päätöksenteossaan. Myös useimmat liikennejärjestelmävertailut pohjautuvat hankearviointiohjeiden mittareihin, vaikka niitä hyödyntäisivät vain kuntatoimijat. 
+Vaikutusten arviointi hyödyntää usein Väyläviraston ylläpitämää [hankearviointiohjeistusta](https://vayla.fi/suunnittelu/hankkeiden-suunnittelu/vaikutusten-arviointi/liikennevaylat) siinä, millaisia oletuksia voidaan tehdä. Edellä mainittujen ohjeiden noudattaminen on usein myös edellytys arvioinneissa, joissa valtio on mukana kumppanina tai joita valtio hyödyntää päätöksenteossaan. Myös useimmat liikennejärjestelmävertailut pohjautuvat hankearviointiohjeiden mittareihin, vaikka niitä hyödyntäisivät vain kuntatoimijat. 
 
 Arvioinneissa ei ennakoida tulevaisuuden poliittisia päätöksiä esimerkiksi eri kulkutapojen hinnoittelun tai priorisoinnin osalta. Vaikutusten arviointia tehtäessä ja niiden tuloksista viestiessä on myös oltava tietoinen niistä oletuksista, joita vaikutusten arvioinnissa on tehty. Yhteiset oletukset tulevaisuudesta mahdollistavat eri hankkeiden ja politiikkatoimenpiteiden vaikuttavuuden vertailtavuuden. Toisaalta strategiatyössä poliittiset päätökset sekä liikennehankkeista että muista toimenpiteistä kuten liikenteen ja pysäköinnin hinnoittelusta ovat tavoitteiden saavuttamisen välineitä. Tällöin tarvitaan skenaariotarkasteluita hankkeiden ja muiden politiikkatoimenpiteiden yhdistelmillä.
 
-## Hyöty/kustannuslaskennan-työkalu
+## Hyöty-kustannusanalyysin kannattavuuslaskelma
 
-HELMET-mallin käyttöliittymässä on mukana H/K-laskelmatyökalu, joka auttaa tuottamaan hankearvioinneissa käytettäviä vertailulaskelmia. Työkalulla voidaan verrata ajettujen skenaarioiden hyötyjä ja kustannuksia. Analyysia varten on määriteltävä:
+HELMET-mallin käyttöliittymässä on mukana hyöty-kustannusanalyysin kannattavuuslaskelmatyökalu (H/K-laskelma), joka auttaa tuottamaan hankearvioinneissa käytettäviä vertailulaskelmia. Työkalulla voidaan verrata ajettujen skenaarioiden hyötyjä ja kustannuksia. Analyysia varten on määriteltävä:
 
 1. Vertailuvaihtoehdon (ve0) tuloskansio (`Tulosten tallennuspolku\Skenaarion nimi`)
 2. Hankevaihtoehdon (ve1) tuloskansio 
@@ -22,11 +22,11 @@ Jos ennusteita on ajettu kahdelle vuodelle (esim. 2040 ja 2060), vertailuvaihtoe
 
 *Kuva 1. Työkalun käyttö HELMET käyttöliittymässä.*
 
-Työkalu tuottaa Excel-tiedoston, joka tallennetaan samaan kansioon, jossa vertailuvaihtoehdon tuloskansio sijaitsee. Excel tiedoston etusivulla on esitäytetty H/K laskelma, johon on käsin lisättävä hankkeen kustannukset, jotta lopullinen H/K laskelma voidaan tehdä. Excel-tiedoston muilla välilehdillä on mallin tuottamat tiedot, sekä yksikköarvot, joiden avulla yhteiskuntataloudelliset hyödyt lasketaan. Hankearviointeja tehtäessä on varmistettava, että yksikköarvot ovat ajantasaiset ja oikean vuoden hintatasossa. 
+Työkalu tuottaa Excel-tulostiedoston, joka tallennetaan samaan kansioon, jossa vertailuvaihtoehdon tuloskansio sijaitsee. Excel-tiedoston etusivulla on esitäytetty H/K-laskelma, johon on käsin lisättävä hankkeen kustannukset, jotta lopullinen H/K-laskelma voidaan tehdä. Excel-tiedoston muilla välilehdillä on mallin tuottamat tiedot sekä yksikköarvot, joiden avulla yhteiskuntataloudelliset hyödyt lasketaan. Hankearviointeja tehtäessä on varmistettava, että yksikköarvot ovat ajantasaiset ja oikean vuoden hintatasossa. 
 
 ## Excel-tulostiedoston kuvaus
 
-Laskentamalli on excel-taulukko, jossa on kuvattuna kustannus-hyötyanalyysin hyöty- ja kustannuserät sekä niiden laskentamenetelmät. Yksittäiset lukuja sisältävät solut ovat joko laskentakaavoja, yksikköarvoja, HELMET-mallin tuloksia, tavoitevuoden (2030 tai 2050) tai laskentaerän nykyarvon summia.  
+Laskentamalli on Excel-taulukko, jossa on kuvattuna hyöty-kustannusanalyysin hyöty- ja kustannuserät sekä niiden laskentamenetelmät. Yksittäiset lukuja sisältävät solut ovat joko laskentakaavoja, yksikköarvoja, HELMET-mallin tuloksia, tavoitevuoden (esim. 2030 tai 2050) tai laskentaerän nykyarvon summia.  
 
 Solujen määritelmät: 
 
@@ -41,7 +41,7 @@ Solujen määritelmät:
 *Kuva 2. Laskentamallin selitteet.*
  
 
-Jokainen väliotsikko kuvaa kunkin laskentakehikon välilehden sisältöä. 
+Seuraavissa luvuissa kuvataan Excel-tiedoston sisältämien välilehtien sisältöä. Jokainen välilehti kuvaa tiettyä laskentakehikkoa. 
 
 ### Diskonttaus 
 
@@ -51,7 +51,7 @@ Kuvassa 3 on esitelty diskonttauksen periaatteet erityisesti vuoden Helsingin se
 
 *Kuva 3. Diskonttauksen periaatteet kuvattuna.*
 
-Hankkeen vaikutukset alkavat avausvuodesta ja jatkuvat koko tarkastelujakson aikana. Tarkastelujakso on 30 vuotta.  
+Hankkeen vaikutukset alkavat avausvuodesta ja jatkuvat koko tarkastelujakson ajan. Tarkastelujakso on 30 vuotta.  
 
 Vaikutuksia voidaan laskea yhdestä tai kahdesta ennustevuodesta. Mikäli lasketaan vaikutuksia kahdesta ennustevuodesta, avausvuosi 1 määrittää milloin ensimmäisen ennustevuoden vaikutukset astuvat voimaan ja avausvuosi 2 määrittää milloin toisen ennustevuoden vaikutukset astuvat voimaan. Tarkastelujakso alkaa aina ensimmäisestä avausvuodesta. Avausvuosi ja ennustevuosi voi olla sama. 
 
@@ -62,7 +62,7 @@ Suunnitelman investoinnit viedään vuoden 2023 hintatasossa sellaisinaan vuodel
 
 ### Käyttäjähyödyt 
 
-Käyttäjähyödyt lasketaan HELMET:n avulla saatavista suoritematriiseista, joista automaattisesti tulostetaan tarpeelliset suoritemuutokset ”Kayttajahyodyt” –välilehdelle. Suoritteet on laskettu aamuhuipputunnille (AHT), huippujen ulkopuolisen ajan (päivä) ja iltapäivän huipputunnille (IHT) erikseen. Suoritemuutokset kerrotaan yksikköarvoilla, joiden myötä saadaan laskettua kuluttajaylijäämän muutokset.  
+Käyttäjähyödyt lasketaan HELMET:n avulla saatavista suoritematriiseista, joista automaattisesti tulostetaan tarpeelliset suoritemuutokset "Kayttajahyodyt"-välilehdelle. Suoritteet on laskettu aamuhuipputunnille (AHT), huippujen ulkopuolisen ajan (päivä) ja iltapäivän huipputunnille (IHT) erikseen. Suoritemuutokset kerrotaan yksikköarvoilla, joiden myötä saadaan laskettua kuluttajaylijäämän muutokset.  
 
 Tuottajahyötyjen ohessa lasketaan mahdollisten tienkäyttömaksujen kokonaissumma ja tätä käsitellään liikennetaloustieteen tutkimuskirjallisuuden perusteella yhteiskuntataloudellisena hyötyeränä. 
 
@@ -73,7 +73,7 @@ Erityishuomioita:
 
 ### Tuottajahyödyt 
 
-Tuottajahyötyihin lasketaan liikennöintikustannukset ja väylänpidon kustannukset. Lisäksi tuottajille koituvat verot ja maksut lasketaan tuottajahyödyissä kustannuksiksi ja vastaavasti kohdassa ”Julkistaloudelliset” hyödyksi.  
+Tuottajahyötyihin lasketaan liikennöintikustannukset ja väylänpidon kustannukset. Lisäksi tuottajille koituvat verot ja maksut lasketaan tuottajahyödyissä kustannuksiksi ja vastaavasti kohdassa "[Julkistaloudelliset](#julkistaloudelliset)" hyödyksi.  
 
 Liikennöintikustannukset lasketaan HELMET-mallista saatavilla kilometrisuoritetiedoilla sekä suoritetyypin mukaisilla kulkumuotokohtaisilla yksikköarvoilla kerrottuina. 
 
@@ -85,7 +85,7 @@ Yksikköarvot ovat määritetty Liikenneviraston yksikköarvo-ohjeen sekä HSL:n
 
 Erityishuomioita: 
 
-* Lomien ja pyhäpäivien vuoksi vuositasolle viedyt kilometrisuoritteet on kerrottu kertoimella 300 eikä vuoden kokonaispäivämäärällä. 
+* HELMET mallintaa syksyn arkivuorokautta. Vuositasolle viedyt kilometrisuoritteet on lomien ja pyhäpäivien vuoksi kerrottu kertoimella 300 eikä vuoden kokonaispäivämäärällä. 
 
 ### Ulkoisvaikutukset 
 
@@ -101,7 +101,7 @@ Erityishuomioita:
 
 Veroja ja maksuja pyritään käsittelemään mahdollisimman tarkalla tasolla, jotta saadaan riittävä määrä aineistoa julkistaloudellisten vaikutusten arviointia varten. On kuitenkin muistettava, että tavoitteena on yhteiskuntataloudellisen laskelman kehittämissä, minkä vuoksi verojen ja maksujen käsittelyyn jäi vielä kehittämisvaraa.  
 
-Suurin erä ovat verot ja maksut, jotka lasketaan ”käyttäjähyödyt”-välilehdeltä saatavista kilometrisuoritteista. ”Käyttäjähyödyt”-välilehdellä ajoneuvoliikenteen verot ovat laskettu valmiiksi ja ”julkistaloudelliset”-välilehdellä viitataan suoraan tähän arvoon. Mahdolliset tienkäyttömaksut myös lasketaan suoraan ”käyttäjähyödyt”-välilehdeltä sen vastalukuna tuottajahyödyissä ja täten siihen ei viitata ”julkistaloudelliset”-välilehdellä. 
+Suurin erä ovat verot ja maksut, jotka lasketaan "Käyttäjähyödyt"-välilehdeltä saatavista kilometrisuoritteista. "Käyttäjähyödyt"-välilehdellä ajoneuvoliikenteen verot ovat laskettu valmiiksi ja "Julkistaloudelliset"-välilehdellä viitataan suoraan tähän arvoon. Mahdolliset tienkäyttömaksut myös lasketaan suoraan "Käyttäjähyödyt"-välilehdeltä sen vastalukuna tuottajahyödyissä ja täten siihen ei viitata "Julkistaloudelliset"-välilehdellä. 
 
 Erityishuomioita: 
 * Pysäköintimaksujen käsittely vaatii selvityksen. 
@@ -111,6 +111,6 @@ Erityishuomioita:
 
 ### Investointikustannus 
 
-Investointikustannuksiksi lasketaan kaikki liikennejärjestelmään kohdistuvat kehittämistoimenpiteet, joista aiheutuu käyttökulujen lisäksi investointikuluja. Nämä investointikustannukset asetetaan laskentateknisistä syistä johtuen valmistumaan samana vuonna tarkasteluvuoden mukaisesti. Niiden kuluminen on määritetty ”Investointikustannus” –välilehdellä ja sen perusteella kehikko laskee kullekin toimenpiteelle valmiit jäännösarvot 30 vuoden poistoajalla mitattuna. 
+Investointikustannuksiksi lasketaan kaikki liikennejärjestelmään kohdistuvat kehittämistoimenpiteet, joista aiheutuu käyttökulujen lisäksi investointikuluja. Nämä investointikustannukset asetetaan laskentateknisistä syistä johtuen valmistumaan samana vuonna tarkasteluvuoden mukaisesti. Niiden kuluminen on määritetty "Investointikustannus"-välilehdellä ja sen perusteella kehikko laskee kullekin toimenpiteelle valmiit jäännösarvot 30 vuoden poistoajalla mitattuna. 
 
-Investoinnit muutetaan kukin estimoinnin hintatasojen vuodelle, eli HELMET 5:ssä 2023. Tämän muokkauksen jälkeen investoinnit ositetaan vuotuisiksi kustannuksiksi ”investointikustannus”-välilehdelle ylimpään taulukkoon. 
+Investoinnit muutetaan kukin estimoinnin hintatasojen vuodelle, eli HELMET 5:ssä 2023. Tämän muokkauksen jälkeen investoinnit ositetaan vuotuisiksi kustannuksiksi "Investointikustannus"-välilehdelle ylimpään taulukkoon. 
