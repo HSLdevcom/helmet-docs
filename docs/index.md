@@ -33,8 +33,7 @@ Mallijärjestelmää kuvataan tarkemmin raportissa (KORJAA) [Helsingin seudun ty
 ## HELMET 5 uusia ominaisuuksia
 
 Tässä on kuvattu keskeisiä nostoja HELMET 5:n uusista ominaisuuksista sekä eroavaisuuksista HELMET 4:een verrattuna.
-Laajemmin aihetta on kuvattu raportissa
-(KORJAA) [Helsingin seudun työssäkäyntialueen liikenne-ennustemallijärjestelmän 2025 kehitystyö](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf). 
+Laajemmin aihetta on kuvattu raportissa [Helsingin seudun työssäkäyntialueen liikenne-ennustemallijärjestelmän 2025 kehitystyö](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf). 
 
 ### Kulkutapa- ja suuntautumismallien rakenne
 
