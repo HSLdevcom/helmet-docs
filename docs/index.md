@@ -3,6 +3,9 @@ nav_order: 0
 sort: 0
 title: Etusivu
 ---
+
+⚠️ **Huom.:** Tämä sivusto kuvaa uutta malliversiota (HELMET 5). HELMET 4 -version dokumentaatio löytyy [täältä](https://hsldevcom.github.io/helmet-docs-h4/).
+
 # HSL:n liikenne-ennustejärjestelmän yleiskuvaus
 
 HELMET on HSL:n liikenne-ennustemallijärjestelmä, joka kattaa Helsingin seudun 14 kuntaa ja Siuntion (Tästä Helsingin seutu + Siuntio joukosta käytetään usein termiä HS15), sekä niitä ympäröivän työssäkäyntialueen, johon kuuluu koko Uusimaa ja lisäksi Varsinais-Suomen, Kanta-Hämeen ja Päijät-Hämeen kuntia.
