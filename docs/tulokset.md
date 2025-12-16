@@ -49,22 +49,25 @@ Joukkoliikenteen osalta etenkin Itä-Helsingissä metron houkuttelemat nousijam�
 
 ### Tiedostoissa käytetyt lyhenteet ja termit
 
-#### Helsingin seudulla alkavien kiertomatkojen päätyypit
+#### Helsingin seudun asukkaiden kiertomatkojen päätyypit
 
 | Koodi | Kiertomatkan tyyppi   |
 |-------|-----------------------|
-| hw    | koti - työ            |
-| hc    | koti - koulu          |
-| hu    | koti - opiskelu       |
-| hs    | koti - ostos/asiointi |
-| ho    | koti - muu            |
-| wo    | työ - joku            |
-| oo    | muu kiertomatka       |
-| *wh*  | työ - koti [1]        |
+| hw    | koti - työ                            |
+| hc    | koti - koulu                          |
+| hu    | koti - opiskelu                       |
+| hs    | koti - ostos/asiointi                 |
+| ho    | koti - muu                            |
+| hh    | koti - koti (lenkki)                  |
+| hoo   | toissijaisen määräpäikän kiertomatka  |
+| wo    | työ - joku                            |
+| oo    | muu kiertomatka                       |
+| *wh*  | työ - koti [1]                        |
 
 [1] Tyyppi *wh* on käännetty versio kotiperäisten työmatkojen (hw) mallista. Sitä käytetään työvoiman saavutettavuuslaskennassa.
+Tyyppi *hoo* kuvaa kaksi uutta matkaa suoran meno- tai paluumatkan sijaan. Tuloksissa tämä ryhmä näkyy vain accessibility.txt tiedostossa.
 
-#### Ympäryskunnissa alkavien kiertomatkojen päätyypit
+#### Ympäryskuntien asukkaiden kiertomatkojen päätyypit
 
 | Koodi | Kiertomatkan tyyppi |
 |-------|---------------------|
@@ -76,10 +79,11 @@ Joukkoliikenteen osalta etenkin Itä-Helsingissä metron houkuttelemat nousijam�
 
 | Koodi | Kulkutapa      |
 |-------|----------------|
-| c     | auto           |
-| t     | joukkoliikenne |
-| b     | polkupyörä     |
-| w     | jalankulku     |
+| c     | auto                |
+| t     | joukkoliikenne      |
+| b     | polkupyörä          |
+| w     | jalankulku          |
+| p     | liityntäpysäköinti  |
 
 #### Sijoitteluluokat
 
@@ -119,8 +123,8 @@ mutta ne ovat autosijoittelussa taustaliikenteenä.
 | helsinki_cbd   | Helsingin kantakaupunki                         | 0 - 999          |
 | helsinki_other | Muu Helsinki                                    | 1 000 - 1 999    |
 | espoo_vant_kau | Muu pääkaupunkiseutu                            | 2 000 - 5 999    |
-| surrounding    | Kehyskunnat                           | 6 000 - 15 999   |
-| surround_train | Junaliikenteeseen <br /> tukeutuvat kehyskunnat | 6 000 - 6 999 <br /> 10 000 - 11 999 <br /> 13 000 - 14 999 <br /> 15 500 - 15 999 |
+| surrounding    | Kehyskunnat (+Siuntio)                          | 6 000 - 15 999   |
+| surround_train | Junaliikenteeseen <br /> tukeutuvat kehyskunnat (ml. Siuntio) | 6 000 - 6 999 <br /> 10 000 - 11 999 <br /> 13 000 - 14 999 <br /> 15 500 - 15 999 |
 | surround_other | Muut kehyskunnat                                | 7 000 - 9 999 <br /> 12 000 - 12 999 <br /> 15 000 - 15 499 |
 | peripheral     | Ympäryskunnat                                   | 16 000 - 30 999  |
 
@@ -150,7 +154,7 @@ mutta ne ovat autosijoittelussa taustaliikenteenä.
 | origins_shares.txt                           | Kokonaiskulkutapajakaumat sijoittelualueittain |
 | own_zone_demand.txt                          | Sijoittelualueiden sisäisten kiertomatkojen (joiden alkupiste ja loppupiste ovat samalla sijoittelualueella) määrät suuralueittain |
 | pnr_facilities.txt                           | Liityntäpysäköintilaitosten käyttöaste ja vastukset | :exclamation: Uusi versiossa 5.0 |
-| result_summary.txt                           | Yhteenveto mallialueen tuloksista: työpaikkojen kasautuminen, työvoimasaavutettavuus, sijoiteltu kysyntä (meno-paluumatkoja), etäisyyssuoritteet, saavutettavuus, kulkutapajakauma  | Kävely ei sisälly kysyntään, koska sitä ei sijoitella |
+| result_summary.txt                           | Yhteenveto mallialueen tuloksista: työpaikkojen kasautuminen, työvoimasaavutettavuus, sijoiteltu kysyntä (meno-paluumatkoja), etäisyyssuoritteet, saavutettavuus, kulkutapajakauma (HS15 kiertomatkat, HS15 matkat, koko alueen kiertomatkat)  | Kävely ei sisälly kysyntään, koska sitä ei sijoitella |
 | savu.txt                                     | SAVU-vyöhyke, jolle sijoittelualue kuuluu |  |
 | sustainable_accessibility.txt                | Kysyntämallin logsum-muuttujat ilman autokulkutapaa sijoittelualueittain ja kiertomatkatyypeittäin |  |
 | tour_combinations.txt  | Vuorokauden kiertomatkayhdistelmien tuotosluvut ikäryhmittäin |  |
