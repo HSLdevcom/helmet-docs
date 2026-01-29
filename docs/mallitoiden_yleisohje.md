@@ -50,6 +50,8 @@ Tyypillisesti tavallisilla käyttäjillä ei ole tarvetta muokata näitä lisäa
 Lisää tietoja `dev-config.json`-tiedoston asetuksista löytyy 
 [Scripts-kansion README-tiedostosta](https://github.com/HSLdevcom/helmet-model-system/tree/olusanya/Scripts#configuring-the-model-run-with-dev-configjson).
 
+![image](images/UI_malliajo.png)
+
 ### Malliajon määrittely
 
 Käyttöliittymässä on tehtävä seuraavat määrittelyt jokaista ajettavaa HELMET-skenaariota kohden:
@@ -80,6 +82,8 @@ Käyttöliittymässä on tehtävä seuraavat määrittelyt jokaista ajettavaa HE
       joten jos ensimmäiseen malliajon matriisit alkavat luvusta 100 (oletus), toisen skenaarion matriisien alku kannattaa asettaa lukuun 400.
     - Ensimmäiset 100 matriisia ovat sijoittelun käytössä sijoittelussa, ja niitä yliajetaan jokaisessa malliajossa.
     - EMME-projektissa matriisit on aina jaettu kaikkien skenaarioiden kesken, eli jos valintaa ei erikseen tehdä, matriisit yliajetaan jokaisen malliajon jälkeen ja eri skenaarioiden matriisien tarkastelu on mahdotonta EMMEssä.
+
+![image](images/UI_CBA.png)
 
 ### Hyöty-kustannusanalyysin (hankearvioinnin) määrittely
 
