@@ -81,6 +81,8 @@ Käyttöliittymässä on tehtävä seuraavat määrittelyt jokaista ajettavaa HE
     - Ensimmäiset 100 matriisia ovat sijoittelun käytössä sijoittelussa, ja niitä yliajetaan jokaisessa malliajossa.
     - EMME-projektissa matriisit on aina jaettu kaikkien skenaarioiden kesken, eli jos valintaa ei erikseen tehdä, matriisit yliajetaan jokaisen malliajon jälkeen ja eri skenaarioiden matriisien tarkastelu on mahdotonta EMMEssä.
 
+Huom: agenttiajo ja mockajo onnistuu vain dev_config.json tiedoston muokkaamisen kautta. Ohjeet siihen löydät täältä: [Helmet-model-systems Github](https://github.com/HSLdevcom/helmet-model-system/blob/olusanya/Scripts/README.md).
+
 ### Hyöty-kustannusanalyysin (hankearvioinnin) määrittely
 
 H/K-analyysillä voidaan verrata ajettujen skenaarioiden hyötyjä ja kustannuksia. Tulokset tulostuvat Excel-tiedostoon tuloskansiossa. Analyysia varten on määriteltävä:
