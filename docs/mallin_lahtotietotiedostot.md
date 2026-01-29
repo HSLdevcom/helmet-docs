@@ -74,12 +74,11 @@ Taustatietoa verkkokuvausten muodostamisesta ja historiasta löydät raportista 
 
 ## Lähtötietoja muokattaessa on ennen malliajoa tarkistettava mm. nämä asiat
 
-* Hinnoittelu esim. poistetaan ruuhkamaksut
-* Lisätään ruuhkamaksut
+* Hinnoittelu
+* Ruuhkamaksut
 * Muutetaan vuorovälit
-* Muutetaan väestötiedot
+* Muutetaan väestötiedot, tarkistetaan väestötiheys
 * Mitä matriiseja muutetaan ja mille nimelle nimetään
-* Mikä makro tai mitä muutoksia malliin pitää lähtötietoihin tehdä, jos ei halua ajaa koko alustusmakroa
 
 ## Lähtötietojen vaikutus ennustemallin eri osiin
 
