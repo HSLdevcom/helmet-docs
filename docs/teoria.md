@@ -24,7 +24,7 @@ Kaikki Helmet-mallissa käytetyt parametrit löytyy Scripts/parameters kansiossa
 | zone.py                     | alueiden luokitus, ikäjakauma, jne.                              |
 
 ## Helmetin funktiot
-Helmetin viivitysfunktiot
+Helmetin viivytysfunktiot
 
 Olisi hyvä näitä plotata täällä
 
