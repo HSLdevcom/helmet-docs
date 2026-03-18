@@ -357,6 +357,30 @@ Vaihtolinkit ratikkapysäkiltä, metro- ja juna-asemilta koodataan lähimmälle 
 jonka olisi hyvä olla pysäkki, mutta kohteesta riippuen siitä voi poiketa.
 Vaihtolinkkien pituudet tulee koodata siten, että vaihtoaika vastaa todellisuutta. Vaihtolinkin pituus voi olla 0 m, jos esimerkiksi samalla fyysisellä pysäkillä on sekä raitio- että bussiliikennettä.
 
+### Säteittäisväylien (Sisääntuloväylien) kapasiteetit
+
+Sisääntuloväylien kapasiteetti reguloidaan Helsingissä liikennevalojen avulla. Tarkoituksena on jonojen päiden siirtyminen kantakaupungista ulospäin. Mallissa ominaisuus on koodattu erikoislinkkinä (tyyppi x9x), jos kapasiteetti on vd-funktiota pienempi seuraavan taulukon mukaan. Muuten linkki jäi ilman muutoksia. 
+
+*Taulukko 11. Säteittäisväylien päiden koodaaminen verkossa*
+
+| Liikennevalonumero | Sisääntuloväylä   | Risteys             | Suunta             | Kierto | Vihreä | Kaistat | Ominaisuusvälityskyky | Liikennevalojen välityskyky | Malliverkon välityskyky | Päätös        |
+| ------------------ | ----------------- | ------------------- | ------------------ | ------ | ------ | ------- | --------------------- | --------------------------- | ----------------------- | ------------- |
+|                    |                   |                     |                    | (s)    | (s)    |         | (ajon/h/kaista)       | (ajon/h)                    |                         |               |
+| 26                 | Turunväylä        | Huopalahdentie      | vasemmalle         | 120    | 38     | 2       | 1900                  | 1203                        | 2000                    | Erikoislinkki |
+| 26                 | Turunväylä        | Huopalahdentie      | oikealle           | 120    | 38     | 2       | 1900                  | 1203                        | 2000                    | Erikoislinkki |
+| 61                 | Hämeenlinnanväylä | Hakamäentie         | vasemmalle         | 138    | 46     | 2       | 1900                  | 1267                        | 2500                    | Erikoislinkki |
+| 61                 | Hämeenlinnanväylä | Hakamäentie         | suoraan            | 138    | 43     | 1       | 1940                  | 604                         | 1250                    | Erikoislinkki |
+| 250                | Porkkalankatu     | Ruoholahdenkatu     | suoraan + oikealle | 92     | 40     | 1       | 1750                  | 761                         | 900                     | Erikoislinkki |
+| 262                | Salmisaarenkatu   | Porkkalankatu       | vasemmalle         | 90     | 14     | 1       | 1900                  | 296                         | 750                     | Erikoislinkki |
+| 262                | Salmisaarenkatu   | Porkkalankatu       | suoraan + oikealle | 90     | 15     | 2       | 1850                  | 617                         | 1500                    | Erikoislinkki |
+| 263                | Länsiväylä        | Porkkalankatu       | vasemmalle         | 90     | 30     | 3       | 1900                  | 1900                        | 4600                    | Erikoislinkki |
+| 266                | Porkkalankatu     | Mechelininkatu      | vasemmalle         | 90     | 29     | 2       | 1850                  | 1192                        | 1800                    | Erikoislinkki |
+| 266                | Porkkalankatu     | Mechelininkatu      | oikealle           | 90     | 34     | 2       | 1850                  | 1398                        | 1800                    | Erikoislinkki |
+| 320                | Kustaa Vaasan tie | Väinö Auerin katu   | suoraan            | 120    | 72     | 2       | 1940                  | 2328                        | 2300                    | Ei muutoksia  |
+| 352                | Tuusulantie       | Pohjolankatu        | suoraan            | 120    | 45     | 2       | 1940                  | 1455                        | 2300                    | Erikoislinkki |
+| 389                | Koskelantie       | Kunnalliskodintie   | suoraan + oikealle | 91     | 46     | 2       | 1850                  | 1870                        | 1800                    | Ei muutoksia  |
+| 418                | Itäväylä          | Sörnäisten rantatie | suoraan            | 120    | 49     | 3       | 1940                  | 2377                        | 2300                    | Ei muutoksia  |
+
 ## Pyöräliikenne
 
 Pyöräliikenneverkossa kaikille linkeille on määritelty pyörätieluokka (0-4) extra-attribuuttiin @pyoratieluokka. Luokan avulla kuvataan pyörätieinfran toteuttamisen muotoa ja laatua.
@@ -370,7 +394,7 @@ Jos moottoritien varressa on pyörätie, sen luokka on yleensä 3 (erillinen py�
 Pyörätiet käyttävät autoverkon solmuja, paitsi moottoriteillä, joiden ympäristössä pyörätiet pyritään koodaamaan erikseen, jotta moottoriteiden aiheuttama estevaikutus ja pyörätien mäkisyys saadaan kuvattua tarkemmin.
 
 
-*Taulukko 11. Pyörätieluokkien vaikutus. Miellyttävyys kuvataan yleistettynä matkanopeutena*
+*Taulukko 12. Pyörätieluokkien vaikutus. Miellyttävyys kuvataan yleistettynä matkanopeutena*
 
 |                                     | @pyoratieluokka | Linkkityypit | Miellyttävyys tasaisella |
 |-------------------------------------|-----------------|--------------|---------------|
@@ -464,7 +488,7 @@ Joukkoliikenteen ajoneuvotyypit on kuvattu siten, että jokaisella joukkoliikent
 
 Lähijunissa kaikki linjat käyttävät oletusarvoisesti kahden yksikön kokoonpanoa, mutta muita kokoonpanoja voidaan käyttää tarkasteluissa tarveperusteisesti, ja ne ovat valmiiksi käytettävissä HSL:n tarjoamilla verkoilla. HSL:n busseissa oletetaan, että kaikki bussit ovat joko telibusseja tai nivelbusseja, kaksiakselisia busseja (A1, A2, B) ei koodata erikseen. Yksinkertaistus johtuu kalustoennusteiden tuottamisen vaikeudesta: jos tarkempi kuvaus tuotaisiin osaksi mallia, tätä pitäisi myös pystyä ennustamaan. 
 
- *Taulukko 12. Joukkoliikenteen ajoneuvotyypit (vehicles), niitä vastaavat kulkumuodot ja kuvaus*
+ *Taulukko 13. Joukkoliikenteen ajoneuvotyypit (vehicles), niitä vastaavat kulkumuodot ja kuvaus*
  
 | ajoneuvotyyppi (vehicle) | kulkumuoto (mode) | kuvaus              |kapasiteetti (istumapaikkaa/yhteensä) |
 |--------------------------|-------------------|---------------------|---------------------|
