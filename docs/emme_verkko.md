@@ -363,7 +363,7 @@ Sisääntuloväylien kapasiteetti reguloidaan Helsingissä liikennevalojen avull
 
 *Taulukko 11. Säteittäisväylien päiden koodaaminen verkossa*
 
-| Liikennevalonumero | Sisääntuloväylä   | Risteys             | Suunta             | Kierto | Vihreä | Kaistat | Ominaisuusvälityskyky | Liikennevalojen välityskyky | Malliverkon välityskyky | Päätös        |
+| Liikennevalonumero | Sisääntuloväylä   | Risteys             | Suunta             | Kierto | Vihreä | Kaistat | Ominaisvälityskyky | Liikennevalojen välityskyky | Malliverkon välityskyky | Päätös        |
 | ------------------ | ----------------- | ------------------- | ------------------ | ------ | ------ | ------- | --------------------- | --------------------------- | ----------------------- | ------------- |
 |                    |                   |                     |                    | (s)    | (s)    |         | (ajon/h/kaista)       | (ajon/h)                    |                         |               |
 | 26                 | Turunväylä        | Huopalahdentie      | vasemmalle         | 120    | 38     | 2       | 1900                  | 1203                        | 2000                    | Erikoislinkki |
