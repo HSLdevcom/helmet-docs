@@ -140,8 +140,8 @@ mutta ne ovat autosijoittelussa taustaliikenteenä.
 | car_density_areas.txt                        | Autotiheys (auto/asukas) suuralueittain |
 | car_density_municipalities.txt               | Autotiheys (auto/asukas) kunnittain |
 | car_use.txt                                  | Henkilöauton pääasiallisten käyttäjien (HAP) osuus väestöstä sijoittelalueittain |
-| car_use_areas.txt                            | Henkilöauton pääasiallisten käyttäjien (HAP) osuus väestöstä suuralueittain |
-| car_use_municipalities.txt                   | Henkilöauton pääasiallisten käyttäjien (HAP) osuus väestöstä kunnittain |
+| car_use_areas.txt                            | Henkilöauton pääasiallisten käyttäjien (HAP) osuus väestöstä suuralueittain | Vain 7+ vuotiaat
+| car_use_municipalities.txt                   | Henkilöauton pääasiallisten käyttäjien (HAP) osuus väestöstä kunnittain | Vain 7+ vuotiaat
 | demand_convergence.txt                       | Kysyntämallin konvergoituminen car_work-kysyntämatriisista laskettuna |  |
 | generation.txt                               | Vuorokauden kiertomatkatuotos kiertomatkatyypeittäin sijoittelualueittain |  |
 | impedance_ratio.txt                          | Joukkoliikenteen ja henkilöautoliikenteen matka-aika- ja matkakustannussuhteet aamuruuhkassa sijoittelualueittain | Eri matkakohteiden matka-ajat ja -kustannukset on painotettu työmatkojen määrillä kulkutavoittain. Lukuja käytetään autonomistusmallin muuttujina. |
