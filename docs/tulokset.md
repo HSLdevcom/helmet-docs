@@ -15,7 +15,7 @@ Huom! Jos ajat samassa Emme-pankissa useita Helmet-skenaarioita, tarkat matriisi
 jos config-tiedostoon on määritelty matriiseille omat tallennuspaikat (ks. [Mallijärjestelmän käyttö](mallitoiden_yleisohje.md)).
 
 Lisää tietoja kysyntämallien toiminnallisuuksista ja niiden tulosten merkityksestä saat
-(KORJATTAVA) [malliraportista](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf).
+[Helsingin seudun työssäkäyntialueen liikenne-ennustemallijärjestelmä 2025](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2026/helsingin-seudun-tyossakayntialueen-liikenne-ennustemallijarjestelma-2025_5-2026.pdf).
 
 ## Tulokset verrattuna HELMET 4.1:een
 
@@ -34,8 +34,8 @@ Kantakaupungissa aiemmin havaitut liian suuret autoliikenteen määrät on pää
 
 Mallia laadittaessa sen antamia tuloksia on verrattu monipuolisesti erilaiseen havaintoaineistoon ja pyritty saamaan tulokset vastaamaan mahdollisimman hyvin havaintoja.
 Tuloksiin liittyy silti tiettyjä epävarmuuksia ja rajoitteita, joista on nostettu tähän keskeisimpiä havaintoja.
-Mallin testausta ja testien tuloksia on kuvattu laajemmin raportissa (KORJATTAVA)
-[Helsingin seudun työssäkäyntialueen liikenne-ennustejärjestelmän kysyntämallit 2020](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf) (luvut 12 ja 13).
+Mallin testausta ja testien tuloksia on kuvattu laajemmin raportissa 
+[Helsingin seudun työssäkäyntialueen liikenne-ennustemallijärjestelmä 2025](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2026/helsingin-seudun-tyossakayntialueen-liikenne-ennustemallijarjestelma-2025_5-2026.pdf) (luku 8).
 
 Mallin tuottama kuvaus nykytilanteen liikkumisesta on aiempaa parempi, eikä kysynnän mallintamiseen liittyviä merkittäviä järjestelmätason virheitä ole havaittu.
 

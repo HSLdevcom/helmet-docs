@@ -31,12 +31,12 @@ Mallijärjestelmän rakenne on esitetty tarkemmin seuraavassa kuvassa:
 
 ![HELMET-mallijärjestelmän rakenne](images/Helmet-mallijarjestelma.png)
 
-Mallijärjestelmää kuvataan tarkemmin raportissa (KORJAA) [Helsingin seudun työssäkäyntialueen liikenne-ennustejärjestelmän kysyntämallit 2020](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf).
+Mallijärjestelmää kuvataan tarkemmin raportissa [Helsingin seudun työssäkäyntialueen liikenne-ennustemallijärjestelmä 2025](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2026/helsingin-seudun-tyossakayntialueen-liikenne-ennustemallijarjestelma-2025_5-2026.pdf).
 
 ## HELMET 5 uusia ominaisuuksia
 
 Tässä on kuvattu keskeisiä nostoja HELMET 5:n uusista ominaisuuksista sekä eroavaisuuksista HELMET 4:een verrattuna.
-Laajemmin aihetta on kuvattu raportissa [Helsingin seudun työssäkäyntialueen liikenne-ennustemallijärjestelmän 2025 kehitystyö](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2020/6_2020_helsingin_seudun_tyossakayntialueen_liikenne-ennustejarjestelman_kysyntamallit.pdf). 
+Laajemmin aihetta on kuvattu raportissa [Helsingin seudun työssäkäyntialueen liikenne-ennustemallijärjestelmän 2025 kehitystyö](https://staticfiles.hsl.fi/globalassets/hsl/mal/mal-julkaisut/2026/helmet5-kehitystyon-raportti_6-2026.pdf). 
 
 ### Kulkutapa- ja suuntautumismallien rakenne
 
