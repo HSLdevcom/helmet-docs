@@ -162,4 +162,4 @@ Noudatathan näitä periaatteita verkonkuvauksia koodatessa, jotta varmistutaan 
 
 <!-- Raporttilinkki päivitettävä kun julkaistu -->
 Lisätietoja mallin käyttämisestä "[Mallijärjestelmän käyttö](mallitoiden_yleisohje.md)"-sivulla.
-Taustatietoa verkkokuvausten muodostamisesta ja historiasta löydät raportista [Helsingin seudun työssäkäyntialueen liikenne-ennustejärjestelmän tarjontamallit 2017](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2019/helsingin-seudun-tyossakayntialueen-liikenne-ennustejarjestelman-tarjontamallit-6-2019.pdf).
+Taustatietoa lähtötiedoista ja niiden muodostamiesesta löydät raportista [Helsingin seudun työssäkäyntialueen liikenne-ennustemallijärjestelmä 2025](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2026/helsingin-seudun-tyossakayntialueen-liikenne-ennustemallijarjestelma-2025_5-2026.pdf).
