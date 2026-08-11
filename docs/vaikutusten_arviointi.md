@@ -24,6 +24,8 @@ Jos ennusteita on ajettu kahdelle vuodelle (esim. 2040 ja 2060), vertailuvaihtoe
 
 Työkalu tuottaa Excel-tulostiedoston, joka tallennetaan samaan kansioon, jossa vertailuvaihtoehdon tuloskansio sijaitsee. Excel-tiedoston etusivulla on esitäytetty H/K-laskelma, johon on käsin lisättävä hankkeen kustannukset, jotta lopullinen H/K-laskelma voidaan tehdä. Excel-tiedoston muilla välilehdillä on mallin tuottamat tiedot sekä yksikköarvot, joiden avulla yhteiskuntataloudelliset hyödyt lasketaan. Hankearviointeja tehtäessä on varmistettava, että yksikköarvot ovat ajantasaiset ja oikean vuoden hintatasossa. 
 
+Jos EMMEssä on lisätty uusia joukkoliikennevälineitä/ajoneuvoja (vehicles), kuten esimerkiksi eri kokoisia busseja tai raitiovaunuja, kaikki ajoneuvot täytyy lisätä mallijärjestelmän cba.py -tiedoston TRANSIT_AGGREGATIONS -muuttujaan. 
+
 ## Excel-tulostiedoston kuvaus
 
 Laskentamalli on Excel-taulukko, jossa on kuvattuna hyöty-kustannusanalyysin hyöty- ja kustannuserät sekä niiden laskentamenetelmät. Yksittäiset lukuja sisältävät solut ovat joko laskentakaavoja, yksikköarvoja, HELMET-mallin tuloksia, tavoitevuoden (esim. 2030 tai 2050) tai laskentaerän nykyarvon summia.  
