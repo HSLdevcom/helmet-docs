@@ -182,14 +182,16 @@ Sekä kysyntä- että vastusmatriisit ovat tuntimatriiseja.
 | pt    | päivätunti      |
 | iht   | iltahuipputunti |
 
-Tuntimatriisit aggregoidaan mallijärjestelmässä koko vuorokauteen kiinteillä kertoimilla (ks. [sijoitteluskripti](https://github.com/HSLdevcom/helmet-model-system/blob/master/Scripts/parameters/assignment.py#L122)).
+Tuntimatriisit voidaan tarvittaessa aggregoida mallijärjestelmässä koko vuorokauteen kiinteillä kertoimilla (ks. [sijoitteluskripti](https://github.com/HSLdevcom/helmet-model-system/blob/master/Scripts/parameters/assignment.py#L122)).
+Omx-formaatissa tallennettuja matriiseja on myös helppo importoida Emme-projektiin Modellerin avulla.
 
 | Tiedoston nimi (jossa xxx on tunnin koodi) | Selite | Tarkempi kuvaus |
 |--------------------------------------------|--------|-----------------|
-| demand_xxx.txt | Kysyntämatriisit kulkumuodoittain | Henkilöauto-, joukkoliikenne- ja polkupyörämatriisit on jaettu työ- ja vapaa-ajan matkojen matriiseihin. |
-| time_xxx.txt   | Matka-aikamatriisit [min] kulkumuodoittain | Henkilöauto- ja joukkoliikennematriisit on jaettu työ- ja vapaa-ajan matkojen matriiseihin. |
-| dist_xxx.txt   | Matkaetäisyysmatriisit [km] kulkumuodoittain | Henkilöauto- ja joukkoliikennematriisit on jaettu työ- ja vapaa-ajan matkojen matriiseihin. |
-| cost_xxx.txt   | Tiemaksu- sekä joukkoliikenteen kuukausilippukustannusmatriisit [eur] kulkumuodoittain | Henkilöauto- ja joukkoliikennematriisit on jaettu työ- ja vapaa-ajan matkojen matriiseihin. |
+| demand_xxx.omx | Kysyntämatriisit kulkumuodoittain | Henkilöauto-, joukkoliikenne- ja polkupyörämatriisit on jaettu työ- ja vapaa-ajan matkojen matriiseihin. |
+| time_xxx.omx   | Matka-aikamatriisit [min] kulkumuodoittain | Henkilöauto- ja joukkoliikennematriisit on jaettu työ- ja vapaa-ajan matkojen matriiseihin. |
+| dist_xxx.omx   | Matkaetäisyysmatriisit [km] kulkumuodoittain | Henkilöauto- ja joukkoliikennematriisit on jaettu työ- ja vapaa-ajan matkojen matriiseihin. |
+| cost_xxx.omx   | Tiemaksu- sekä joukkoliikenteen kuukausilippukustannusmatriisit [eur] kulkumuodoittain | Henkilöauto- ja joukkoliikennematriisit on jaettu työ- ja vapaa-ajan matkojen matriiseihin. |
+
 
 ## Emme-projektin matriisit
 
@@ -197,7 +199,7 @@ Tuntimatriisit aggregoidaan mallijärjestelmässä koko vuorokauteen kiinteillä
 
 (Disclaimer: luonnos tehty tekoälyllä, tarkistettu)
 Helmet-mallijärjestelmä tallentaa sijoittelussa käytettävät kysyntä- ja vastusmatriisit Emme-pankkiin. Matriisin tunnuksen (`mf`) viimeiset kaksi numeroa kuvaavat matriisin sisältöä alla olevan taulukon mukaisesti. Yleensä joka matriisityyppi alkaa seuraavalla kymmenellä, mutta jos esim. sijoitteluluokkia olisi enemmän, matriisityyppiin voi kuulua myös enemmän kuin 10 matriisia. 
-Matriisin koodi riippuu aikajakson muuttujasta eli SAVE_MATRICES_IN_EMME lipusta. Jos lippu ei ole päällä, matriisit tallennetaan mf1-mf99 väliin. Jos on (ja ensimmäinen matriisin numero on UI:ssa oletettu 100) sitten joka aikajakso tallennetaan omaan väliin, eli aht 100-199, pt 200-299 ja iht 300-399. Matriisien vertailua varten suoraan Emmessä (esim. ve0 ja ve1 skenaario), kannattaa myös seuraavalle skenaariolle valita ensimmäisen matriisin numerona vaikka 400, niin seuraava skenario tallentuu väliin 400-699.  
+Matriisin koodi riippuu aikajakson muuttujasta eli SAVE_MATRICES_IN_EMME lipusta. Jos lippu ei ole päällä, matriisit tallennetaan mf1-mf99 väliin. Jos on (ja ensimmäinen matriisin numero on UI:ssa oletettu 100) sitten joka aikajakso tallennetaan omaan väliin, eli aht 100-199, pt 200-299 ja iht 300-399. Matriisien vertailua varten suoraan Emmessä (esim. ve0 ja ve1 skenaario), kannattaa myös seuraavalle skenaariolle valita ensimmäisen matriisin numerona (`Matriisit tallennetaan numeroille`) vaikka 400, niin seuraava skenario tallentuu väliin 400-699.  
 
 | Matriisi | Nimi                           | Kuvaus                                                                  |
 | -------- | ------------------------------ | ----------------------------------------------------------------------- |
