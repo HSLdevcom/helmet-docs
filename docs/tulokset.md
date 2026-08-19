@@ -182,13 +182,122 @@ Sekä kysyntä- että vastusmatriisit ovat tuntimatriiseja.
 | pt    | päivätunti      |
 | iht   | iltahuipputunti |
 
-Tuntimatriisit aggregoidaan mallijärjestelmässä koko vuorokauteen kiinteillä kertoimilla (ks. [sijoitteluskripti](https://github.com/HSLdevcom/helmet-model-system/blob/master/Scripts/parameters/assignment.py#L122)).
+Tuntimatriisit voidaan tarvittaessa aggregoida mallijärjestelmässä koko vuorokauteen kiinteillä kertoimilla (ks. [sijoitteluskripti](https://github.com/HSLdevcom/helmet-model-system/blob/master/Scripts/parameters/assignment.py#L122)).
+Omx-formaatissa tallennettuja matriiseja on myös helppo importoida Emme-projektiin Modellerin avulla.
 
 | Tiedoston nimi (jossa xxx on tunnin koodi) | Selite | Tarkempi kuvaus |
 |--------------------------------------------|--------|-----------------|
-| demand_xxx.txt | Kysyntämatriisit kulkumuodoittain | Henkilöauto-, joukkoliikenne- ja polkupyörämatriisit on jaettu työ- ja vapaa-ajan matkojen matriiseihin. |
-| time_xxx.txt   | Matka-aikamatriisit [min] kulkumuodoittain | Henkilöauto- ja joukkoliikennematriisit on jaettu työ- ja vapaa-ajan matkojen matriiseihin. |
-| dist_xxx.txt   | Matkaetäisyysmatriisit [km] kulkumuodoittain | Henkilöauto- ja joukkoliikennematriisit on jaettu työ- ja vapaa-ajan matkojen matriiseihin. |
-| cost_xxx.txt   | Tiemaksu- sekä joukkoliikenteen kuukausilippukustannusmatriisit [eur] kulkumuodoittain | Henkilöauto- ja joukkoliikennematriisit on jaettu työ- ja vapaa-ajan matkojen matriiseihin. |
+| demand_xxx.omx | Kysyntämatriisit kulkumuodoittain | Henkilöauto-, joukkoliikenne- ja polkupyörämatriisit on jaettu työ- ja vapaa-ajan matkojen matriiseihin. |
+| time_xxx.omx   | Matka-aikamatriisit [min] kulkumuodoittain | Henkilöauto- ja joukkoliikennematriisit on jaettu työ- ja vapaa-ajan matkojen matriiseihin. |
+| dist_xxx.omx   | Matkaetäisyysmatriisit [km] kulkumuodoittain | Henkilöauto- ja joukkoliikennematriisit on jaettu työ- ja vapaa-ajan matkojen matriiseihin. |
+| cost_xxx.omx   | Tiemaksu- sekä joukkoliikenteen kuukausilippukustannusmatriisit [eur] kulkumuodoittain | Henkilöauto- ja joukkoliikennematriisit on jaettu työ- ja vapaa-ajan matkojen matriiseihin. |
+
+
+## Emme-projektin matriisit
+
+### Emme-matriisien sisältö
+
+(Disclaimer: luonnos tehty tekoälyllä, tarkistettu)
+Helmet-mallijärjestelmä tallentaa sijoittelussa käytettävät kysyntä- ja vastusmatriisit Emme-pankkiin. Matriisin tunnuksen (`mf`) viimeiset kaksi numeroa kuvaavat matriisin sisältöä alla olevan taulukon mukaisesti. Yleensä joka matriisityyppi alkaa seuraavalla kymmenellä, mutta jos esim. sijoitteluluokkia olisi enemmän, matriisityyppiin voi kuulua myös enemmän kuin 10 matriisia. 
+Matriisin koodi riippuu aikajakson muuttujasta eli SAVE_MATRICES_IN_EMME lipusta. Jos lippu ei ole päällä, matriisit tallennetaan mf1-mf99 väliin. Jos on (ja ensimmäinen matriisin numero on UI:ssa oletettu 100) sitten joka aikajakso tallennetaan omaan väliin, eli aht 100-199, pt 200-299 ja iht 300-399. Matriisien vertailua varten suoraan Emmessä (esim. ve0 ja ve1 skenaario), kannattaa myös seuraavalle skenaariolle valita ensimmäisen matriisin numerona (`Matriisit tallennetaan numeroille`) vaikka 400, niin seuraava skenario tallentuu väliin 400-699.  
+
+| Matriisi | Nimi                           | Kuvaus                                                                  |
+| -------- | ------------------------------ | ----------------------------------------------------------------------- |
+| `mf1`    | `demand_car_work`              | Henkilöautojen työmatkojen kysyntä                                      |
+| `mf2`    | `demand_car_leisure`           | Henkilöautojen vapaa-ajan matkojen kysyntä                              |
+| `mf3`    | `demand_transit_work`          | Joukkoliikenteen työmatkojen kysyntä                                    |
+| `mf4`    | `demand_transit_leisure`       | Joukkoliikenteen vapaa-ajan matkojen kysyntä                            |
+| `mf5`    | `demand_bike`                  | Polkupyöräliikenteen kysyntä                                            |
+| `mf7`    | `demand_trailer_truck`         | Yhdistelmäajoneuvojen kysyntä                                           |
+| `mf8`    | `demand_truck`                 | Kuorma-autojen kysyntä                                                  |
+| `mf9`    | `demand_van`                   | Pakettiautojen kysyntä                                                  |
+| `mf11`   | `time_car_work`                | Henkilöauton matka-aika, työmatkat                                      |
+| `mf12`   | `time_car_leisure`             | Henkilöauton matka-aika, vapaa-ajan matkat                              |
+| `mf13`   | `time_transit_work`            | Joukkoliikenteen matka-aika, työmatkat                                  |
+| `mf14`   | `time_transit_leisure`         | Joukkoliikenteen matka-aika, vapaa-ajan matkat                          |
+| `mf15`   | `time_bike`                    | Polkupyörän matka-aika                                                  |
+| `mf16`   | `time_walk`                    | Kävelyn matka-aika                                                      |
+| `mf17`   | `time_trailer_truck`           | Yhdistelmäajoneuvon matka-aika                                          |
+| `mf18`   | `time_truck`                   | Kuorma-auton matka-aika                                                 |
+| `mf19`   | `time_van`                     | Pakettiauton matka-aika                                                 |
+| `mf21`   | `dist_car_work`                | Henkilöauton matkaetäisyys, työmatkat                                   |
+| `mf22`   | `dist_car_leisure`             | Henkilöauton matkaetäisyys, vapaa-ajan matkat                           |
+| `mf23`   | `dist_transit_work`            | Joukkoliikenteen matkaetäisyys, työmatkat                               |
+| `mf24`   | `dist_transit_leisure`         | Joukkoliikenteen matkaetäisyys, vapaa-ajan matkat                       |
+| `mf25`   | `dist_bike`                    | Polkupyörän matkaetäisyys                                               |
+| `mf26`   | `dist_walk`                    | Kävelyn matkaetäisyys                                                   |
+| `mf27`   | `dist_trailer_truck`           | Yhdistelmäajoneuvon matkaetäisyys                                       |
+| `mf28`   | `dist_truck`                   | Kuorma-auton matkaetäisyys                                              |
+| `mf29`   | `dist_van`                     | Pakettiauton matkaetäisyys                                              |
+| `mf31`   | `cost_car_work`                | Henkilöauton matkakustannus, työmatkat                                  |
+| `mf32`   | `cost_car_leisure`             | Henkilöauton matkakustannus, vapaa-ajan matkat                          |
+| `mf33`   | `cost_transit_work`            | Joukkoliikenteen matkakustannus, työmatkat                              |
+| `mf34`   | `cost_transit_leisure`         | Joukkoliikenteen matkakustannus, vapaa-ajan matkat                      |
+| `mf37`   | `cost_trailer_truck`           | Yhdistelmäajoneuvon matkakustannus                                      |
+| `mf38`   | `cost_truck`                   | Kuorma-auton matkakustannus                                             |
+| `mf39`   | `cost_van`                     | Pakettiauton matkakustannus                                             |
+| `mf41`   | `gen_cost_car_work`            | Henkilöauton yleistetty matkakustannus, työmatkat                       |
+| `mf42`   | `gen_cost_car_leisure`         | Henkilöauton yleistetty matkakustannus, vapaa-ajan matkat               |
+| `mf47`   | `gen_cost_trailer_truck`       | Yhdistelmäajoneuvon yleistetty matkakustannus                           |
+| `mf48`   | `gen_cost_truck`               | Kuorma-auton yleistetty matkakustannus                                  |
+| `mf49`   | `gen_cost_van`                 | Pakettiauton yleistetty matkakustannus                                  |
+| `mf53`   | `congest_time_transit_work`    | Joukkoliikenteen ruuhkautumisen huomioiva matka-aika, työmatkat         |
+| `mf54`   | `congest_time_transit_leisure` | Joukkoliikenteen ruuhkautumisen huomioiva matka-aika, vapaa-ajan matkat |
+
+### Joukkoliikennesijoittelun matriisit
+
+Joukkoliikennesijoittelu tuottaa kokonaisvastuksen lisäksi matriiseja, joissa matkan eri osatekijät on eroteltu. Samat matriisit tuotetaan erikseen työmatkojen (`transit_work`) ja muiden matkojen (`transit_leisure`) sijoitteluluokille.
+
+| Matriisi        | Muuttuja                      | Sisältö / mistä muodostuu                                                                                                                                                                         |
+| --------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `mf61` / `mf71` | `total_travel_time`           | **Matkan todellinen kokonaisaika:** odotusaika + liikennevälineessäoloaika + liityntä- ja vaihtokävely + nousuihin liittyvä aika                                                                  |
+| `mf62` / `mf72` | `actual_total_waiting_times`  | **Kaikki odotusajat:** ensimmäisen liikennevälineen odotus + vaihtojen yhteydessä tapahtuva odotus                                                                                                |
+| `mf63` / `mf73` | `actual_first_waiting_times`  | **Ensimmäinen odotusaika:** lähtöpaikan ja ensimmäisen joukkoliikennevälineeseen nousun välinen odotus. Sisältyy `actual_total_waiting_times`-matriisiin eikä sitä pidä summata siihen uudelleen. |
+| `mf64` / `mf74` | `actual_in_vehicle_times`     | **Liikennevälineessä vietetty aika:** bussissa, raitiovaunussa, metrossa, junassa, lautassa ym. tapahtuva matkustusaika                                                                           |
+| `mf65` / `mf75` | `actual_aux_transit_times`    | **Liityntä- ja vaihtokävely:** kävely lähtöpaikasta pysäkille/asemalle, kävelyt vaihtojen yhteydessä sekä kävely viimeiseltä pysäkiltä/asemalta määränpäähän                                      |
+| `mf66` / `mf76` | `actual_total_boarding_times` | **Nousuihin liittyvä aika/vastus:** liikennemuotokohtaiset nousuvastukset sekä vuorovälin hajonnasta aiheutuva lisävastus                                                                         |
+| `mf67` / `mf77` | `avg_boardings`               | **Nousujen lukumäärä:** odotettu joukkoliikennevälineisiin nousujen määrä. Ensimmäinen nousu mukaan lukien; vaihtojen määrä on siten likimäärin `avg_boardings - 1`.                              |
+| `mf68` / `mf78` | `actual_total_boarding_costs` | **Nousuihin liittyvä erillinen kustannus/vastus:** erityisesti vaihdoille asetettu vaihtovastus. Ei ole sama asia kuin `actual_total_boarding_times`.                                             |
+
+Matriiseista `mf61`–`mf68` koskevat luokkaa `transit_work` ja matriisit `mf71`–`mf78` luokkaa `transit_leisure`.
+
+#### Kokonaismatka-ajan komponentit
+
+`total_travel_time` voidaan esittää komponenttitasolla seuraavasti:
+
+```text
+total_travel_time
+    = actual_total_waiting_times
+    + actual_in_vehicle_times
+    + actual_aux_transit_times
+    + actual_total_boarding_times
+```
+
+Toisin sanoen:
+
+```text
+kokonaismatka-aika
+    = odotus
+    + aika liikennevälineessä
+    + liityntä- ja vaihtokävely
+    + nousuihin liittyvä aika
+```
+
+`actual_first_waiting_times` on `actual_total_waiting_times`-muuttujan osajoukko, joten sitä ei lisätä kokonaisaikaan erikseen. Vastaavasti `avg_boardings` kuvaa nousujen lukumäärää eikä aikaa, ja `actual_total_boarding_costs` on erillinen sijoitteluvastus.
+
+#### Sijoittelussa käytetty vastus
+
+Joukkoliikenteen reitinvalinta ei perustu suoraan yllä olevaan todelliseen kokonaismatka-aikaan. Eri matkan osille käytetään sijoittelussa erilaisia painoja. Nykyisessä Helmet-mallissa esimerkiksi:
+
+| Komponentti                               | Sijoittelun paino |
+| ----------------------------------------- | ----------------: |
+| Liikennevälineessäoloaika                 |             `1.0` |
+| Odotusaika                                |             `1.5` |
+| Liityntä- ja vaihtokävely (`aux_transit`) |            `1.75` |
+| Nousuaika/-vastus                         |             `1.0` |
+
+Lisäksi vaihtojen yhteydessä käytetään erillistä vaihtovastusta. Sen arvo on työmatkoilla (`transit_work`) 3 minuuttia ja muilla matkoilla (`transit_leisure`) 5 minuuttia vaihtoa kohti.
+
+Ensimmäiselle odotukselle ja myöhemmille odotuksille käytetään myös eri vuoroväliosuutta: ensimmäisellä nousulla odotusaika perustuu 0,3 × vuoroväliin ja myöhemmillä nousuilla 0,5 × vuoroväliin.
 
 
