@@ -34,7 +34,7 @@ Alla on lueteltu HELMET-sijoittelupankin (lisenssikoko vähintään 9) dimensiot
 | Network scenarios                                                         | 1+        | 5+ (jos ajanjaksot erillisiin skenaarioihin)        |
 | Zones or centroids                                                        | 2350      |                                                     |
 | Nodes incl. centroids                                                     | 20 000    |                                                     |
-| Directional links                                                         | 55 000    |                                                     |
+| Directional links                                                         | 60 000    |                                                     |
 | Transit vehicle types                                                     | 30        |                                                     |
 | Transit lines or routes                                                   | 2 000     |                                                     |
 | Transit line segments                                                     | 200 000   |                                                     |
