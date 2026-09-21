@@ -213,8 +213,8 @@ Matriisin koodi riippuu aikajakson muuttujasta eli SAVE_MATRICES_IN_EMME lipusta
 | `mf9`    | `demand_van`                   | Pakettiautojen kysyntä                                                  |
 | `mf11`   | `time_car_work`                | Henkilöauton matka-aika, työmatkat                                      |
 | `mf12`   | `time_car_leisure`             | Henkilöauton matka-aika, vapaa-ajan matkat                              |
-| `mf13`   | `time_transit_work`            | Joukkoliikenteen matka-aika, työmatkat                                  |
-| `mf14`   | `time_transit_leisure`         | Joukkoliikenteen matka-aika, vapaa-ajan matkat                          |
+| `mf13`   | `time_transit_work`            | Joukkoliikenteen matka-aika, työmatkat (sis. ruuhka)                    |
+| `mf14`   | `time_transit_leisure`         | Joukkoliikenteen matka-aika, vapaa-ajan matkat (sis. ruuhka)            |
 | `mf15`   | `time_bike`                    | Polkupyörän matka-aika                                                  |
 | `mf16`   | `time_walk`                    | Kävelyn matka-aika                                                      |
 | `mf17`   | `time_trailer_truck`           | Yhdistelmäajoneuvon matka-aika                                          |
@@ -229,20 +229,22 @@ Matriisin koodi riippuu aikajakson muuttujasta eli SAVE_MATRICES_IN_EMME lipusta
 | `mf27`   | `dist_trailer_truck`           | Yhdistelmäajoneuvon matkaetäisyys                                       |
 | `mf28`   | `dist_truck`                   | Kuorma-auton matkaetäisyys                                              |
 | `mf29`   | `dist_van`                     | Pakettiauton matkaetäisyys                                              |
-| `mf31`   | `cost_car_work`                | Henkilöauton matkakustannus, työmatkat                                  |
-| `mf32`   | `cost_car_leisure`             | Henkilöauton matkakustannus, vapaa-ajan matkat                          |
-| `mf33`   | `cost_transit_work`            | Joukkoliikenteen matkakustannus, työmatkat                              |
-| `mf34`   | `cost_transit_leisure`         | Joukkoliikenteen matkakustannus, vapaa-ajan matkat                      |
-| `mf37`   | `cost_trailer_truck`           | Yhdistelmäajoneuvon matkakustannus                                      |
-| `mf38`   | `cost_truck`                   | Kuorma-auton matkakustannus                                             |
-| `mf39`   | `cost_van`                     | Pakettiauton matkakustannus                                             |
-| `mf41`   | `gen_cost_car_work`            | Henkilöauton yleistetty matkakustannus, työmatkat                       |
-| `mf42`   | `gen_cost_car_leisure`         | Henkilöauton yleistetty matkakustannus, vapaa-ajan matkat               |
-| `mf47`   | `gen_cost_trailer_truck`       | Yhdistelmäajoneuvon yleistetty matkakustannus                           |
-| `mf48`   | `gen_cost_truck`               | Kuorma-auton yleistetty matkakustannus                                  |
-| `mf49`   | `gen_cost_van`                 | Pakettiauton yleistetty matkakustannus                                  |
-| `mf53`   | `congest_time_transit_work`    | Joukkoliikenteen ruuhkautumisen huomioiva matka-aika, työmatkat         |
-| `mf54`   | `congest_time_transit_leisure` | Joukkoliikenteen ruuhkautumisen huomioiva matka-aika, vapaa-ajan matkat |
+| `mf31`   | `cost_car_work`                | Henkilöauton matkakustannus (vain tiemaksut), työmatkat                 |
+| `mf32`   | `cost_car_leisure`             | Henkilöauton matkakustannus (vain tiemaksut), vapaa-ajan matkat         |
+| `mf33`   | `cost_transit_work`            | Joukkoliikenteen matkakustannus (kk-taso), työmatkat                    |
+| `mf34`   | `cost_transit_leisure`         | Joukkoliikenteen matkakustannus (kk-taso), vapaa-ajan matkat            |
+| `mf37`   | `cost_trailer_truck`           | Yhdistelmäajoneuvon matkakustannus (ei käytössä)                                      |
+| `mf38`   | `cost_truck`                   | Kuorma-auton matkakustannus (ei käytössä)                                             |
+| `mf39`   | `cost_van`                     | Pakettiauton matkakustannus (vain tiemaksut)                                            |
+| `mf41`   | `gen_cost_car_work`            | Henkilöauton yleistetty matkakustannus (tiemaksut + VOT * matka-aika), työmatkat        |
+| `mf42`   | `gen_cost_car_leisure`         | Henkilöauton yleistetty matkakustannus (tiemaksut + VOT * matka-aika), vapaa-ajan matkat|
+| `mf47`   | `gen_cost_trailer_truck`       | Yhdistelmäajoneuvon yleistetty matkakustannus (tiemaksut + VOT * matka-aika)                           |
+| `mf48`   | `gen_cost_truck`               | Kuorma-auton yleistetty matkakustannus (tiemaksut + VOT * matka-aika)                                  |
+| `mf49`   | `gen_cost_van`                 | Pakettiauton yleistetty matkakustannus (tiemaksut + VOT * matka-aika)                                  |
+| `mf53`   | `congest_time_transit_work`    | Joukkoliikenteen ruuhkautumisen lisäys (min), työmatkat                 |
+| `mf54`   | `congest_time_transit_leisure` | Joukkoliikenteen ruuhkautumisen lisäys (min), vapaa-ajan matkat         |
+
+Huom. että mf13 ja mf14 eivät vastaa loppullisia joukkoliikenteen matkoja omx-tiedostossa, koska matka-ajat vielä dampataan sijoittelun jälkeen. Tällä tavalla kysyntämallissa käytetään "pehmennetty" ensimmäisen odotusajan vastus ja sama vastus on myös Matriisit -kansiossa.
 
 ### Joukkoliikennesijoittelun matriisit
 
