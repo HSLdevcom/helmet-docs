@@ -191,4 +191,53 @@ Tuntimatriisit aggregoidaan mallijärjestelmässä koko vuorokauteen kiinteillä
 | dist_xxx.txt   | Matkaetäisyysmatriisit [km] kulkumuodoittain | Henkilöauto- ja joukkoliikennematriisit on jaettu työ- ja vapaa-ajan matkojen matriiseihin. |
 | cost_xxx.txt   | Tiemaksu- sekä joukkoliikenteen kuukausilippukustannusmatriisit [eur] kulkumuodoittain | Henkilöauto- ja joukkoliikennematriisit on jaettu työ- ja vapaa-ajan matkojen matriiseihin. |
 
+## Linkeille tallennetut tulokset
+
+| Attribuutti | Tarkempi kuvaus |
+|-------------|-----------------|
+| @car_work_vrk | Work-matkaryhmän henkilöautojen määrä, laajennettu koko päivälle laajennuskertoimilla (volume_factors) |
+| @car_leisure_vrk | Leisure-matkaryhmän henkilöautojen määrä, laajennettu koko päivälle laajennuskertoimilla (volume_factors) |
+| @transit_work_vrk | Work-matkaryhmän matkustajien määrä, laajennettu koko päivälle laajennuskertoimilla (volume_factors) |
+| @transit_leisure_vrk | Leisure-matkaryhmän matkustajien määrä, laajennettu koko päivälle laajennuskertoimilla (volume_factors) |
+| @bike_vrk | Pyöräilijöiden määrä (oletus 1 pyöräilijä per pyörä), sähköpotkulaudat myös lasketaan tähän. Kaupunkifillarit jätetään pois, jos ne eivät ole pääkulkutapana ovelta ovelle, laajennettu koko päivälle laajennuskertoimilla (volume_factors) |
+| @trailer_truck_vrk | Yhdistelmäajoneuvojen määrä, laajennettu koko päivälle laajennuskertoimilla (volume_factors) |
+| @truck_vrk | Kuorma-autojen määrä, laajennettu koko päivälle laajennuskertoimilla (volume_factors) |
+| @van_vrk | Pakettiautojen määrä, laajennettu koko päivälle laajennuskertoimilla (volume_factors) |
+| @bus_vrk | Bussien määrä (ei sis. tilausajoja), laajennettu koko päivälle laajennuskertoimilla (volume_factors) |
+| @aux_transit_vrk | Liityntäkävelyn määrä, sis. liityntäpyöräilyä ja liityntämatkaa sähköpotkulaudalla, laajennettu koko päivälle laajennuskertoimilla (volume_factors) |
+| @car_work_aht | Work-matkaryhmän henkilöautojen määrä aamuhuipputunnilla |
+| @car_work_pt | Work-matkaryhmän henkilöautojen määrä päivän tunnilla |
+| @car_work_iht | Work-matkaryhmän henkilöautojen määrä iltahuipputunnilla |
+| - | Muut ryhmät toimii vastaavasti |
+| @toll_cost_aht | Tiemaksujen kustannus (jo kerrottu pituudella) euroissa |
+| @total_cost_aht | Henkilöautojen kilometrikustannus aamuhuipputunnilla, vrk ei käytössä |
+| @car_time_aht | Viivytysfunktion avulla laskettu linkin ylitysaika (min) |
+| @bike_time_aht | Pyöräilyn linkin ylitysaika (min), kuvaa pyöräilyn vastusta |
+
+## Solmuille tallennetut tulokset
+| Attribuutti | Tarkempi kuvaus |
+|-------------|-----------------|
+| @transit_wor_vol_vrk | Work-matkaryhmän matkustajien määrä (linkin kuormitus) |
+| @transit_wor_boa_vrk | Work-matkaryhmän nousijoiden määrä, viittaa linkin alkusolmuun |
+| @transit_wor_trb_vrk | Work-matkaryhmän vaihtajien määrä, viittaa linkin alkusolmuun |
+| @transit_lei_vol_vrk | Leisure-matkaryhmän matkustajien määrä (linkin kuormitus) |
+| @transit_lei_boa_vrk | Leisure-matkaryhmän nousijoiden määrä, viittaa linkin alkusolmuun |
+| @transit_lei_trb_vrk | Leisure-matkaryhmän vaihtajien määrä, viittaa linkin alkusolmuun |
+
+## Segmenteille tallennetut tulokset
+| Attribuutti | Tarkempi kuvaus |
+|-------------|-----------------|
+| @transit_wor_vol_vrk | Work-matkaryhmän matkustajien määrä (linkin kuormitus) |
+| @transit_wor_boa_vrk | Work-matkaryhmän nousijoiden määrä, viittaa linkin alkusolmuun |
+| @transit_wor_trb_vrk | Work-matkaryhmän vaihtajien määrä, viittaa linkin alkusolmuun |
+| @transit_lei_vol_vrk | Leisure-matkaryhmän matkustajien määrä (linkin kuormitus) |
+| @transit_lei_boa_vrk | Leisure-matkaryhmän nousijoiden määrä, viittaa linkin alkusolmuun |
+| @transit_lei_trb_vrk | Leisure-matkaryhmän vaihtajien määrä, viittaa linkin alkusolmuun |
+| @wait_time_dev | Pysäkki- ja linjakohtainen odotusajan keskihajonta (1) |
+| @ccost | Ruuhkautumisen kustannus, saa olla negatiivinen, jos ajoneuvossa on hyvin tilaa |
+| @base_timtr | Matka-aika ilman ruuhkantumista, myös ajoneuvoa koskeva aika |
+
+
+1) [HELMET 5 -mallin raportti](https://staticfiles.hsl.fi/globalassets/julkaisuarkisto/2026/helsingin-seudun-tyossakayntialueen-liikenne-ennustemallijarjestelma-2025_5-2026.pdf) kertoo luvussa 7.3.3 lisää menetelmästä
+
 
