@@ -233,6 +233,7 @@ Verkolla käytetyt kulkumuodot (modes):
 | ul3             | autoliikenteen linkeille sijoitellaan aluksi raskas liikenne, ja tulokset tallennetaan linkkiattribuuttiin ul3 (oltava link user datassa eikä extra-attribuutissa, jotta tietoa voidaan käyttää sijoittelufunktioissa)  | ei käytössä (0) | ei käytössä (0) |
 | @pyoratieluokka | pyörätien laatuluokka (taulukko 12)                          | ei käytössä (0) | pyörätien laatuluokka (taulukko 12)          |
 | @kaltevuus      | linkin pituuskaltevuus (ei käytössä)    | linkin pituuskaltevuus (ei käytössä) | linkin pituuskaltevuus (mäkisyyden mallinnus)|
+| @hinta+aikajakso| tiemaksujen summa jaettu linkin pituudella | ei käytössä | ei käytössä |
 
 ### Linkkityypit, väyläluokat ja sallitut kulkutavat
 
