@@ -82,6 +82,7 @@ Käyttöliittymässä on tehtävä seuraavat määrittelyt jokaista ajettavaa HE
       joten jos ensimmäiseen malliajon matriisit alkavat luvusta 100 (oletus), toisen skenaarion matriisien alku kannattaa asettaa lukuun 400.
     - Ensimmäiset 100 matriisia ovat sijoittelun käytössä sijoittelussa, ja niitä yliajetaan jokaisessa malliajossa.
     - EMME-projektissa matriisit on aina jaettu kaikkien skenaarioiden kesken, eli jos valintaa ei erikseen tehdä, matriisit yliajetaan jokaisen malliajon jälkeen ja eri skenaarioiden matriisien tarkastelu on mahdotonta EMMEssä.
+    - Lue lisää matriiseista [Tulokset](tulokset.md) -sivulla.
 
 Huom: agenttiajo ja mockajo onnistuu vain `dev_config.json`-tiedoston muokkaamisen kautta. Ohjeet siihen löydät mallijärjestelmän [README-tiedostosta](https://github.com/HSLdevcom/helmet-model-system/blob/main/README.md) ja järjestelmän Scripts-kansion [README-tiedostosta](https://github.com/HSLdevcom/helmet-model-system/blob/main/Scripts/README.md).
 
