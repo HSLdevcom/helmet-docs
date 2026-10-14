@@ -147,7 +147,7 @@ mutta ne ovat autosijoittelussa taustaliikenteenä.
 | generation.txt                               | Vuorokauden kiertomatkatuotos kiertomatkatyypeittäin sijoittelualueittain |  |
 | impedance_ratio.txt                          | Joukkoliikenteen ja henkilöautoliikenteen matka-aika- ja matkakustannussuhteet aamuruuhkassa sijoittelualueittain | Eri matkakohteiden matka-ajat ja -kustannukset on painotettu työmatkojen määrillä kulkutavoittain. Lukuja käytetään autonomistusmallin muuttujina. |
 | link_lengths.txt                             | Väylätyyppien yhteenlaskettu pituus (km) verkolla | |
-| links.txt                                    | Linkit ominaisuuksineen | :exclamation: Saatavilla vain [Emme-Desktop skriptin](https://github.com/HSLdevcom/helmet-model-system/blob/olusanya/Scripts/emme_tools/helmet_link_printing.py) kautta |
+| links.txt                                    | Linkit ominaisuuksineen | :exclamation: Saatavilla vain OpenPaths EMMEn Modelleriin lisättävänä [työkaluna](https://github.com/HSLdevcom/helmet-model-system/blob/olusanya/Scripts/emme_tools/helmet_link_printing.py) (eng. "toolbox", "tool") |
 | mode_analysis.csv                            | Kulkutapajakauman muutos alkukysynnästä viimeiseen iteraatioon | :exclamation: Uusi versiossa 5.0 |
 | mode_share.txt                               | Kokonaiskulkutapajakaumat kiertomatkatyyppeittäin |
 | noise_areas.txt                              | Suuralueiden melualueiden pinta-alat ja väestömäärät |  |
